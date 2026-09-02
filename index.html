@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4th ESO English Syllabus Dashboard</title>
+    <title>English Hub - Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -14,839 +13,89 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                    },
+                    }
                 }
             }
         }
     </script>
     <style>
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Drawer transitions */
-        .drawer-overlay {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .drawer-overlay.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .drawer-panel {
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .drawer-panel.show {
-            transform: translateX(0);
-        }
-
-        /* Glassmorphism */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-        .dark .glass-card {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.3s ease-out forwards;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
     </style>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300 relative font-sans antialiased min-h-screen">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+    <nav class="w-full p-6 flex justify-end">
+        <button onclick="toggleTheme()" class="p-3 rounded-full bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all text-slate-600 dark:text-slate-300">
+            <i data-lucide="moon" id="themeIcon"></i>
+        </button>
+    </nav>
 
-    <div id="app">
-        <!-- Content injected by JS -->
-    </div>
+    <main class="flex-1 flex flex-col items-center justify-center p-6 -mt-16">
+        <div class="text-center mb-12">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-blue-500/20 mb-6 transform -rotate-6">
+                <i data-lucide="book-open" class="w-10 h-10"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">English Hub</span></h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg mx-auto">Select your class below to access your interactive syllabus, vocabulary tools, and final tasks.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+            <!-- 3rd ESO Card -->
+            <a href="3ESO/index.html" class="group relative bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 dark:bg-emerald-400/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">3rd of ESO</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8">Discover stories, films, crime mysteries, and the music festival challenge.</p>
+                    <div class="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold group-hover:translate-x-2 transition-transform">
+                        Enter Dashboard <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 4th ESO Card -->
+            <a href="4ESO/index.html" class="group relative bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">4th of ESO</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8">Explore global issues, future pathways, deep fakes, and learning stations.</p>
+                    <div class="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:translate-x-2 transition-transform">
+                        Enter Dashboard <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center text-sm text-slate-500 dark:text-slate-500">
+        <p>&copy; 2024-2025 English Hub. Built for IE Coma-ruga.</p>
+    </footer>
 
     <script>
-        // Data Store
-        const units = [
-            {
-                id: 1,
-                title: "Warm Up & Back to School",
-                shortTitle: "Warm Up",
-                theme: "amber",
-                gradient: "from-amber-400 to-orange-500",
-                icon: "book",
-                grammar: "Basic review (Past tenses, present simple)",
-                vocab: [
-                    { term: "passport", def: "passaport", example: "We use the English passport to track our progress." },
-                    { term: "expectations", def: "expectatives", example: "What are your expectations for this year?" },
-                    { term: "goals", def: "objectius", example: "Set some goals to improve your fluency." }
-                ],
-                student: {
-                    repte: "Welcome back! Let's set our goals for the year, break the ice, and share our summer memories.",
-                    products: [
-                        { type: "Written Task", desc: "A Summer Memory Writing: attach a picture from your holidays and write about it.", url: "https://classroom.google.com/h" },
-                        { type: "English Passport", desc: "Mark in the passport where you think your knowledge is located.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Establish classroom routines, set expectations, and conduct initial diagnostic assessments.",
-                    competencies: "Competència Específica 1 (Oral reception) and 3 (Oral production).",
-                    methodology: "Ice-breakers, diagnostic testing, collaborative goal setting.",
-                    assessment: "Diagnostic, non-graded feedback to gauge initial level."
-                }
-            },
-            {
-                id: 2,
-                title: "Personality, Advertising and Shopping",
-                shortTitle: "Personality & Ads",
-                theme: "rose",
-                gradient: "from-rose-400 to-pink-500",
-                icon: "shopping-bag",
-                grammar: "Past Simple, Past Continuous, Used to, Past Perfect",
-                vocab: [
-                    { term: "personality", def: "personalitat", example: "She has a very outgoing personality." },
-                    { term: "advertising", def: "publicitat", example: "Advertising influences what we buy." },
-                    { term: "shopping", def: "compres", example: "Online shopping is very popular." },
-                    { term: "influencer", def: "creador de tendències", example: "The influencer promoted a new brand." },
-                    { term: "customer review", def: "ressenya de client", example: "Read the customer review before buying." }
-                ],
-                student: {
-                    repte: "Explore how advertising affects us and learn to describe personalities and shopping habits.",
-                    products: [
-                        { type: "Written Task", desc: "Write a Customer Review evaluating a product or service.", url: "https://classroom.google.com/h" },
-                        { type: "Reading Task", desc: "Read 'The Rise of the Influencer' and answer the questions.", url: "https://classroom.google.com/h" },
-                        { type: "TOD & Speaking", desc: "Complete the Grammar review stations and discuss short spooky films.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Develop critical thinking regarding media and consumerism, while consolidating narrative past tenses.",
-                    competencies: "Competència Específica 2 (Written reception) and 5 (Written production).",
-                    methodology: "Station-based learning (TOD), critical reading, peer editing.",
-                    assessment: "Accuracy of narrative tenses in the review, reading comprehension."
-                }
-            },
-            {
-                id: 3,
-                title: "Nutrition, Well-Being, Aches and Pains",
-                shortTitle: "Health",
-                theme: "emerald",
-                gradient: "from-emerald-400 to-teal-500",
-                icon: "heart-pulse",
-                grammar: "Present Simple vs Continuous, Modals",
-                vocab: [
-                    { term: "nutrition", def: "nutrició", example: "Good nutrition is essential for growth." },
-                    { term: "well-being", def: "benestar", example: "Focus on your mental well-being." },
-                    { term: "aches", def: "malestars", example: "He has aches after playing sports." },
-                    { term: "pains", def: "dolors", example: "She felt pains in her stomach." },
-                    { term: "diet", def: "dieta", example: "A balanced diet is very important." }
-                ],
-                student: {
-                    repte: "Focus on your wellbeing! Learn about nutrition, design healthy routines, and express your opinions.",
-                    products: [
-                        { type: "Written Task", desc: "Write an Opinion Essay about health and lifestyle.", url: "https://classroom.google.com/h" },
-                        { type: "TOD 2", desc: "Design a weekly meal plan focusing on nutrition and wellbeing.", url: "https://classroom.google.com/h" },
-                        { type: "Speaking Game", desc: "Play Boom!! / 1, 2, 3... Speak! to practice fluency.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Promote healthy habits and metacognitive reflection on personal well-being, practicing modals of advice.",
-                    competencies: "Personal, social i d’aprendre a aprendre (CPSAA 5), Llengua Estrangera 5.",
-                    methodology: "Gamification (Boom!), project-based learning (meal plan), essay structuring.",
-                    assessment: "Cohesion in opinion essays, oral fluency during games, proper use of modals."
-                }
-            },
-            {
-                id: 4,
-                title: "News, Utopia, Education and Careers",
-                shortTitle: "News & Future",
-                theme: "blue",
-                gradient: "from-blue-400 to-indigo-500",
-                icon: "globe",
-                grammar: "Future Tenses",
-                vocab: [
-                    { term: "news", def: "notícies", example: "Did you watch the news today?" },
-                    { term: "utopia", def: "utopia", example: "An ideal society is a utopia." },
-                    { term: "senses", def: "sentits", example: "We have five basic senses." },
-                    { term: "education", def: "educació", example: "Education is the key to success." },
-                    { term: "careers", def: "carreres professionals", example: "They discussed their future careers." }
-                ],
-                student: {
-                    repte: "Analyze current events, envision ideal societies, and plan your future education and career.",
-                    products: [
-                        { type: "Written Task", desc: "Write a Report Practice based on a questionnaire.", url: "https://classroom.google.com/h" },
-                        { type: "Listening Task", desc: "Complete the Unit 3 Listening Test and practice.", url: "https://classroom.google.com/h" },
-                        { type: "TOD 3", desc: "Choose a Youtube video (challenge, tag, unboxing) and analyze it.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Students explore societal issues and future educational trajectories, developing vocabulary to express hypotheses.",
-                    competencies: "Ciutadana (CC1), Llengua Estrangera 3 (Oral) and 5 (Written).",
-                    methodology: "Inquiry-based learning, media literacy (YouTube analysis), formal report writing.",
-                    assessment: "Ability to extract main ideas from audio, formal register in reports."
-                }
-            },
-            {
-                id: 5,
-                title: "Protest, Reporting and Entertainment",
-                shortTitle: "Protest & Media",
-                theme: "purple",
-                gradient: "from-purple-400 to-violet-500",
-                icon: "megaphone",
-                grammar: "Conditionals",
-                vocab: [
-                    { term: "protest", def: "protesta", example: "The protest was peaceful." },
-                    { term: "reporting", def: "reportatge", example: "Journalists are reporting live." },
-                    { term: "entertainment", def: "entreteniment", example: "Movies are a form of entertainment." },
-                    { term: "social media", def: "xarxes socials", example: "Social media connects people." }
-                ],
-                student: {
-                    repte: "Understand the power of reporting and protests, and explore the entertainment industry.",
-                    products: [
-                        { type: "Listening Task", desc: "Listen to the opening scene of 'The Lord of the Rings' and fill in the gaps.", url: "https://classroom.google.com/h" },
-                        { type: "TOD 4", desc: "Complete the Conditionals Learning Stations.", url: "https://classroom.google.com/h" },
-                        { type: "Reading Task", desc: "Complete the Comp. Bàsiques Practice.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Develop critical awareness of media and civic action, utilizing complex conditional structures.",
-                    competencies: "Ciutadana (CC2), Llengua Estrangera 2 & 4.",
-                    methodology: "Station-based learning (Conditionals), multimedia listening, standardized test practice.",
-                    assessment: "Accurate use of conditionals, listening comprehension of authentic materials."
-                }
-            },
-            {
-                id: 6,
-                title: "Final Evaluations and Presentations",
-                shortTitle: "Finals",
-                theme: "slate",
-                gradient: "from-slate-700 to-slate-900",
-                icon: "award",
-                grammar: "Comprehensive Review",
-                vocab: [
-                    { term: "presentation", def: "presentació", example: "She gave a great presentation." },
-                    { term: "fluency", def: "fluïdesa", example: "Practice speaking to improve your fluency." },
-                    { term: "accuracy", def: "precisió", example: "Check your grammar for accuracy." },
-                    { term: "comprehension", def: "comprensió", example: "The test measures reading comprehension." }
-                ],
-                student: {
-                    repte: "Show everything you've learned this year! Prepare for your final exams and your oral presentation.",
-                    products: [
-                        { type: "Oral Task", desc: "A One minute talk that counts as 10% of the final mark.", url: "https://classroom.google.com/h" },
-                        { type: "Proves Finals", desc: "Complete the Final Oral Comprehension and Reading Comprehension exams.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Consolidate the year's learning and conduct final summative assessments across all skills.",
-                    competencies: "All Competències Específiques.",
-                    methodology: "Summative assessment, oral presentations, standardized testing.",
-                    assessment: "Final mastery of 4th ESO objectives, oral fluency, reading and listening comprehension."
-                }
-            }
-        ];
+        lucide.createIcons();
 
-        const themeClasses = {
-            amber: { bg: 'bg-amber-100 dark:bg-amber-900/40', text: 'text-amber-700 dark:text-amber-400' },
-            blue: { bg: 'bg-blue-100 dark:bg-blue-900/40', text: 'text-blue-700 dark:text-blue-400' },
-            emerald: { bg: 'bg-emerald-100 dark:bg-emerald-900/40', text: 'text-emerald-700 dark:text-emerald-400' },
-            rose: { bg: 'bg-rose-100 dark:bg-rose-900/40', text: 'text-rose-700 dark:text-rose-400' },
-            purple: { bg: 'bg-purple-100 dark:bg-purple-900/40', text: 'text-purple-700 dark:text-purple-400' },
-            slate: { bg: 'bg-slate-200 dark:bg-slate-800', text: 'text-slate-700 dark:text-slate-300' }
-        };
-
-        // State
-        let currentView = 'student'; // 'student' | 'teacher'
         let isDarkMode = false;
-        let searchQuery = '';
-        let selectedUnit = null;
-        let activeTab = 'glance'; // 'glance' | 'toolkit' | 'assess'
-
-        // Initialization
-        function initApp() {
-            const app = document.getElementById('app');
-            app.innerHTML = `
-                <nav class="sticky top-0 z-30 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-                                <i data-lucide="graduation-cap"></i>
-                            </div>
-                            <h1 class="font-bold text-xl tracking-tight hidden sm:block">4th ESO English</h1>
-                        </div>
-                        
-                        <div class="flex items-center gap-4 sm:gap-6">
-                            <div class="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-full relative shadow-inner border border-slate-200 dark:border-slate-800">
-                                <div id="togglePill" class="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white dark:bg-slate-800 rounded-full shadow transition-all duration-300 left-1 border border-slate-200 dark:border-slate-700"></div>
-                                <button id="btnStudent" onclick="setView('student')" class="relative z-10 px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors text-blue-600 dark:text-blue-400">Student</button>
-                                <button id="btnTeacher" onclick="setView('teacher')" class="relative z-10 px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors text-slate-500 dark:text-slate-400">Teacher</button>
-                            </div>
-                            
-                            <button id="themeIconBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 dark:text-slate-400">
-                                <i data-lucide="moon"></i>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-
-                <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-12 pb-20">
-                    <section id="roadmapSection"></section>
-                    
-                    <section class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div class="relative w-full md:w-[28rem] group">
-                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <i data-lucide="search" class="h-5 w-5 text-slate-400 group-focus-within:text-blue-500 transition-colors"></i>
-                            </div>
-                            <input type="text" id="searchInput" placeholder="Search topics, grammar, vocabulary..." 
-                                class="block w-full pl-11 pr-4 py-3 border border-slate-200 dark:border-slate-800 rounded-2xl leading-5 bg-white dark:bg-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-all shadow-sm">
-                        </div>
-                    </section>
-
-                    <section id="gridSection"></section>
-                    <section id="resourceSection"></section>
-                </main>
-
-                
-                <!-- Google Sign-In Modal -->
-                <div id="gsiModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/50 backdrop-blur-sm">
-                    <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border border-slate-200 dark:border-slate-800">
-                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="lock" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Teacher Login Required</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6">Please sign in with your authorized Google account to access Teacher Mode.</p>
-                        <div id="g_id_onload"
-                             data-client_id="YOUR_GOOGLE_CLIENT_ID"
-                             data-callback="handleCredentialResponse"
-                             data-auto_prompt="false">
-                        </div>
-                        <div class="g_id_signin flex justify-center mb-4" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
-                        <button onclick="closeGsiModal()" class="text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Cancel</button>
-                    </div>
-                </div>
-                <div id="drawerOverlay" onclick="closeDrawer()" class="drawer-overlay fixed inset-0 bg-slate-900/40 dark:bg-slate-950/70 backdrop-blur-sm z-40"></div>
-                <div id="drawerPanel" class="drawer-panel fixed inset-y-0 right-0 w-full sm:w-[500px] md:w-[600px] bg-slate-50 dark:bg-slate-950 shadow-2xl z-50 flex flex-col border-l border-slate-200 dark:border-slate-800">
-                    <div id="drawerContent" class="flex-col h-full hidden"></div>
-                </div>
-            `;
-
-            document.getElementById('searchInput').addEventListener('input', (e) => {
-                searchQuery = e.target.value;
-                renderGrid();
-            });
-
-            // Check system theme preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                isDarkMode = true;
-                document.documentElement.classList.add('dark');
-            }
-
-            updateToggleUI();
-            renderRoadmap();
-            renderGrid();
-            renderResourceCorner();
-            lucide.createIcons();
-        }
-
-        // Core Functions
-        
-        let isAuthenticatedTeacher = sessionStorage.getItem('teacherAuth') === 'true';
-
-        function handleCredentialResponse(response) {
-            try {
-                const payloadBase64 = response.credential.split('.')[1];
-                const payload = JSON.parse(atob(payloadBase64.replace(/-/g, '+').replace(/_/g, '/')));
-                
-                if (payload.email === 'eugenimonfort@iecomaruga.cat') {
-                    isAuthenticatedTeacher = true;
-                    sessionStorage.setItem('teacherAuth', 'true');
-                    closeGsiModal();
-                    performSetView('teacher');
-                } else {
-                    alert('Access Denied: Unauthorized email address.');
-                }
-            } catch(e) {
-                console.error('Error decoding JWT', e);
-            }
-        }
-
-        function closeGsiModal() {
-            const modal = document.getElementById('gsiModal');
-            if(modal) {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-            }
-        }
-
-        function setView(view) {
-            if (view === 'teacher' && !isAuthenticatedTeacher) {
-                const modal = document.getElementById('gsiModal');
-                if(modal) {
-                    modal.classList.remove('hidden');
-                    modal.classList.add('flex');
-                }
-                return;
-            }
-            performSetView(view);
-        }
-
-        function performSetView(view) {
-            if (currentView === view) return;
-            currentView = view;
-            updateToggleUI();
-            renderGrid();
-            renderResourceCorner();
-            if (selectedUnit) {
-                renderDrawerContent();
-            }
-        }
-
-        function updateToggleUI() {
-            const pill = document.getElementById('togglePill');
-            const btnStudent = document.getElementById('btnStudent');
-            const btnTeacher = document.getElementById('btnTeacher');
-            
-            if (currentView === 'student') {
-                pill.classList.remove('left-[calc(50%+2px)]');
-                pill.classList.add('left-1');
-                btnStudent.classList.add('text-blue-600', 'dark:text-blue-400');
-                btnStudent.classList.remove('text-slate-500', 'dark:text-slate-400');
-                btnTeacher.classList.remove('text-blue-600', 'dark:text-blue-400');
-                btnTeacher.classList.add('text-slate-500', 'dark:text-slate-400');
-            } else {
-                pill.classList.remove('left-1');
-                pill.classList.add('left-[calc(50%+2px)]');
-                btnTeacher.classList.add('text-blue-600', 'dark:text-blue-400');
-                btnTeacher.classList.remove('text-slate-500', 'dark:text-slate-400');
-                btnStudent.classList.remove('text-blue-600', 'dark:text-blue-400');
-                btnStudent.classList.add('text-slate-500', 'dark:text-slate-400');
-            }
-            
-            // Also update theme icon just to be sure
-            const themeIconContainer = document.getElementById('themeIconBtn');
-            themeIconContainer.innerHTML = `<i data-lucide="${isDarkMode ? 'sun' : 'moon'}"></i>`;
-            lucide.createIcons();
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            isDarkMode = true;
+            document.documentElement.classList.add('dark');
         }
 
         function toggleTheme() {
             isDarkMode = !isDarkMode;
-            document.documentElement.classList.toggle('dark', isDarkMode);
-            updateToggleUI();
-        }
-
-        // Component Renderers
-        function renderRoadmap() {
-            const roadmap = document.getElementById('roadmapSection');
-            roadmap.innerHTML = `
-                <div class="flex items-center justify-between mb-8">
-                    <h2 class="text-2xl font-bold flex items-center gap-2">
-                        <i data-lucide="route" class="text-indigo-500"></i>
-                        The Spiral Journey
-                    </h2>
-                </div>
-                <div class="relative py-8 overflow-x-auto no-scrollbar">
-                    <div class="absolute top-1/2 left-8 right-8 h-1 bg-slate-200 dark:bg-slate-800 -translate-y-1/2 z-0 rounded-full"></div>
-                    <div class="flex justify-between items-center relative z-10 min-w-[800px] px-8">
-                        ${units.map((u, i) => {
-                            return `
-                            <div class="group relative flex flex-col items-center cursor-pointer" onclick="openDrawer(${u.id})">
-                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${u.gradient} text-white flex items-center justify-center shadow-lg ring-4 ring-slate-50 dark:ring-slate-950 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
-                                    <span class="font-bold text-lg">${u.id}</span>
-                                </div>
-                                <div class="absolute top-16 w-32 text-center">
-                                    <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">${u.shortTitle}</p>
-                                </div>
-                                
-                                <!-- Tooltip -->
-                                <div class="absolute -top-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-slate-800 dark:bg-slate-700 text-white text-xs rounded-lg py-1.5 px-3 whitespace-nowrap z-20 shadow-xl">
-                                    ${i > 0 ? `Recycles Unit ${u.id-1}` : 'Starting Point'}
-                                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-800 dark:bg-slate-700 rotate-45"></div>
-                                </div>
-                            </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderGrid() {
-            const grid = document.getElementById('gridSection');
-            const filteredUnits = units.filter(u => {
-                const query = searchQuery.toLowerCase();
-                return u.title.toLowerCase().includes(query) || 
-                       u.grammar.toLowerCase().includes(query) ||
-                       u.vocab.some(v => v.term.toLowerCase().includes(query));
-            });
-
-            if (filteredUnits.length === 0) {
-                grid.innerHTML = `
-                    <div class="text-center py-16 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-                        <i data-lucide="search-x" class="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-4"></i>
-                        <h3 class="text-lg font-medium text-slate-900 dark:text-slate-100">No units found</h3>
-                        <p class="text-slate-500 dark:text-slate-400 mt-1">Try adjusting your search keywords.</p>
-                    </div>`;
-                lucide.createIcons();
-                return;
+            if (isDarkMode) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('themeIcon').setAttribute('data-lucide', 'sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('themeIcon').setAttribute('data-lucide', 'moon');
             }
-
-            grid.innerHTML = `
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    ${filteredUnits.map(u => {
-                        const colors = themeClasses[u.theme];
-                        const viewData = currentView === 'student' ? u.student : u.teacher;
-                        
-                        return `
-                        <div class="glass-card rounded-3xl p-6 cursor-pointer transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative overflow-hidden group border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/80" onclick="openDrawer(${u.id})">
-                            <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-gradient-to-br ${u.gradient} opacity-10 group-hover:opacity-20 transition-opacity blur-2xl"></div>
-                            
-                            <div class="flex items-center gap-4 mb-5 relative z-10">
-                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${u.gradient} text-white flex items-center justify-center shadow-md">
-                                    <i data-lucide="${u.icon}"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-1">Unit ${u.id}</p>
-                                    <h3 class="text-lg font-bold leading-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">${u.title}</h3>
-                                </div>
-                            </div>
-                            
-                            <div class="space-y-4 relative z-10">
-                                <div class="bg-slate-50/50 dark:bg-slate-950/50 rounded-xl p-3 border border-slate-100 dark:border-slate-800">
-                                    <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1 flex items-center gap-1.5">
-                                        <i data-lucide="target" class="w-3.5 h-3.5"></i> ${currentView === 'student' ? 'Your Challenge' : 'Pedagogical Goal'}
-                                    </p>
-                                    <p class="text-sm font-medium line-clamp-2 text-slate-700 dark:text-slate-300">${viewData.repte}</p>
-                                </div>
-                                
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold ${colors.bg} ${colors.text}">
-                                        <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Grammar Focus
-                                    </span>
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                                        <i data-lucide="${currentView === 'student' ? 'check-circle' : 'bar-chart'}" class="w-3.5 h-3.5"></i> ${currentView === 'student' ? viewData.products.length + ' Final Tasks' : 'Assessments'}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        `;
-                    }).join('')}
-                </div>
-            `;
             lucide.createIcons();
         }
-
-        function renderResourceCorner() {
-            const section = document.getElementById('resourceSection');
-            
-            let content = '';
-            if (currentView === 'student') {
-                content = `
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/30 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-amber-100 dark:bg-amber-800/50 rounded-xl text-amber-600 dark:text-amber-400"><i data-lucide="compass"></i></div>
-                            <div>
-                                <h4 class="font-bold text-amber-900 dark:text-amber-100">Self-Regulation</h4>
-                                <p class="text-sm text-amber-800/80 dark:text-amber-200/80 mt-1">Break your tasks into smaller steps. Use a planner to map out deadlines for final products.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-blue-100 dark:bg-blue-800/50 rounded-xl text-blue-600 dark:text-blue-400"><i data-lucide="shield-check"></i></div>
-                            <div>
-                                <h4 class="font-bold text-blue-900 dark:text-blue-100">Originality & Plagiarism</h4>
-                                <p class="text-sm text-blue-800/80 dark:text-blue-200/80 mt-1">Always write in your own words. Use translation tools to learn words, not to translate whole sentences.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                         <div class="flex items-start gap-4 p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/30 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-xl text-emerald-600 dark:text-emerald-400"><i data-lucide="messages-square"></i></div>
-                            <div>
-                                <h4 class="font-bold text-emerald-900 dark:text-emerald-100">Active Participation</h4>
-                                <p class="text-sm text-emerald-800/80 dark:text-emerald-200/80 mt-1">Speak up! Mistakes are part of learning. Group discussions are the best way to improve fluency.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-purple-50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-900/30 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-purple-100 dark:bg-purple-800/50 rounded-xl text-purple-600 dark:text-purple-400"><i data-lucide="file-text"></i></div>
-                            <div>
-                                <h4 class="font-bold text-purple-900 dark:text-purple-100">Feedback Loop</h4>
-                                <p class="text-sm text-purple-800/80 dark:text-purple-200/80 mt-1">Review teacher and peer feedback on your drafts before submitting the final product.</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else {
-                content = `
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-slate-200 dark:bg-slate-700 rounded-xl text-slate-600 dark:text-slate-300"><i data-lucide="users"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-slate-100">Universal Supports (DUA)</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Provide visual scaffolds, glossaries, and choice in final product formats. Allow extra time for processing.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-slate-200 dark:bg-slate-700 rounded-xl text-slate-600 dark:text-slate-300"><i data-lucide="target"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-slate-100">Formative Assessment</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Use checklists and co-created rubrics. Focus on communicative intent over grammatical perfection.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                         <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-slate-200 dark:bg-slate-700 rounded-xl text-slate-600 dark:text-slate-300"><i data-lucide="book-marked"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-slate-100">Spiral Methodology</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Recycle vocabulary actively. Final units rely on the communicative confidence built in earlier units.</p>
-                            </div>
-                        </div>
-                         <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 transition-transform hover:-translate-y-1 hover:shadow-md">
-                            <div class="mt-1 p-2 bg-slate-200 dark:bg-slate-700 rounded-xl text-slate-600 dark:text-slate-300"><i data-lucide="settings"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-slate-100">Additional Supports</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">For specific learning needs, adjust the length of written tasks or allow pairing with a peer model.</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-
-            section.innerHTML = `
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 relative overflow-hidden mt-12">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300/10 to-orange-500/10 dark:from-amber-400/5 dark:to-orange-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <h2 class="text-2xl font-bold mb-8 flex items-center gap-2 relative z-10">
-                        <i data-lucide="lightbulb" class="text-amber-500"></i>
-                        ${currentView === 'student' ? 'Student Success Toolkit' : 'Pedagogical Resource Corner'}
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                        ${content}
-                    </div>
-                </div>
-            `;
-        }
-
-        // Drawer Logic
-        function openDrawer(unitId) {
-            selectedUnit = units.find(u => u.id === unitId);
-            activeTab = 'glance';
-            renderDrawerContent();
-            
-            document.getElementById('drawerOverlay').classList.add('show');
-            document.getElementById('drawerPanel').classList.add('show');
-            document.getElementById('drawerContent').classList.remove('hidden');
-            document.getElementById('drawerContent').classList.add('flex');
-        }
-
-        function closeDrawer() {
-            document.getElementById('drawerOverlay').classList.remove('show');
-            document.getElementById('drawerPanel').classList.remove('show');
-            setTimeout(() => {
-                document.getElementById('drawerContent').classList.add('hidden');
-                document.getElementById('drawerContent').classList.remove('flex');
-                selectedUnit = null;
-            }, 400); // match transition duration
-        }
-
-        function switchTab(tab) {
-            activeTab = tab;
-            renderDrawerContent();
-        }
-
-        function toggleVocab(element) {
-            const details = element.querySelector('.vocab-details');
-            const icon = element.querySelector('.vocab-icon');
-            if (details.classList.contains('hidden')) {
-                details.classList.remove('hidden');
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                details.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-
-        function renderDrawerContent() {
-            if (!selectedUnit) return;
-            const u = selectedUnit;
-            const drawerContainer = document.getElementById('drawerContent');
-            const viewData = currentView === 'student' ? u.student : u.teacher;
-            
-            // Header
-            const headerHtml = `
-                <div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br ${u.gradient} text-white flex items-center justify-center shadow-lg">
-                        <i data-lucide="${u.icon}" class="w-7 h-7"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-0.5">Unit ${u.id}</p>
-                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white leading-tight pr-4">${u.title}</h2>
-                    </div>
-                </div>
-                <button onclick="closeDrawer()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
-                    <i data-lucide="x"></i>
-                </button>
-            `;
-
-            // Tabs
-            const tabsHtml = `
-                <button onclick="switchTab('glance')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'glance' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">At a Glance</button>
-                <button onclick="switchTab('toolkit')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'toolkit' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">Language Toolkit</button>
-                <button onclick="switchTab('assess')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'assess' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">How We Assess</button>
-            `;
-
-            // Tab Content
-            let tabBody = '';
-            if (activeTab === 'glance') {
-                tabBody = `
-                    <div class="space-y-8 animate-fade-in">
-                        <div class="bg-gradient-to-br ${u.gradient} rounded-3xl p-8 text-white shadow-lg relative overflow-hidden">
-                            <div class="absolute -right-10 -bottom-10 opacity-20 transform -rotate-12">
-                                <i data-lucide="${u.icon}" style="width: 200px; height: 200px;"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-3 relative z-10 flex items-center gap-2">
-                                <i data-lucide="target" class="w-6 h-6"></i>
-                                ${currentView === 'student' ? 'The Challenge (Repte)' : 'Pedagogical Repte'}
-                            </h3>
-                            <p class="text-white/95 text-lg relative z-10 leading-relaxed">${viewData.repte}</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-bold mb-5 flex items-center gap-2 text-slate-900 dark:text-white">
-                                <i data-lucide="flag" class="text-blue-500"></i> ${currentView === 'student' ? 'Final Products' : 'Core Focus Tasks'}
-                            </h3>
-                            <div class="space-y-4">
-                                ${viewData.products ? viewData.products.map(p => `
-                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative group flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                                        <div>
-                                            <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">${p.type}</h4>
-                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
-                                        </div>
-                                        ${p.url && currentView === 'teacher' ? `
-                                            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50 transition-all shadow-sm border border-blue-100 dark:border-blue-800 font-medium text-sm">
-                                                <span>Open Task</span>
-                                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                                            </a>
-                                        ` : ''}
-                                    </div>
-                                `).join('') : ''}
-                                
-                                ${currentView === 'teacher' ? `
-                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
-                                        <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Teacher Pedagogical Focus</h4>
-                                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.methodology}</p>
-                                    </div>
-                                ` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (activeTab === 'toolkit') {
-                tabBody = `
-                    <div class="space-y-10 animate-fade-in">
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-900 dark:text-white">
-                                <i data-lucide="book-open" class="text-indigo-500"></i> Grammar Focus
-                            </h3>
-                            <div class="bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-900/30 rounded-2xl p-6">
-                                <p class="text-lg font-medium text-indigo-900 dark:text-indigo-200">${u.grammar}</p>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 flex items-center gap-2 text-slate-900 dark:text-white">
-                                <i data-lucide="message-circle" class="text-emerald-500"></i> Vocabulary Chips
-                            </h3>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-5">Click any chip to reveal its translation and an example.</p>
-                            
-                            <div class="flex flex-col gap-3">
-                                ${u.vocab.map(v => `
-                                    <div onclick="toggleVocab(this)" class="vocab-chip cursor-pointer select-none bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
-                                        <div class="flex justify-between items-center">
-                                            <span class="font-bold text-lg text-slate-800 dark:text-slate-200">${v.term}</span>
-                                            <i data-lucide="chevron-down" class="vocab-icon text-slate-400 transition-transform duration-300"></i>
-                                        </div>
-                                        <div class="text-sm mt-4 hidden vocab-details animate-fade-in border-t border-slate-100 dark:border-slate-800 pt-4">
-                                            <div class="flex items-start gap-2 mb-2">
-                                                <div class="mt-0.5 text-emerald-500"><i data-lucide="languages" class="w-4 h-4"></i></div>
-                                                <p class="text-emerald-700 dark:text-emerald-400 font-medium">${v.def}</p>
-                                            </div>
-                                            <div class="flex items-start gap-2">
-                                                <div class="mt-0.5 text-blue-500"><i data-lucide="quote" class="w-4 h-4"></i></div>
-                                                <p class="text-slate-600 dark:text-slate-300 italic">"${v.example}"</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (activeTab === 'assess') {
-                tabBody = `
-                    <div class="space-y-6 animate-fade-in">
-                        ${currentView === 'teacher' ? `
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="award" class="text-purple-500"></i> Competències Específiques
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.competencies}</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="bar-chart" class="text-blue-500"></i> Criteris d'Avaluació
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.assessment}</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="network" class="text-emerald-500"></i> Metodologia i DUA
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.methodology}</p>
-                            </div>
-                        ` : `
-                            <div class="bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-3xl p-8">
-                                <h3 class="text-2xl font-bold mb-3 text-blue-900 dark:text-blue-100 flex items-center gap-2">
-                                    <i data-lucide="clipboard-check" class="text-blue-500"></i> How you will be graded
-                                </h3>
-                                <p class="text-blue-800/80 dark:text-blue-200/80 mb-8 text-lg">Your teacher will look at how well you complete the final tasks. Focus on clarity, creativity, and using the target grammar and vocabulary from this unit.</p>
-                                
-                                <div class="space-y-4">
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl">AE</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Excellent achievement.</strong> Exceeds expectations and shows great creativity and accuracy.</div>
-                                    </div>
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 rounded-xl">AN</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Notable achievement.</strong> Completes tasks well with good use of the language tools.</div>
-                                    </div>
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 rounded-xl">AS</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Satisfactory achievement.</strong> Meets the basic requirements of the challenge.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        `}
-                    </div>
-                `;
-            }
-
-            drawerContainer.innerHTML = `
-                <div class="px-8 py-6 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-20">
-                    ${headerHtml}
-                </div>
-                <div class="flex border-b border-slate-200 dark:border-slate-800 px-8 space-x-8 overflow-x-auto no-scrollbar bg-white/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-[105px] z-10">
-                    ${tabsHtml}
-                </div>
-                <div class="flex-1 overflow-y-auto p-8 bg-slate-50/50 dark:bg-slate-950/50">
-                    ${tabBody}
-                </div>
-            `;
-            lucide.createIcons();
-        }
-
-        // Boot
-        window.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>
