@@ -61,6 +61,7 @@
             animation: fadeIn 0.3s ease-out forwards;
         }
     </style>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300 relative font-sans antialiased min-h-screen">
 
@@ -332,7 +333,48 @@
         }
 
         // Core Functions
+        
+        let isAuthenticatedTeacher = sessionStorage.getItem('teacherAuth') === 'true';
+
+        function handleCredentialResponse(response) {
+            try {
+                const payloadBase64 = response.credential.split('.')[1];
+                const payload = JSON.parse(atob(payloadBase64.replace(/-/g, '+').replace(/_/g, '/')));
+                
+                if (payload.email === 'eugenimonfort@iecomaruga.cat') {
+                    isAuthenticatedTeacher = true;
+                    sessionStorage.setItem('teacherAuth', 'true');
+                    closeGsiModal();
+                    performSetView('teacher');
+                } else {
+                    alert('Access Denied: Unauthorized email address.');
+                }
+            } catch(e) {
+                console.error('Error decoding JWT', e);
+            }
+        }
+
+        function closeGsiModal() {
+            const modal = document.getElementById('gsiModal');
+            if(modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        }
+
         function setView(view) {
+            if (view === 'teacher' && !isAuthenticatedTeacher) {
+                const modal = document.getElementById('gsiModal');
+                if(modal) {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }
+                return;
+            }
+            performSetView(view);
+        }
+
+        function performSetView(view) {
             if (currentView === view) return;
             currentView = view;
             updateToggleUI();
@@ -341,6 +383,7 @@
             if (selectedUnit) {
                 renderDrawerContent();
             }
+        }
         }
 
         function updateToggleUI() {
@@ -662,7 +705,7 @@
                                             <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">${p.type}</h4>
                                             <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
                                         </div>
-                                        ${p.url ? `
+                                        ${p.url && currentView === 'teacher' ? `
                                             <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50 transition-all shadow-sm border border-blue-100 dark:border-blue-800 font-medium text-sm">
                                                 <span>Open Task</span>
                                                 <i data-lucide="external-link" class="w-4 h-4"></i>
