@@ -87,8 +87,8 @@
                 student: {
                     repte: "Welcome back! Let's set our goals for the year, break the ice, and share our summer memories.",
                     products: [
-                        { type: "Written Task", desc: "A Summer Memory Writing: attach a picture from your holidays and write about it." },
-                        { type: "English Passport", desc: "Mark in the passport where you think your knowledge is located." }
+                        { type: "Written Task", desc: "A Summer Memory Writing: attach a picture from your holidays and write about it.", url: "https://classroom.google.com/h" },
+                        { type: "English Passport", desc: "Mark in the passport where you think your knowledge is located.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -116,9 +116,9 @@
                 student: {
                     repte: "Explore how advertising affects us and learn to describe personalities and shopping habits.",
                     products: [
-                        { type: "Written Task", desc: "Write a Customer Review evaluating a product or service." },
-                        { type: "Reading Task", desc: "Read 'The Rise of the Influencer' and answer the questions." },
-                        { type: "TOD & Speaking", desc: "Complete the Grammar review stations and discuss short spooky films." }
+                        { type: "Written Task", desc: "Write a Customer Review evaluating a product or service.", url: "https://classroom.google.com/h" },
+                        { type: "Reading Task", desc: "Read 'The Rise of the Influencer' and answer the questions.", url: "https://classroom.google.com/h" },
+                        { type: "TOD & Speaking", desc: "Complete the Grammar review stations and discuss short spooky films.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -146,9 +146,9 @@
                 student: {
                     repte: "Focus on your wellbeing! Learn about nutrition, design healthy routines, and express your opinions.",
                     products: [
-                        { type: "Written Task", desc: "Write an Opinion Essay about health and lifestyle." },
-                        { type: "TOD 2", desc: "Design a weekly meal plan focusing on nutrition and wellbeing." },
-                        { type: "Speaking Game", desc: "Play Boom!! / 1, 2, 3... Speak! to practice fluency." }
+                        { type: "Written Task", desc: "Write an Opinion Essay about health and lifestyle.", url: "https://classroom.google.com/h" },
+                        { type: "TOD 2", desc: "Design a weekly meal plan focusing on nutrition and wellbeing.", url: "https://classroom.google.com/h" },
+                        { type: "Speaking Game", desc: "Play Boom!! / 1, 2, 3... Speak! to practice fluency.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -176,9 +176,9 @@
                 student: {
                     repte: "Analyze current events, envision ideal societies, and plan your future education and career.",
                     products: [
-                        { type: "Written Task", desc: "Write a Report Practice based on a questionnaire." },
-                        { type: "Listening Task", desc: "Complete the Unit 3 Listening Test and practice." },
-                        { type: "TOD 3", desc: "Choose a Youtube video (challenge, tag, unboxing) and analyze it." }
+                        { type: "Written Task", desc: "Write a Report Practice based on a questionnaire.", url: "https://classroom.google.com/h" },
+                        { type: "Listening Task", desc: "Complete the Unit 3 Listening Test and practice.", url: "https://classroom.google.com/h" },
+                        { type: "TOD 3", desc: "Choose a Youtube video (challenge, tag, unboxing) and analyze it.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -205,9 +205,9 @@
                 student: {
                     repte: "Understand the power of reporting and protests, and explore the entertainment industry.",
                     products: [
-                        { type: "Listening Task", desc: "Listen to the opening scene of 'The Lord of the Rings' and fill in the gaps." },
-                        { type: "TOD 4", desc: "Complete the Conditionals Learning Stations." },
-                        { type: "Reading Task", desc: "Complete the Comp. Bàsiques Practice." }
+                        { type: "Listening Task", desc: "Listen to the opening scene of 'The Lord of the Rings' and fill in the gaps.", url: "https://classroom.google.com/h" },
+                        { type: "TOD 4", desc: "Complete the Conditionals Learning Stations.", url: "https://classroom.google.com/h" },
+                        { type: "Reading Task", desc: "Complete the Comp. Bàsiques Practice.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -234,8 +234,8 @@
                 student: {
                     repte: "Show everything you've learned this year! Prepare for your final exams and your oral presentation.",
                     products: [
-                        { type: "Oral Task", desc: "A One minute talk that counts as 10% of the final mark." },
-                        { type: "Proves Finals", desc: "Complete the Final Oral Comprehension and Reading Comprehension exams." }
+                        { type: "Oral Task", desc: "A One minute talk that counts as 10% of the final mark.", url: "https://classroom.google.com/h" },
+                        { type: "Proves Finals", desc: "Complete the Final Oral Comprehension and Reading Comprehension exams.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -657,9 +657,17 @@
                             </h3>
                             <div class="space-y-4">
                                 ${viewData.products ? viewData.products.map(p => `
-                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                        <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-2">${p.type}</h4>
-                                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
+                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative group flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">${p.type}</h4>
+                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
+                                        </div>
+                                        ${p.url ? `
+                                            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50 transition-all shadow-sm border border-blue-100 dark:border-blue-800 font-medium text-sm">
+                                                <span>Open Task</span>
+                                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                            </a>
+                                        ` : ''}
                                     </div>
                                 `).join('') : ''}
                                 

@@ -89,9 +89,9 @@
                 student: {
                     repte: "Explore what happiness means to you, talk about past experiences, and invent a spooky tale.",
                     products: [
-                        { type: "Written Task", desc: "Spooky Tales: Invent a horror story." },
-                        { type: "Speaking Task", desc: "Speaking about the past: share experiences." },
-                        { type: "TOD", desc: "Find Someone Who: Play the game speaking only in English." }
+                        { type: "Written Task", desc: "Spooky Tales: Invent a horror story.", url: "https://classroom.google.com/h" },
+                        { type: "Speaking Task", desc: "Speaking about the past: share experiences.", url: "https://classroom.google.com/h" },
+                        { type: "TOD", desc: "Find Someone Who: Play the game speaking only in English.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -119,9 +119,9 @@
                 student: {
                     repte: "Dive into the world of stories! Review your favourite films and create your own comic strip.",
                     products: [
-                        { type: "Speaking Task", desc: "My Favourite Film Presentation." },
-                        { type: "Creative Task", desc: "Comic strip creation." },
-                        { type: "Listening Task", desc: "Fantastic Beasts trailer listening." }
+                        { type: "Speaking Task", desc: "My Favourite Film Presentation.", url: "https://classroom.google.com/h" },
+                        { type: "Creative Task", desc: "Comic strip creation.", url: "https://classroom.google.com/h" },
+                        { type: "Listening Task", desc: "Fantastic Beasts trailer listening.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -149,9 +149,9 @@
                 student: {
                     repte: "Make choices, manage money, and embark on adventures while preparing for the holidays.",
                     products: [
-                        { type: "TOD Project", desc: "Create your own Board Game." },
-                        { type: "Challenge", desc: "30 Days Happiness Challenge." },
-                        { type: "Music Task", desc: "My Playlist: Create a 10 songs playlist." }
+                        { type: "TOD Project", desc: "Create your own Board Game.", url: "https://classroom.google.com/h" },
+                        { type: "Challenge", desc: "30 Days Happiness Challenge.", url: "https://classroom.google.com/h" },
+                        { type: "Music Task", desc: "My Playlist: Create a 10 songs playlist.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -179,9 +179,9 @@
                 student: {
                     repte: "Explore how we communicate in the modern world and learn to give advice using modals.",
                     products: [
-                        { type: "Listening Task", desc: "Movie Trailers: Listen and fill in the gaps." },
-                        { type: "Reading Task", desc: "Lost in translation! Read and answer." },
-                        { type: "TOD", desc: "Modal verbs review exercises." }
+                        { type: "Listening Task", desc: "Movie Trailers: Listen and fill in the gaps.", url: "https://classroom.google.com/h" },
+                        { type: "Reading Task", desc: "Lost in translation! Read and answer.", url: "https://classroom.google.com/h" },
+                        { type: "TOD", desc: "Modal verbs review exercises.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -209,9 +209,9 @@
                 student: {
                     repte: "Investigate crimes and learn about famous British and American writers.",
                     products: [
-                        { type: "Project", desc: "British and American writers - Biographical project." },
-                        { type: "Reading Task", desc: "A second chance: Read and complete the form." },
-                        { type: "Writing Task", desc: "Crime writing photocopy." }
+                        { type: "Project", desc: "British and American writers - Biographical project.", url: "https://classroom.google.com/h" },
+                        { type: "Reading Task", desc: "A second chance: Read and complete the form.", url: "https://classroom.google.com/h" },
+                        { type: "Writing Task", desc: "Crime writing photocopy.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -238,8 +238,8 @@
                 student: {
                     repte: "Show off your skills! Design a music festival and ace your final exams.",
                     products: [
-                        { type: "Creative Task", desc: "The Music Festival of your Dreams: Design a billboard." },
-                        { type: "Exams", desc: "Proves Finals: Reading and Listening Comprehension." }
+                        { type: "Creative Task", desc: "The Music Festival of your Dreams: Design a billboard.", url: "https://classroom.google.com/h" },
+                        { type: "Exams", desc: "Proves Finals: Reading and Listening Comprehension.", url: "https://classroom.google.com/h" }
                     ]
                 },
                 teacher: {
@@ -661,9 +661,17 @@
                             </h3>
                             <div class="space-y-4">
                                 ${viewData.products ? viewData.products.map(p => `
-                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                        <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-2">${p.type}</h4>
-                                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
+                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative group flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">${p.type}</h4>
+                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
+                                        </div>
+                                        ${p.url ? `
+                                            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-600 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50 transition-all shadow-sm border border-blue-100 dark:border-blue-800 font-medium text-sm">
+                                                <span>Open Task</span>
+                                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                            </a>
+                                        ` : ''}
                                     </div>
                                 `).join('') : ''}
                                 
