@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Hub - Portal</title>
+    <meta name="robots" content="noindex, nofollow">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="auth.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -24,19 +27,36 @@
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
-    <nav class="w-full p-6 flex justify-end">
+    <nav class="w-full p-6 flex justify-end items-center gap-3">
+        <button id="signOutBtn" onclick="hubSignOut()" class="hidden items-center gap-2 px-4 py-2.5 rounded-full bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all text-sm font-medium text-slate-600 dark:text-slate-300">
+            <i data-lucide="log-out" class="w-4 h-4"></i> <span id="signOutLabel">Sign out</span>
+        </button>
         <button onclick="toggleTheme()" class="p-3 rounded-full bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all text-slate-600 dark:text-slate-300">
             <i data-lucide="moon" id="themeIcon"></i>
         </button>
     </nav>
 
-    <main class="flex-1 flex flex-col items-center justify-center p-6 -mt-16">
+    <!-- Locked state: shown until an authorised account signs in -->
+    <div id="portalGate" class="flex-1 flex flex-col items-center justify-center p-6 -mt-16">
+        <div class="bg-white dark:bg-slate-900 p-10 rounded-[2rem] shadow-xl max-w-sm w-full text-center border border-slate-200 dark:border-slate-800">
+            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="lock" class="w-8 h-8"></i>
+            </div>
+            <h1 class="text-2xl font-bold mb-2">English Hub</h1>
+            <p class="text-slate-600 dark:text-slate-400 mb-7">This portal is private. Sign in with your authorised school account to continue.</p>
+            <div id="gsiButton" class="flex justify-center mb-4"></div>
+            <p id="hubAuthError" class="hidden text-sm text-rose-600 dark:text-rose-400 mt-2"></p>
+        </div>
+    </div>
+
+    <!-- Unlocked state -->
+    <main id="portalMain" class="hidden flex-1 flex-col items-center justify-center p-6 -mt-16">
         <div class="text-center mb-12">
             <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center text-white shadow-xl shadow-blue-500/20 mb-6 transform -rotate-6">
                 <i data-lucide="book-open" class="w-10 h-10"></i>
             </div>
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">English Hub</span></h1>
-            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg mx-auto">Select your class below to access your interactive syllabus, vocabulary tools, and final tasks.</p>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg mx-auto">Select a class below to open its interactive syllabus, vocabulary tools, and final tasks.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
@@ -77,8 +97,6 @@
     </footer>
 
     <script>
-        lucide.createIcons();
-
         let isDarkMode = false;
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             isDarkMode = true;
@@ -96,6 +114,37 @@
             }
             lucide.createIcons();
         }
+
+        function showPortal(email) {
+            const gate = document.getElementById('portalGate');
+            gate.classList.add('hidden');
+            gate.classList.remove('flex');
+
+            const portal = document.getElementById('portalMain');
+            portal.classList.remove('hidden');
+            portal.classList.add('flex');
+
+            const btn = document.getElementById('signOutBtn');
+            btn.classList.remove('hidden');
+            btn.classList.add('flex');
+            if (email) {
+                document.getElementById('signOutLabel').textContent = 'Sign out (' + email + ')';
+            }
+            lucide.createIcons();
+        }
+
+        // Called by auth.js once Google returns an authorised account.
+        window.onHubAuthSuccess = function (email) {
+            showPortal(email);
+        };
+
+        if (hubIsSignedIn()) {
+            showPortal(hubSignedInEmail());
+        } else {
+            hubRenderSignIn('gsiButton');
+        }
+
+        lucide.createIcons();
     </script>
 </body>
 </html>

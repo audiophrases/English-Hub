@@ -6,6 +6,8 @@
     <title>3rd ESO English Syllabus Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../auth.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -22,7 +24,7 @@
     <style>
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+
         /* Drawer transitions */
         .drawer-overlay {
             opacity: 0;
@@ -279,21 +281,18 @@
                             </div>
                             <h1 class="font-bold text-xl tracking-tight hidden sm:block">3rd ESO English</h1>
                         </div>
-                        
+
                         <div class="flex items-center gap-4 sm:gap-6">
 
-                            <a href="../index.html" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300 font-medium text-sm border border-slate-200 dark:border-slate-800 hidden sm:flex">
-                                <i data-lucide="home" class="w-4 h-4"></i> Home
-                            </a>
-                            <a href="../index.html" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 dark:text-slate-400 sm:hidden">
-                                <i data-lucide="home"></i>
-                            </a>
+                            <button id="signOutBtn" onclick="hubSignOut()" class="hidden items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300 font-medium text-sm border border-slate-200 dark:border-slate-800">
+                                <i data-lucide="log-out" class="w-4 h-4"></i> <span class="hidden sm:inline">Sign out</span>
+                            </button>
                             <div class="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-full relative shadow-inner border border-slate-200 dark:border-slate-800">
                                 <div id="togglePill" class="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white dark:bg-slate-800 rounded-full shadow transition-all duration-300 left-1 border border-slate-200 dark:border-slate-700"></div>
                                 <button id="btnStudent" onclick="setView('student')" class="relative z-10 px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors text-blue-600 dark:text-blue-400">Student</button>
                                 <button id="btnTeacher" onclick="setView('teacher')" class="relative z-10 px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors text-slate-500 dark:text-slate-400">Teacher</button>
                             </div>
-                            
+
                             <button id="themeIconBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 dark:text-slate-400">
                                 <i data-lucide="moon"></i>
                             </button>
@@ -303,13 +302,13 @@
 
                 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-12 pb-20">
                     <section id="roadmapSection"></section>
-                    
+
                     <section class="flex flex-col md:flex-row justify-between items-center gap-4">
                         <div class="relative w-full md:w-[28rem] group">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                 <i data-lucide="search" class="h-5 w-5 text-slate-400 group-focus-within:text-blue-500 transition-colors"></i>
                             </div>
-                            <input type="text" id="searchInput" placeholder="Search topics, grammar, vocabulary..." 
+                            <input type="text" id="searchInput" placeholder="Search topics, grammar, vocabulary..."
                                 class="block w-full pl-11 pr-4 py-3 border border-slate-200 dark:border-slate-800 rounded-2xl leading-5 bg-white dark:bg-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-all shadow-sm">
                         </div>
                     </section>
@@ -318,7 +317,7 @@
                     <section id="resourceSection"></section>
                 </main>
 
-                
+
                 <!-- Google Sign-In Modal -->
                 <div id="gsiModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/50 backdrop-blur-sm">
                     <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border border-slate-200 dark:border-slate-800">
@@ -326,13 +325,9 @@
                             <i data-lucide="lock" class="w-8 h-8"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Teacher Login Required</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6">Please sign in with your authorized Google account to access Teacher Mode.</p>
-                        <div id="g_id_onload"
-                             data-client_id="YOUR_GOOGLE_CLIENT_ID"
-                             data-callback="handleCredentialResponse"
-                             data-auto_prompt="false">
-                        </div>
-                        <div class="g_id_signin flex justify-center mb-4" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Please sign in with your authorised Google account to access Teacher Mode.</p>
+                        <div id="gsiButton" class="flex justify-center mb-4"></div>
+                        <p id="hubAuthError" class="hidden text-sm text-rose-600 dark:text-rose-400 mb-4"></p>
                         <button onclick="closeGsiModal()" class="text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Cancel</button>
                     </div>
                 </div>
@@ -361,35 +356,38 @@
         }
 
         // Core Functions
-        
-        let isAuthenticatedTeacher = sessionStorage.getItem('teacherAuth') === 'true';
 
-        
-        function verifyPin() {
-            const input = document.getElementById('pinInput');
-            const error = document.getElementById('pinError');
-            
-            // Set your PIN here!
-            if (input.value === '0000') {
-                isAuthenticatedTeacher = true;
-                sessionStorage.setItem('teacherAuth', 'true');
-                closeGsiModal();
-                performSetView('teacher');
-                input.value = '';
+        let isAuthenticatedTeacher = hubIsSignedIn();
+
+        // Called by auth.js once Google returns an authorised account.
+        window.onHubAuthSuccess = function () {
+            isAuthenticatedTeacher = true;
+            closeGsiModal();
+            performSetView('teacher');
+            updateToggleUI();
+        };
+
+        function openGsiModal() {
+            const modal = document.getElementById('gsiModal');
+            if (!modal) return;
+
+            const error = document.getElementById('hubAuthError');
+            if (error) {
+                error.textContent = '';
                 error.classList.add('hidden');
-            } else {
-                error.classList.remove('hidden');
-                input.value = '';
-                input.focus();
             }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Render only once the modal is visible - Google draws a 0px wide
+            // button into a container that is still display:none.
+            hubRenderSignIn('gsiButton');
         }
 
         function closeGsiModal() {
-            document.getElementById('pinInput').value = '';
-            document.getElementById('pinError').classList.add('hidden');
-    
             const modal = document.getElementById('gsiModal');
-            if(modal) {
+            if (modal) {
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
             }
@@ -397,11 +395,7 @@
 
         function setView(view) {
             if (view === 'teacher' && !isAuthenticatedTeacher) {
-                const modal = document.getElementById('gsiModal');
-                if(modal) {
-                    modal.classList.remove('hidden');
-                    modal.classList.add('flex');
-                }
+                openGsiModal();
                 return;
             }
             performSetView(view);
@@ -422,7 +416,7 @@
             const pill = document.getElementById('togglePill');
             const btnStudent = document.getElementById('btnStudent');
             const btnTeacher = document.getElementById('btnTeacher');
-            
+
             if (currentView === 'student') {
                 pill.classList.remove('left-[calc(50%+2px)]');
                 pill.classList.add('left-1');
@@ -438,7 +432,13 @@
                 btnStudent.classList.remove('text-blue-600', 'dark:text-blue-400');
                 btnStudent.classList.add('text-slate-500', 'dark:text-slate-400');
             }
-            
+
+            const signOutBtn = document.getElementById('signOutBtn');
+            if (signOutBtn) {
+                signOutBtn.classList.toggle('hidden', !isAuthenticatedTeacher);
+                signOutBtn.classList.toggle('flex', isAuthenticatedTeacher);
+            }
+
             // Also update theme icon just to be sure
             const themeIconContainer = document.getElementById('themeIconBtn');
             themeIconContainer.innerHTML = `<i data-lucide="${isDarkMode ? 'sun' : 'moon'}"></i>`;
@@ -473,7 +473,7 @@
                                 <div class="absolute top-16 w-32 text-center">
                                     <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">${u.shortTitle}</p>
                                 </div>
-                                
+
                                 <!-- Tooltip -->
                                 <div class="absolute -top-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-slate-800 dark:bg-slate-700 text-white text-xs rounded-lg py-1.5 px-3 whitespace-nowrap z-20 shadow-xl">
                                     ${i > 0 ? `Recycles Unit ${u.id-1}` : 'Starting Point'}
@@ -491,7 +491,7 @@
             const grid = document.getElementById('gridSection');
             const filteredUnits = units.filter(u => {
                 const query = searchQuery.toLowerCase();
-                return u.title.toLowerCase().includes(query) || 
+                return u.title.toLowerCase().includes(query) ||
                        u.grammar.toLowerCase().includes(query) ||
                        u.vocab.some(v => v.term.toLowerCase().includes(query));
             });
@@ -512,11 +512,11 @@
                     ${filteredUnits.map(u => {
                         const colors = themeClasses[u.theme];
                         const viewData = currentView === 'student' ? u.student : u.teacher;
-                        
+
                         return `
                         <div class="glass-card rounded-3xl p-6 cursor-pointer transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative overflow-hidden group border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/80" onclick="openDrawer(${u.id})">
                             <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-gradient-to-br ${u.gradient} opacity-10 group-hover:opacity-20 transition-opacity blur-2xl"></div>
-                            
+
                             <div class="flex items-center gap-4 mb-5 relative z-10">
                                 <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${u.gradient} text-white flex items-center justify-center shadow-md">
                                     <i data-lucide="${u.icon}"></i>
@@ -526,7 +526,7 @@
                                     <h3 class="text-lg font-bold leading-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">${u.title}</h3>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-4 relative z-10">
                                 <div class="bg-slate-50/50 dark:bg-slate-950/50 rounded-xl p-3 border border-slate-100 dark:border-slate-800">
                                     <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1 flex items-center gap-1.5">
@@ -534,7 +534,7 @@
                                     </p>
                                     <p class="text-sm font-medium line-clamp-2 text-slate-700 dark:text-slate-300">${viewData.repte}</p>
                                 </div>
-                                
+
                                 <div class="flex flex-wrap gap-2">
                                     <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold ${colors.bg} ${colors.text}">
                                         <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Grammar Focus
@@ -554,7 +554,7 @@
 
         function renderResourceCorner() {
             const section = document.getElementById('resourceSection');
-            
+
             let content = '';
             if (currentView === 'student') {
                 content = `
@@ -647,7 +647,7 @@
             selectedUnit = units.find(u => u.id === unitId);
             activeTab = 'glance';
             renderDrawerContent();
-            
+
             document.getElementById('drawerOverlay').classList.add('show');
             document.getElementById('drawerPanel').classList.add('show');
             document.getElementById('drawerContent').classList.remove('hidden');
@@ -686,7 +686,7 @@
             const u = selectedUnit;
             const drawerContainer = document.getElementById('drawerContent');
             const viewData = currentView === 'student' ? u.student : u.teacher;
-            
+
             // Header
             const headerHtml = `
                 <div class="flex items-center gap-4">
@@ -725,7 +725,7 @@
                             </h3>
                             <p class="text-white/95 text-lg relative z-10 leading-relaxed">${viewData.repte}</p>
                         </div>
-                        
+
                         <div>
                             <h3 class="text-xl font-bold mb-5 flex items-center gap-2 text-slate-900 dark:text-white">
                                 <i data-lucide="flag" class="text-blue-500"></i> ${currentView === 'student' ? 'Final Products' : 'Core Focus Tasks'}
@@ -745,7 +745,7 @@
                                         ` : ''}
                                     </div>
                                 `).join('') : ''}
-                                
+
                                 ${currentView === 'teacher' ? `
                                     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
                                         <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Teacher Pedagogical Focus</h4>
@@ -767,13 +767,13 @@
                                 <p class="text-lg font-medium text-indigo-900 dark:text-indigo-200">${u.grammar}</p>
                             </div>
                         </div>
-                        
+
                         <div>
                             <h3 class="text-xl font-bold mb-1 flex items-center gap-2 text-slate-900 dark:text-white">
                                 <i data-lucide="message-circle" class="text-emerald-500"></i> Vocabulary Chips
                             </h3>
                             <p class="text-sm text-slate-500 dark:text-slate-400 mb-5">Click any chip to reveal its translation and an example.</p>
-                            
+
                             <div class="flex flex-col gap-3">
                                 ${u.vocab.map(v => `
                                     <div onclick="toggleVocab(this)" class="vocab-chip cursor-pointer select-none bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
@@ -825,7 +825,7 @@
                                     <i data-lucide="clipboard-check" class="text-blue-500"></i> How you will be graded
                                 </h3>
                                 <p class="text-blue-800/80 dark:text-blue-200/80 mb-8 text-lg">Your teacher will look at how well you complete the final tasks. Focus on clarity, creativity, and using the target grammar and vocabulary from this unit.</p>
-                                
+
                                 <div class="space-y-4">
                                     <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
                                         <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl">AE</div>
