@@ -173,6 +173,15 @@ function hubProductRow(entry) {
         + '</div>';
 }
 
+function hubGrammarPointRow(entry) {
+    const g = entry || { id: '', label: '' };
+    return '<div data-row="grammarPoint" class="flex gap-2 items-start">'
+        + '<input type="text" data-field="id" value="' + hubEsc(g.id) + '" placeholder="COND2_B1_01" class="' + HUB_INPUT_CLASS + ' flex-1 font-mono">'
+        + '<input type="text" data-field="label" value="' + hubEsc(g.label) + '" placeholder="Second conditional" class="' + HUB_INPUT_CLASS + ' flex-[2]">'
+        + hubRowButton('remove-row', 'trash-2', 'Remove this grammar point')
+        + '</div>';
+}
+
 function hubSectionHead(title, note) {
     return '<h4 class="text-sm font-bold text-slate-900 dark:text-white">' + hubEsc(title)
         + (note ? ' <span class="font-normal text-slate-400">' + hubEsc(note) + '</span>' : '') + '</h4>';
@@ -189,6 +198,7 @@ function hubEditorMarkup(unit) {
     const teacher = unit.teacher || {};
     const vocab = unit.vocab || [];
     const products = student.products || [];
+    const grammarPoints = unit.grammarPoints || [];
 
     return [
         '<div class="fixed inset-0 z-[110] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">',
@@ -230,6 +240,14 @@ function hubEditorMarkup(unit) {
         vocab.map(hubVocabRow).join(''),
         '</div>',
         hubAddButton('add-vocab', 'Add a word'),
+        '</div>',
+
+        '<div class="space-y-3">',
+        hubSectionHead('Grammar points', '(ids from the ESL Grammar Studio sheet)'),
+        '<div data-list="grammarPoints" class="space-y-2">',
+        grammarPoints.map(hubGrammarPointRow).join(''),
+        '</div>',
+        hubAddButton('add-grammar', 'Add a grammar point'),
         '</div>',
 
         '<div class="space-y-4 p-5 rounded-2xl bg-blue-50/60 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30">',
@@ -323,6 +341,7 @@ function hubReadForm(root, original) {
     updated.grammar = value('grammar');
     updated.icon = value('icon');
     updated.vocab = hubReadRows(root, 'vocab', ['term', 'def', 'example']);
+    updated.grammarPoints = hubReadRows(root, 'grammarPoints', ['id', 'label']);
 
     updated.student = Object.assign({}, original.student, {
         repte: value('student.repte'),
@@ -417,9 +436,13 @@ function hubEditUnit(unitId) {
         if (action === 'close') hubEditorClose();
         else if (action === 'save') hubEditorSave();
         else if (action === 'remove-row') { button.closest('[data-row]').remove(); }
-        else if (action === 'add-vocab' || action === 'add-product') {
-            const list = root.querySelector('[data-list="' + (action === 'add-vocab' ? 'vocab' : 'products') + '"]');
-            list.insertAdjacentHTML('beforeend', action === 'add-vocab' ? hubVocabRow() : hubProductRow());
+        else if (action === 'add-vocab' || action === 'add-product' || action === 'add-grammar') {
+            const listName = action === 'add-vocab' ? 'vocab'
+                : action === 'add-product' ? 'products' : 'grammarPoints';
+            const rowHtml = action === 'add-vocab' ? hubVocabRow()
+                : action === 'add-product' ? hubProductRow() : hubGrammarPointRow();
+            const list = root.querySelector('[data-list="' + listName + '"]');
+            list.insertAdjacentHTML('beforeend', rowHtml);
             if (window.lucide) lucide.createIcons();
             const added = list.lastElementChild.querySelector('input');
             if (added) added.focus();

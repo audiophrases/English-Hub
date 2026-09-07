@@ -6,84 +6,37 @@
     "theme": "amber",
     "gradient": "from-amber-400 to-orange-500",
     "icon": "briefcase",
-    "grammar": "Will, going to, future continuous, and future perfect",
+    "grammar": "Will, going to, future continuous and future perfect",
+    "grammarPoints": [
+      { "id": "FUTURE_REVIEW_B1_01", "label": "Future forms (review & choice)" },
+      { "id": "FUT_WILL_A2_01", "label": "Will: predictions, offers, decisions" },
+      { "id": "FUT_CONT_B2_01", "label": "Future Continuous" },
+      { "id": "FUT_PERF_B2_01", "label": "Future Perfect" }
+    ],
     "vocab": [
-      {
-        "term": "degree",
-        "def": "grau",
-        "example": "I want to get a university degree."
-      },
-      {
-        "term": "internship",
-        "def": "pràctiques",
-        "example": "She is doing a summer internship."
-      },
-      {
-        "term": "scholarship",
-        "def": "beca",
-        "example": "He won a scholarship to study abroad."
-      },
-      {
-        "term": "university",
-        "def": "universitat",
-        "example": "Which university do you want to attend?"
-      },
-      {
-        "term": "job application",
-        "def": "sol·licitud de feina",
-        "example": "I sent my job application yesterday."
-      },
-      {
-        "term": "career path",
-        "def": "trajectòria professional",
-        "example": "She chose a career path in science."
-      },
-      {
-        "term": "skills",
-        "def": "habilitats",
-        "example": "Communication is an important skill."
-      },
-      {
-        "term": "qualifications",
-        "def": "titulacions",
-        "example": "Do you have the right qualifications?"
-      },
-      {
-        "term": "profession",
-        "def": "professió",
-        "example": "Teaching is a noble profession."
-      },
-      {
-        "term": "long-term goal",
-        "def": "objectiu a llarg termini",
-        "example": "My long-term goal is to become a doctor."
-      },
-      {
-        "term": "career advancement",
-        "def": "promoció professional",
-        "example": "There are many opportunities for career advancement."
-      }
+      { "term": "degree", "def": "grau", "example": "I want to get a university degree." },
+      { "term": "internship", "def": "pràctiques", "example": "She is doing a summer internship." },
+      { "term": "scholarship", "def": "beca", "example": "He won a scholarship to study abroad." },
+      { "term": "job application", "def": "sol·licitud de feina", "example": "I sent my job application yesterday." },
+      { "term": "career path", "def": "trajectòria professional", "example": "She chose a career path in science." },
+      { "term": "skills", "def": "habilitats", "example": "Communication is an important skill." },
+      { "term": "qualifications", "def": "titulacions", "example": "Do you have the right qualifications?" },
+      { "term": "long-term goal", "def": "objectiu a llarg termini", "example": "My long-term goal is to become a doctor." },
+      { "term": "vocational training", "def": "formació professional", "example": "Vocational training is a serious option after ESO." }
     ],
     "student": {
       "repte": "Plan your future! Think about what you want to study and what career you want to pursue.",
       "products": [
-        {
-          "type": "Written Task",
-          "desc": "A 150-word text outlining future study/career plans, integrating at least three future tenses and course vocabulary.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Oral Presentation",
-          "desc": "A 2-3 minute presentation detailing personal future career interests and how they plan to achieve their goals.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Written Task", "desc": "A 150-word text outlining your future study or career plans, using future tenses correctly. You choose the text type: formal email, short essay, job application or informal email.", "url": "https://classroom.google.com/h" },
+        { "type": "Oral Presentation", "desc": "A 2-3 minute individual presentation on a profession you find interesting: what the job involves, the skills it needs, and how you would get there.", "url": "https://classroom.google.com/h" },
+        { "type": "Vocabulary Practice with AI", "desc": "Use a chatbot to drill the vocabulary of your own chosen field, then bring the terms you learned back to class.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
       "repte": "Students explore future educational and professional trajectories, developing vocabulary and structures to express hypotheses and plans.",
       "competencies": "Competència Específica 3 (Oral) and 5 (Written).",
-      "methodology": "Task-Based Learning (TBL), Collaborative Learning, Inquiry-Based Learning (career research), Self-Regulation & Peer Evaluation.",
-      "assessment": "5.1 (Clarity, coherence, and original content without plagiarism)."
+      "methodology": "Task-Based Learning, collaborative learning, inquiry-based career research, self-regulation and peer evaluation. Letting students choose the text type makes register a deliberate decision rather than a given.",
+      "assessment": "Clarity, coherence and original content; accurate range of future forms; ability to sustain a 2-3 minute talk on a self-chosen topic."
     }
   },
   {
@@ -93,69 +46,38 @@
     "theme": "blue",
     "gradient": "from-blue-400 to-indigo-500",
     "icon": "globe",
-    "grammar": "Zero, first, second, third, and mixed conditionals",
+    "grammar": "Zero, first, second, third and mixed conditionals",
+    "grammarPoints": [
+      { "id": "COND0_B1_01", "label": "Zero conditional" },
+      { "id": "COND1_B1_01", "label": "First conditional" },
+      { "id": "COND2_B1_01", "label": "Second conditional" },
+      { "id": "COND3_B2_01", "label": "Third conditional" },
+      { "id": "COND_MIX_B2_01", "label": "Mixed conditionals" }
+    ],
     "vocab": [
-      {
-        "term": "migration challenges",
-        "def": "reptes de la migració",
-        "example": "Language is one of the main migration challenges."
-      },
-      {
-        "term": "misconceptions",
-        "def": "idees errònies",
-        "example": "There are many misconceptions about immigrants."
-      },
-      {
-        "term": "racism",
-        "def": "racisme",
-        "example": "We must fight against racism."
-      },
-      {
-        "term": "classism",
-        "def": "classisme",
-        "example": "Classism creates social divides."
-      },
-      {
-        "term": "political trends",
-        "def": "tendències polítiques",
-        "example": "Current political trends affect migration laws."
-      },
-      {
-        "term": "cultural clashes",
-        "def": "xocs culturals",
-        "example": "Cultural clashes can happen when adjusting to a new country."
-      },
-      {
-        "term": "reasons",
-        "def": "motius",
-        "example": "People migrate for many different reasons."
-      },
-      {
-        "term": "emotions of leaving",
-        "def": "emocions de marxar",
-        "example": "The emotions of leaving home are complex."
-      }
+      { "term": "migration challenges", "def": "reptes de la migració", "example": "Language is one of the main migration challenges." },
+      { "term": "misconceptions", "def": "idees errònies", "example": "There are many misconceptions about immigrants." },
+      { "term": "racism", "def": "racisme", "example": "We must fight against racism." },
+      { "term": "classism", "def": "classisme", "example": "Classism creates social divides." },
+      { "term": "cultural clashes", "def": "xocs culturals", "example": "Cultural clashes can happen when adjusting to a new country." },
+      { "term": "reasons", "def": "motius", "example": "People migrate for many different reasons." },
+      { "term": "emotions of leaving", "def": "emocions de marxar", "example": "The emotions of leaving home are complex." },
+      { "term": "asylum", "def": "asil", "example": "They applied for asylum when they arrived." },
+      { "term": "to settle in", "def": "establir-se", "example": "It took them two years to settle in." }
     ],
     "student": {
       "repte": "Step into someone else's shoes. Understand the journey, challenges, and emotions of migration.",
       "products": [
-        {
-          "type": "Skit (Groups of 3-4)",
-          "desc": "A creative, three-scene theatrical script and performance: 'Before Leaving', 'Once in the New Country', and 'Resolution'. Must feature all conditional types and a narrator.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Reflective Debate",
-          "desc": "Post-performance class discussion on the moral and hidden social messages of the skits.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Skit (Groups of 3-4)", "desc": "A three-scene script and performance: 'Before Leaving', 'Once in the New Country' and 'Resolution'. Assign characters, feature all conditional types, and end with a moral and a debate.", "url": "https://classroom.google.com/h" },
+        { "type": "Migration News Story", "desc": "Find a real news story about immigration, simplify it to roughly two paragraphs, list the difficult words, and write one comprehension question and one opinion question using a conditional.", "url": "https://classroom.google.com/h" },
+        { "type": "Reflective Debate", "desc": "Post-performance class discussion on the moral and hidden social messages of the skits.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
       "repte": "Develop empathy and social awareness regarding global migration through role-play and debate, utilizing complex conditional structures.",
       "competencies": "Ciutadana (CC1 - social identity & empathy), Llengua Estrangera 3 & 5.",
-      "methodology": "Cooperative learning, dramatic role-play, empathy-focused moral discussions.",
-      "assessment": "Observation of empathy, accurate use of conditionals, oral fluency in debate."
+      "methodology": "Cooperative learning, dramatic role-play, empathy-focused moral discussions. Anchoring the unit in a real news story keeps an abstract topic concrete and current.",
+      "assessment": "Observation of empathy, accurate use of the full conditional range, oral fluency in debate, quality of the questions written about the news story."
     }
   },
   {
@@ -165,54 +87,36 @@
     "theme": "emerald",
     "gradient": "from-emerald-400 to-teal-500",
     "icon": "heart-pulse",
-    "grammar": "Modals for giving advice and expressing necessity (should, could, must)",
+    "grammar": "Modals for giving advice and expressing necessity and possibility",
+    "grammarPoints": [
+      { "id": "MOD_SHOULD_A2_01", "label": "Should (advice)" },
+      { "id": "MOD_MUST_A2_01", "label": "Must / mustn't (rules)" },
+      { "id": "MOD_HAVE_TO_A2_01", "label": "Have to / don't have to" },
+      { "id": "MOD_MAY_MIGHT_B1_01", "label": "May / might (possibility)" }
+    ],
     "vocab": [
-      {
-        "term": "Food",
-        "def": "menjar",
-        "example": "Healthy food gives you energy."
-      },
-      {
-        "term": "nutrition",
-        "def": "nutrició",
-        "example": "Good nutrition is essential for growth."
-      },
-      {
-        "term": "lifestyle habits",
-        "def": "hàbits de vida",
-        "example": "Sleeping 8 hours is a good lifestyle habit."
-      },
-      {
-        "term": "mental health",
-        "def": "salut mental",
-        "example": "Take care of your mental health as well as your body."
-      },
-      {
-        "term": "exercise",
-        "def": "exercici",
-        "example": "Regular exercise makes you stronger."
-      }
+      { "term": "nutrition", "def": "nutrició", "example": "Good nutrition is essential for growth." },
+      { "term": "lifestyle habits", "def": "hàbits de vida", "example": "Sleeping 8 hours is a good lifestyle habit." },
+      { "term": "mental health", "def": "salut mental", "example": "Take care of your mental health as well as your body." },
+      { "term": "exercise", "def": "exercici", "example": "Regular exercise makes you stronger." },
+      { "term": "digital detox", "def": "desintoxicació digital", "example": "A digital detox might improve your sleep." },
+      { "term": "reliable source", "def": "font fiable", "example": "Always check that a health claim comes from a reliable source." },
+      { "term": "misinformation", "def": "desinformació", "example": "Health misinformation spreads quickly online." },
+      { "term": "balanced diet", "def": "dieta equilibrada", "example": "A balanced diet is not the same as eating less." }
     ],
     "student": {
-      "repte": "Become a wellness expert! Create guides and give advice on how to live a healthier physical and mental life.",
+      "repte": "Become a wellness expert! Build a guide people actually want to read — and make sure every word of it is true.",
       "products": [
-        {
-          "type": "Interactive Wellness Guide",
-          "desc": "A single digital slide deck or infographic built around a main 'How to...?' question and three sub-questions. Modal-based advice is dynamically hidden and revealed.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Role-Play Recording",
-          "desc": "A doctor-patient or coach-athlete spoken diagnostic scenario recorded for peer feedback.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Health & Well-being Guide", "desc": "Narrow 'health' down to a specific niche (teen mental health, the science of sleep, digital detox...). Structure it with Question Titles the reader needs answered — 'Why am I always tired in the morning?' — never headers like 'Introduction' or 'Tips'. Use modal verbs inside every section to give advice.", "url": "https://classroom.google.com/h" },
+        { "type": "The Truth Test", "desc": "Before including any fact, prove the source is credible: a medical institution, a government health site or a peer-reviewed paper. Health is sensitive — you must not spread misinformation.", "url": "https://classroom.google.com/h" },
+        { "type": "Role-Play Recording", "desc": "A doctor-patient or coach-athlete spoken diagnostic scenario recorded for peer feedback.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Promote healthy habits and metacognitive reflection on personal well-being, practicing modals of advice.",
+      "repte": "Promote healthy habits and metacognitive reflection on personal well-being, practicing modals of advice. The Question Title rule forces the modals to do real communicative work instead of sitting in an exercise.",
       "competencies": "Personal, social i d’aprendre a aprendre (CPSAA 5 - metacognition & habit improvement), Digital (CD1).",
-      "methodology": "Project-based learning (infographics), peer-feedback loops, scenario-based role-play.",
-      "assessment": "Accuracy of modals, visual communication (digital competence), spoken fluency."
+      "methodology": "Project-based learning, peer-feedback loops, scenario-based role-play, explicit source-evaluation step.",
+      "assessment": "Accuracy and range of modals, credibility of the sources cited, visual communication, spoken fluency."
     }
   },
   {
@@ -222,49 +126,36 @@
     "theme": "rose",
     "gradient": "from-rose-400 to-pink-500",
     "icon": "milestone",
-    "grammar": "Reported speech (tense backshifting) and reporting verbs (promised, refused, suggested)",
+    "grammar": "Reported speech, tense backshifting and reporting verbs",
+    "grammarPoints": [
+      { "id": "REPORTED_B1_01", "label": "Reported speech: statements" },
+      { "id": "REPORTED_B1_02", "label": "Reported speech: questions" },
+      { "id": "REPORTED_ADV_B2_01", "label": "Reporting verbs" },
+      { "id": "REPORTED_PERF_B2_01", "label": "Backshift exceptions & time words" }
+    ],
     "vocab": [
-      {
-        "term": "Life paths",
-        "def": "camins de la vida",
-        "example": "Everyone has different life paths."
-      },
-      {
-        "term": "personal challenges",
-        "def": "reptes personals",
-        "example": "Overcoming personal challenges makes you resilient."
-      },
-      {
-        "term": "achievements",
-        "def": "assoliments",
-        "example": "Graduating was one of her greatest achievements."
-      },
-      {
-        "term": "biographical timeline terms",
-        "def": "termes de línia de temps",
-        "example": "Phrases like 'afterwards' and 'prior to'."
-      }
+      { "term": "life path", "def": "camí de la vida", "example": "Everyone has a different life path." },
+      { "term": "personal challenges", "def": "reptes personals", "example": "Overcoming personal challenges makes you resilient." },
+      { "term": "achievements", "def": "assoliments", "example": "Graduating was one of her greatest achievements." },
+      { "term": "turning point", "def": "punt d'inflexió", "example": "Moving abroad was the turning point in his career." },
+      { "term": "to claim", "def": "afirmar", "example": "She claimed that the job had changed her completely." },
+      { "term": "to admit", "def": "admetre", "example": "He admitted he had been wrong." },
+      { "term": "to deny", "def": "negar", "example": "They denied knowing anything about it." },
+      { "term": "headline", "def": "titular", "example": "Write a headline for your sixty-second news pitch." }
     ],
     "student": {
-      "repte": "Discover inspiring stories around you. Interview someone whose life path inspires you and share their journey.",
+      "repte": "Discover inspiring stories around you. Interview someone whose life path inspires you and report their story back to the class.",
       "products": [
-        {
-          "type": "Visual-Only Oral Profile",
-          "desc": "A short, engaging presentation supported exclusively by images. Students tell the interviewee's story and reflect on how it inspires them.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Syllabus Appendix",
-          "desc": "A side-by-side list comparing direct interview questions with their reported speech transformations.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Visual-Only Oral Profile", "desc": "A short presentation supported exclusively by images. Tell the interviewee's story and reflect on how it inspires you — no text on the slides.", "url": "https://classroom.google.com/h" },
+        { "type": "Interview + Reported Speech Appendix", "desc": "Choose someone accessible, write your questions first in direct speech, convert them into reported speech, then conduct the interview. Submit both columns side by side.", "url": "https://classroom.google.com/h" },
+        { "type": "The 60-Second News Pitch", "desc": "Turn one story from your interview into a sixty-second spoken news item, reporting what was said rather than quoting it.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
       "repte": "Practice narrative reporting and descriptive skills by synthesizing and relaying real-life inspirational interviews.",
       "competencies": "Emprenedora (CE2 - evaluating personal strengths), Llengua Estrangera 3 & 5.",
-      "methodology": "Interview-based inquiry, narrative storytelling, visual presentation techniques.",
-      "assessment": "Correct application of reported speech backshifting, oral presentation skills without text reliance."
+      "methodology": "Interview-based inquiry, narrative storytelling, visual presentation techniques. The news pitch compresses the same material into a timed oral format.",
+      "assessment": "Correct application of reported speech backshifting and reporting verbs, oral presentation skills without text reliance."
     }
   },
   {
@@ -274,49 +165,35 @@
     "theme": "purple",
     "gradient": "from-purple-400 to-violet-500",
     "icon": "user-check",
-    "grammar": "Question formation (yes/no, wh- questions, formal indirect questions), professional register",
+    "grammar": "Question formation, indirect polite questions and professional register",
+    "grammarPoints": [
+      { "id": "QUEST_INDIRECT_B1_01", "label": "Indirect questions (core)" },
+      { "id": "WHQ_A1_01", "label": "WH- questions" },
+      { "id": "TAGQ_B1_01", "label": "Question tags" }
+    ],
     "vocab": [
-      {
-        "term": "Job advertisements",
-        "def": "ofertes de feina",
-        "example": "I saw several job advertisements online."
-      },
-      {
-        "term": "professional cover letters",
-        "def": "cartes de presentació",
-        "example": "A good professional cover letter is essential."
-      },
-      {
-        "term": "CV conventions",
-        "def": "convencions de currículum",
-        "example": "Follow standard CV conventions."
-      },
-      {
-        "term": "action verbs",
-        "def": "verbs d'acció",
-        "example": "Use action verbs like 'managed' or 'created' in your CV."
-      }
+      { "term": "job advertisement", "def": "oferta de feina", "example": "I saw several job advertisements online." },
+      { "term": "cover letter", "def": "carta de presentació", "example": "A good cover letter is essential." },
+      { "term": "CV", "def": "currículum", "example": "Follow standard CV conventions." },
+      { "term": "action verbs", "def": "verbs d'acció", "example": "Use action verbs like 'managed' or 'created' in your CV." },
+      { "term": "duties", "def": "tasques, funcions", "example": "The advert lists the main duties of the post." },
+      { "term": "compensation", "def": "remuneració", "example": "The compensation includes a bonus structure." },
+      { "term": "candidate", "def": "candidat/a", "example": "We interviewed six candidates." },
+      { "term": "to hire", "def": "contractar", "example": "They decided to hire her after the second interview." }
     ],
     "student": {
-      "repte": "Get ready for the real world! Create your professional profile and experience a real-life job interview simulation.",
+      "repte": "Get ready for the real world! Build the job market first, then apply to it and survive the interview.",
       "products": [
-        {
-          "type": "Job Application Pack",
-          "desc": "An individual applicant portfolio consisting of one modern CV and one tailored, formal cover letter.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Mock Interview Simulation",
-          "desc": "Collaborative simulation where student recruiters conduct and audio-record formal interviews with candidates.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Project 1/2 — Job Offer", "desc": "Publish a job offer as a PDF. Include the company description; the job title, department, duties and reporting manager; base salary or hourly rate, pay frequency and any bonus; and the start logistics.", "url": "https://classroom.google.com/h" },
+        { "type": "Project 2/2 — CV and Cover Letter", "desc": "Choose two of your classmates' job offers and apply: one modern CV plus a cover letter tailored to each post.", "url": "https://classroom.google.com/h" },
+        { "type": "Recorded Mock Interview", "desc": "Recruiters interview the candidates and record it. Rehearse pronunciation and intonation first — polite indirect questions throughout.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
       "repte": "Simulate a professional recruitment cycle focusing on formal register, direct questioning, and active listening.",
       "competencies": "Llengua Estrangera 3.4 (discourse strategies, turn-taking, managing communication challenges).",
-      "methodology": "Simulation/Role-play, peer recruitment, formal writing practice.",
-      "assessment": "Formality of register, accuracy in question formation, interaction strategies."
+      "methodology": "Simulation and role-play, peer recruitment, formal writing practice. Splitting the project into a numbered two-part sequence means the class writes the job market before applying to it, so every application has a real counterpart.",
+      "assessment": "Formality of register, accuracy in question formation, completeness of the job-offer specification, interaction strategies under pressure."
     }
   },
   {
@@ -326,58 +203,35 @@
     "theme": "slate",
     "gradient": "from-slate-700 to-slate-900",
     "icon": "search-code",
-    "grammar": "Defining and non-defining relative clauses (who, which, that, where, whose)",
+    "grammar": "Defining and non-defining relative clauses",
+    "grammarPoints": [
+      { "id": "REL_DEF_A2_01", "label": "Defining relative clauses" },
+      { "id": "REL_NONDEF_B1_01", "label": "Non-defining relative clauses" },
+      { "id": "REL_ADV_B1_01", "label": "whose / where / when" },
+      { "id": "REL_REDUCED_B2_01", "label": "Reduced relatives" }
+    ],
     "vocab": [
-      {
-        "term": "Deductive reasoning",
-        "def": "raonament deductiu",
-        "example": "Detectives use deductive reasoning to solve cases."
-      },
-      {
-        "term": "crime scene terms",
-        "def": "termes de l'escena del crim",
-        "example": "The area was secured with crime scene tape."
-      },
-      {
-        "term": "clues",
-        "def": "pistes",
-        "example": "They found several clues in the room."
-      },
-      {
-        "term": "evidence",
-        "def": "proves",
-        "example": "The fingerprints are crucial evidence."
-      },
-      {
-        "term": "suspect profiles",
-        "def": "perfils de sospitosos",
-        "example": "They created suspect profiles based on the testimonies."
-      }
+      { "term": "deductive reasoning", "def": "raonament deductiu", "example": "Detectives use deductive reasoning to solve cases." },
+      { "term": "crime scene", "def": "escena del crim", "example": "The area was secured with crime scene tape." },
+      { "term": "clues", "def": "pistes", "example": "They found several clues in the room." },
+      { "term": "evidence", "def": "proves", "example": "The fingerprints are crucial evidence." },
+      { "term": "suspect profile", "def": "perfil del sospitós", "example": "They created suspect profiles based on the testimonies." },
+      { "term": "alibi", "def": "coartada", "example": "The suspect whose alibi failed became the prime suspect." },
+      { "term": "witness", "def": "testimoni", "example": "The witness who saw the car came forward." },
+      { "term": "motive", "def": "mòbil", "example": "Nobody could establish a motive." }
     ],
     "student": {
       "repte": "Become a detective! Invent a crime mystery and challenge your classmates to solve it using clues.",
       "products": [
-        {
-          "type": "Digital Clue Board",
-          "desc": "A single presentation slide displaying twelve picture-only clues with absolutely no text.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Confidential Written Solution",
-          "desc": "A short narrative connecting all clues using accurate relative clauses and identifying the culprit.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "CSI Live Presentation",
-          "desc": "An interactive classroom round where the team projects their clue board and fields classmates' questions.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Digital Clue Board", "desc": "A single presentation slide displaying twelve picture-only clues with absolutely no text.", "url": "https://classroom.google.com/h" },
+        { "type": "Confidential Written Solution", "desc": "A short narrative connecting all clues using accurate relative clauses and identifying the culprit.", "url": "https://classroom.google.com/h" },
+        { "type": "CSI Live Presentation", "desc": "An interactive classroom round where the team projects their clue board and fields classmates' questions.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Consolidate the year's grammar (questions, reported speech, modals) through a capstone deductive reasoning project.",
+      "repte": "Consolidate the year's grammar (questions, reported speech, modals) through a capstone deductive reasoning project. NOTE: delivered in full in 2024-25, but not reached in 2025-26 — the year ended on unit 5.",
       "competencies": "Llengua Estrangera 3 (interaction), 5 (multimodal production), Digital (CD1).",
-      "methodology": "Gamification, problem-based learning (PBL), multimodal presentation.",
+      "methodology": "Gamification, problem-based learning, multimodal presentation.",
       "assessment": "Mastery of relative clauses, ability to field unscripted questions, narrative cohesion."
     }
   }

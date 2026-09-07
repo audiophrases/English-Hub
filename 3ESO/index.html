@@ -89,7 +89,7 @@
         let isDarkMode = false;
         let searchQuery = '';
         let selectedUnit = null;
-        let activeTab = 'glance'; // 'glance' | 'toolkit' | 'assess'
+        let activeTab = 'glance'; // 'glance' | 'toolkit' | 'grammar'
 
         // Initialization
         function initApp() {
@@ -486,6 +486,120 @@
             }, 400); // match transition duration
         }
 
+        // ---- Grammar Studio -------------------------------------------------
+        // Explanations and examples come live from the same published sheet that
+        // powers https://audiophrases.github.io/grammar/, so there is one source
+        // of truth. units.json only stores the point ids and a fallback label.
+        const GRAMMAR_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQVRtxu8NCcv04qR_5yNY-lUaUqkzLTKouAoDI5vgh31AX6VRKxmjsMr9wgzDAvg_Qht3kCKE8VOUvU/pub?gid=253795148&single=true&output=csv';
+        const GRAMMAR_APP_URL = 'https://audiophrases.github.io/grammar/';
+
+        let hubGrammarCache = null;
+
+        function hubGrammarData() {
+            if (!hubGrammarCache) {
+                hubGrammarCache = fetch(GRAMMAR_CSV_URL)
+                    .then(function (r) {
+                        if (!r.ok) throw new Error('HTTP ' + r.status);
+                        return r.text();
+                    })
+                    .then(hubParseCsv)
+                    .catch(function (err) {
+                        hubGrammarCache = null;   // let a later open retry
+                        throw err;
+                    });
+            }
+            return hubGrammarCache;
+        }
+
+        // Quoted fields may contain commas and newlines, so parse character by
+        // character rather than splitting on delimiters.
+        function hubParseCsv(text) {
+            const rows = [];
+            let row = [], field = '', quoted = false;
+            for (let i = 0; i < text.length; i++) {
+                const c = text[i];
+                if (quoted) {
+                    if (c === '"') {
+                        if (text[i + 1] === '"') { field += '"'; i++; }
+                        else quoted = false;
+                    } else field += c;
+                } else if (c === '"') quoted = true;
+                else if (c === ',') { row.push(field); field = ''; }
+                else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+                else if (c !== '\r') field += c;
+            }
+            if (field !== '' || row.length) { row.push(field); rows.push(row); }
+            const head = (rows.shift() || []).map(function (h) { return h.trim(); });
+            return rows.filter(function (r) { return r.length > 1; }).map(function (r) {
+                const o = {};
+                head.forEach(function (h, i) { o[h] = (r[i] || '').trim(); });
+                return o;
+            });
+        }
+
+        function hubEscapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function hubGrammarBlock(label, value, tone) {
+            if (!value) return '';
+            return '<div><p class="text-xs font-semibold uppercase tracking-wider ' + tone + ' mb-1">'
+                + label + '</p><p class="text-slate-600 dark:text-slate-300 leading-relaxed">'
+                + hubEscapeHtml(value) + '</p></div>';
+        }
+
+        function hubExampleRow(en, ca) {
+            if (!en) return '';
+            return '<div class="border-l-2 border-indigo-300 dark:border-indigo-700 pl-3 py-1">'
+                + '<p class="text-slate-800 dark:text-slate-100 italic">' + hubEscapeHtml(en) + '</p>'
+                + (ca ? '<p class="text-sm text-emerald-700 dark:text-emerald-400 mt-0.5">' + hubEscapeHtml(ca) + '</p>' : '')
+                + '</div>';
+        }
+
+        // Fills the point cards once the sheet arrives. The cards already carry
+        // their title and their link, so a failed fetch degrades quietly.
+        function hydrateGrammarCards() {
+            const host = document.getElementById('grammarCards');
+            if (!host) return;
+
+            hubGrammarData().then(function (points) {
+                const byId = {};
+                points.forEach(function (p) { byId[p.point_id] = p; });
+
+                host.querySelectorAll('[data-point]').forEach(function (card) {
+                    const slot = card.querySelector('.gp-detail');
+                    const p = byId[card.getAttribute('data-point')];
+                    if (!slot) return;
+                    if (!p) {
+                        slot.innerHTML = '<p class="text-sm text-slate-500 dark:text-slate-400">This point is not in the grammar sheet yet.</p>';
+                        return;
+                    }
+                    const heading = card.querySelector('.gp-title');
+                    if (heading && p.title_en) heading.textContent = p.title_en;
+
+                    slot.innerHTML = [
+                        p.form_pattern ? '<div><p class="text-xs font-semibold uppercase tracking-wider text-indigo-500 dark:text-indigo-400 mb-1">Form</p>'
+                            + '<p class="font-mono text-sm bg-slate-100 dark:bg-slate-800 rounded-lg px-3 py-2 text-slate-800 dark:text-slate-200">'
+                            + hubEscapeHtml(p.form_pattern) + '</p></div>' : '',
+                        hubGrammarBlock('When we use it', p.meaning_use_en, 'text-slate-400 dark:text-slate-500'),
+                        hubGrammarBlock('Watch out', p.common_errors_en, 'text-rose-500 dark:text-rose-400'),
+                        (p.example_1_en || p.example_2_en)
+                            ? '<div><p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Examples</p>'
+                              + '<div class="space-y-2">' + hubExampleRow(p.example_1_en, p.example_1_ca)
+                              + hubExampleRow(p.example_2_en, p.example_2_ca) + '</div></div>'
+                            : ''
+                    ].join('');
+                });
+                lucide.createIcons();
+            }).catch(function () {
+                host.querySelectorAll('.gp-detail').forEach(function (slot) {
+                    slot.innerHTML = '<p class="text-sm text-slate-500 dark:text-slate-400">Could not reach the grammar sheet. The practice links still work.</p>';
+                });
+            });
+        }
+
         function switchTab(tab) {
             activeTab = tab;
             renderDrawerContent();
@@ -532,8 +646,8 @@
             // Tabs
             const tabsHtml = `
                 <button onclick="switchTab('glance')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'glance' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">At a Glance</button>
-                <button onclick="switchTab('toolkit')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'toolkit' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">Language Toolkit</button>
-                <button onclick="switchTab('assess')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'assess' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">How We Assess</button>
+                <button onclick="switchTab('toolkit')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'toolkit' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">Vocabulary</button>
+                <button onclick="switchTab('grammar')" class="pb-3 pt-4 border-b-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTab === 'grammar' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}">Grammar Studio</button>
             `;
 
             // Tab Content
@@ -573,9 +687,20 @@
                                 `).join('') : ''}
 
                                 ${currentView === 'teacher' ? `
-                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
-                                        <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Teacher Pedagogical Focus</h4>
-                                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.methodology}</p>
+                                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-5">
+                                        <h4 class="font-bold text-lg text-slate-900 dark:text-white">Teacher Pedagogical Focus</h4>
+                                        <div>
+                                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Metodologia i DUA</p>
+                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.methodology}</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Competències Específiques</p>
+                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.competencies}</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Criteris d'Avaluació</p>
+                                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.assessment}</p>
+                                        </div>
                                     </div>
                                 ` : ''}
                             </div>
@@ -585,15 +710,6 @@
             } else if (activeTab === 'toolkit') {
                 tabBody = `
                     <div class="space-y-10 animate-fade-in">
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-900 dark:text-white">
-                                <i data-lucide="book-open" class="text-indigo-500"></i> Grammar Focus
-                            </h3>
-                            <div class="bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-900/30 rounded-2xl p-6">
-                                <p class="text-lg font-medium text-indigo-900 dark:text-indigo-200">${u.grammar}</p>
-                            </div>
-                        </div>
-
                         <div>
                             <h3 class="text-xl font-bold mb-1 flex items-center gap-2 text-slate-900 dark:text-white">
                                 <i data-lucide="message-circle" class="text-emerald-500"></i> Vocabulary Chips
@@ -623,49 +739,44 @@
                         </div>
                     </div>
                 `;
-            } else if (activeTab === 'assess') {
+            } else if (activeTab === 'grammar') {
+                const points = u.grammarPoints || [];
                 tabBody = `
-                    <div class="space-y-6 animate-fade-in">
-                        ${currentView === 'teacher' ? `
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="award" class="text-purple-500"></i> Competències Específiques
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.competencies}</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="bar-chart" class="text-blue-500"></i> Criteris d'Avaluació
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.assessment}</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-bold mb-3 flex items-center gap-2 text-slate-900 dark:text-white">
-                                    <i data-lucide="network" class="text-emerald-500"></i> Metodologia i DUA
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${u.teacher.methodology}</p>
-                            </div>
-                        ` : `
-                            <div class="bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-3xl p-8">
-                                <h3 class="text-2xl font-bold mb-3 text-blue-900 dark:text-blue-100 flex items-center gap-2">
-                                    <i data-lucide="clipboard-check" class="text-blue-500"></i> How you will be graded
-                                </h3>
-                                <p class="text-blue-800/80 dark:text-blue-200/80 mb-8 text-lg">Your teacher will look at how well you complete the final tasks. Focus on clarity, creativity, and using the target grammar and vocabulary from this unit.</p>
+                    <div class="space-y-8 animate-fade-in">
+                        <div class="bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-900/30 rounded-3xl p-8">
+                            <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-500 dark:text-indigo-400 mb-2">Grammar focus for this unit</h3>
+                            <p class="text-2xl font-bold text-indigo-900 dark:text-indigo-100 leading-snug">${u.grammar}</p>
+                        </div>
 
-                                <div class="space-y-4">
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl">AE</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Excellent achievement.</strong> Exceeds expectations and shows great creativity and accuracy.</div>
+                        ${points.length ? `
+                            <div id="grammarCards" class="space-y-5">
+                                ${points.map(gp => `
+                                    <div data-point="${gp.id}" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+                                        <div class="flex items-start justify-between gap-4 mb-4">
+                                            <div>
+                                                <span class="inline-block text-[10px] font-bold tracking-wider px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 mb-2">${(gp.id.match(/_(A1|A2|B1|B2|C1|C2)_/) || [, 'CEFR'])[1]}</span>
+                                                <h4 class="gp-title font-bold text-lg text-slate-900 dark:text-white leading-snug">${gp.label}</h4>
+                                            </div>
+                                            <a href="${GRAMMAR_APP_URL}?point=${encodeURIComponent(gp.id)}" target="_blank" rel="noopener noreferrer"
+                                               class="shrink-0 inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 dark:hover:bg-indigo-900/50 transition-all text-sm font-medium border border-indigo-100 dark:border-indigo-800">
+                                                Practise <i data-lucide="external-link" class="w-4 h-4"></i>
+                                            </a>
+                                        </div>
+                                        <div class="gp-detail space-y-4 text-[15px]">
+                                            <p class="text-sm text-slate-400 dark:text-slate-500">Loading explanation and examples…</p>
+                                        </div>
                                     </div>
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 rounded-xl">AN</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Notable achievement.</strong> Completes tasks well with good use of the language tools.</div>
-                                    </div>
-                                    <div class="flex items-center gap-5 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm">
-                                        <div class="w-16 h-12 flex items-center justify-center font-bold text-lg text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 rounded-xl">AS</div>
-                                        <div class="flex-1 text-sm md:text-base text-slate-700 dark:text-slate-300"><strong>Satisfactory achievement.</strong> Meets the basic requirements of the challenge.</div>
-                                    </div>
-                                </div>
+                                `).join('')}
+                            </div>
+
+                            <a href="${GRAMMAR_APP_URL}" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium">
+                                <i data-lucide="library" class="w-4 h-4"></i> Open the full ESL Grammar Studio
+                            </a>
+                        ` : `
+                            <div class="text-center py-12 text-slate-500 dark:text-slate-400">
+                                <i data-lucide="book-dashed" class="w-10 h-10 mx-auto mb-3 opacity-50"></i>
+                                <p>No grammar points are linked to this unit yet.</p>
                             </div>
                         `}
                     </div>
@@ -684,6 +795,7 @@
                 </div>
             `;
             lucide.createIcons();
+            if (activeTab === 'grammar') hydrateGrammarCards();
         }
 
         // Boot
