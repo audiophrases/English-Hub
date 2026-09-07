@@ -1,24 +1,32 @@
 /* ==========================================================================
    English Hub — teacher authentication (Google Sign-In)
    --------------------------------------------------------------------------
-   ONE-TIME SETUP — until this is done, every login screen will say so:
+   This reuses the SAME Google OAuth client as PinPlay's student login, so
+   there is no second client to keep in step. The client ID is public by
+   design — it ships in the page and PinPlay serves it at
+   https://api.pinplay.win/api/student/config
+
+   ONE-TIME SETUP — the origin must be authorised or the button 400s:
 
      1. Open  https://console.cloud.google.com/apis/credentials
-     2. Create credentials  ->  OAuth client ID  ->  Web application
-     3. Under "Authorised JavaScript origins" add BOTH:
+     2. Open the Web client ending  ...8aacskg99idu0uqnbr181id33gf8fet4
+     3. Under "Authorised JavaScript origins" add:
             https://audiophrases.github.io
             http://localhost:8000          (only if you test locally)
-     4. Copy the Client ID. It ends in  .apps.googleusercontent.com
-     5. Paste it below, replacing YOUR_GOOGLE_CLIENT_ID.
+        Leave PinPlay's existing origins alone — add, don't replace.
 
    To authorise another teacher later, add their address to HUB_ALLOWED_EMAILS.
 
    NOTE: this is a public static site, so this check runs in the browser and
    is a courtesy lock, not real security. Anyone who opens "View source" can
    read the teacher notes. Keep genuinely private material off this site.
+
+   Sharing the client with PinPlay means a token minted there carries the same
+   "aud", so the check below leans on HUB_ALLOWED_EMAILS to keep this to the
+   teacher account. That is fine for a courtesy lock; it is not a keep-out.
    ========================================================================== */
 
-const HUB_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+const HUB_CLIENT_ID = '673678320233-8aacskg99idu0uqnbr181id33gf8fet4.apps.googleusercontent.com';
 
 const HUB_ALLOWED_EMAILS = [
     'eugenimonfort@iecomaruga.cat'
