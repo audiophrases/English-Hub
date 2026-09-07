@@ -1,364 +1,183 @@
 [
   {
     "id": 1,
-    "title": "Happiness & Feelings",
-    "shortTitle": "Happiness",
+    "title": "Inspiring teens",
+    "shortTitle": "Inspiring Teens",
     "theme": "amber",
     "gradient": "from-amber-400 to-orange-500",
-    "icon": "smile",
-    "grammar": "Past Simple vs Past Continuous",
+    "icon": "sparkles",
+    "grammar": "Past simple and present perfect for telling life stories and achievements",
     "vocab": [
-      {
-        "term": "happiness",
-        "def": "felicitat",
-        "example": "Happiness is important for your health."
-      },
-      {
-        "term": "behaviour",
-        "def": "comportament",
-        "example": "His behaviour was excellent."
-      },
-      {
-        "term": "feeling",
-        "def": "sentiment",
-        "example": "She had a strong feeling of joy."
-      },
-      {
-        "term": "helping",
-        "def": "ajudar",
-        "example": "Helping others makes you feel good."
-      },
-      {
-        "term": "spooky",
-        "def": "esgarrifós",
-        "example": "That was a very spooky story!"
-      }
+      { "term": "inspiring", "def": "inspirador", "example": "She is an inspiring young activist." },
+      { "term": "entrepreneur", "def": "emprenedor/a", "example": "The teenage entrepreneur started her own company." },
+      { "term": "achievement", "def": "assoliment", "example": "Winning the prize was a huge achievement." },
+      { "term": "role model", "def": "referent", "example": "Athletes can be role models for young people." },
+      { "term": "solidarity", "def": "solidaritat", "example": "Together, we are stronger — that is solidarity." },
+      { "term": "impact", "def": "impacte", "example": "Her project had a real impact on the community." }
     ],
     "student": {
-      "repte": "Explore what happiness means to you, talk about past experiences, and invent a spooky tale.",
+      "repte": "We often hear about inspiring teenage entrepreneurs and their successful stories but, who of you will be able to find the most amazing?",
       "products": [
-        {
-          "type": "Written Task",
-          "desc": "Spooky Tales: Invent a horror story.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Speaking Task",
-          "desc": "Speaking about the past: share experiences.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "TOD",
-          "desc": "Find Someone Who: Play the game speaking only in English.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Multimodal Presentation", "desc": "In small groups, research an inspiring young person and share their story and impact as a video, podcast, digital poster or speech.", "url": "https://classroom.google.com/h" },
+        { "type": "Class Q&A Session", "desc": "Present to the class and take questions from your classmates about the person your group chose.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Establish initial routines and assess narrative tenses through engaging topics like happiness and Halloween.",
-      "competencies": "Competència Específica 1 and 5.",
-      "methodology": "Gamification, creative writing, peer interaction.",
-      "assessment": "Accuracy of past tenses, fluency in spoken games."
+      "repte": "The opening Learning Scenario of the year, following the introductory session and the diagnostic test. Students discover the accomplishments of inspiring teens and young adults, and see how much more people achieve with a sense of solidarity — the “Together, we are stronger!” slogan.",
+      "competencies": "Llengua Estrangera 2, 7 and 8; Ciutadana CC1; Emprenedora CE1; CPSAA 3; Digital CD2.",
+      "methodology": "Project-Based Learning, collaborative learning with peer review, digital literacy for multimodal presentations, student-centred choice of topic.",
+      "assessment": "Interpretation of oral and multimodal texts, audience engagement and creativity of the presentation, reliability of the sources used."
     }
   },
   {
     "id": 2,
-    "title": "Stories, Books & Films",
-    "shortTitle": "Stories & Films",
+    "title": "Art through words",
+    "shortTitle": "Art Through Words",
     "theme": "rose",
     "gradient": "from-rose-400 to-pink-500",
-    "icon": "film",
-    "grammar": "Present Perfect",
+    "icon": "palette",
+    "grammar": "Descriptive adjectives and relative clauses for profiling an artist",
     "vocab": [
-      {
-        "term": "opinion",
-        "def": "opinió",
-        "example": "What is your opinion on this book?"
-      },
-      {
-        "term": "archetype",
-        "def": "arquetip",
-        "example": "The hero is a common archetype."
-      },
-      {
-        "term": "plot",
-        "def": "argument",
-        "example": "The plot of the movie was very interesting."
-      },
-      {
-        "term": "comic strip",
-        "def": "tira còmica",
-        "example": "I love reading this comic strip."
-      },
-      {
-        "term": "character",
-        "def": "personatge",
-        "example": "Who is your favourite character?"
-      }
+      { "term": "artwork", "def": "obra d'art", "example": "Her artwork is displayed in a small gallery." },
+      { "term": "listicle", "def": "article en format llista", "example": "We wrote a listicle about the artist's life." },
+      { "term": "creativity", "def": "creativitat", "example": "Creativity is at the heart of this project." },
+      { "term": "exhibition", "def": "exposició", "example": "The exhibition opens next week." },
+      { "term": "persistence", "def": "persistència", "example": "Persistence helped her become a professional artist." }
     ],
     "student": {
-      "repte": "Dive into the world of stories! Review your favourite films and create your own comic strip.",
+      "repte": "Art is not just old paintings in a museum. Create the profile of a female artist who deserves to be better known — research her life and her work, and present her to the class as a team.",
       "products": [
-        {
-          "type": "Speaking Task",
-          "desc": "My Favourite Film Presentation.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Creative Task",
-          "desc": "Comic strip creation.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Listening Task",
-          "desc": "Fantastic Beasts trailer listening.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Artist Profile (Groups of 3-5)", "desc": "A multimedia presentation about a not-so-famous female artist, built in Google Slides, Canva, Genial·ly or a similar tool.", "url": "https://classroom.google.com/h" },
+        { "type": "Listicle", "desc": "A written listicle covering several aspects of the artist, following the structure of the model provided.", "url": "https://classroom.google.com/h" },
+        { "type": "Presentation & Discussion", "desc": "Deliver the presentation in class, ready to ask and answer questions and facilitate the discussion.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Develop students' ability to narrate life experiences and express opinions on media.",
-      "competencies": "Competència Específica 3 and 4.",
-      "methodology": "Oral presentations, multimodal creation (comics), active listening.",
-      "assessment": "Oral fluency, proper usage of Present Perfect."
+      "repte": "Students find out about young people who applied their creativity and initiative to produce art of various kinds, discovering that art is a living, vibrant form of expression. The group work develops suggesting ideas, listening respectfully, dividing tasks equally and giving constructive feedback.",
+      "competencies": "Llengua Estrangera 3, 5 and 6; Ciutadana CC1; Emprenedora CE3; CPSAA 4; Digital CD3.",
+      "methodology": "Project-Based Learning in mixed-ability groups, online research, peer review, digital creation tools.",
+      "assessment": "Quality of the research and selection of information, structure of the listicle, collaboration and shared credit within the team."
     }
   },
   {
     "id": 3,
-    "title": "Choices, Money & Adventure",
-    "shortTitle": "Choices",
+    "title": "The state of our planet",
+    "shortTitle": "Our Planet",
     "theme": "emerald",
     "gradient": "from-emerald-400 to-teal-500",
-    "icon": "compass",
-    "grammar": "Review of Present and Past Tenses",
+    "icon": "leaf",
+    "grammar": "Present simple and continuous, quantifiers, the passive voice and the first conditional",
     "vocab": [
-      {
-        "term": "choice",
-        "def": "elecció",
-        "example": "You have to make a choice."
-      },
-      {
-        "term": "money",
-        "def": "diners",
-        "example": "How much money do you need?"
-      },
-      {
-        "term": "shopping",
-        "def": "compres",
-        "example": "Let's go shopping!"
-      },
-      {
-        "term": "adventure",
-        "def": "aventura",
-        "example": "It was a great adventure."
-      },
-      {
-        "term": "bargain",
-        "def": "ganga",
-        "example": "This jacket was a real bargain."
-      }
+      { "term": "pollution", "def": "contaminació", "example": "Air pollution is a serious problem in big cities." },
+      { "term": "climate change", "def": "canvi climàtic", "example": "Climate change affects the whole planet." },
+      { "term": "waste", "def": "residus", "example": "We produce too much plastic waste." },
+      { "term": "recycling", "def": "reciclatge", "example": "Recycling helps reduce landfill." },
+      { "term": "sustainability", "def": "sostenibilitat", "example": "Sustainability means thinking about the future." },
+      { "term": "greenhouse gases", "def": "gasos amb efecte d'hivernacle", "example": "Greenhouse gases trap heat in the atmosphere." }
     ],
     "student": {
-      "repte": "Make choices, manage money, and embark on adventures while preparing for the holidays.",
+      "repte": "What are the biggest threats facing our planet? Research them, then design a campaign that persuades your classmates to actually do something about it.",
       "products": [
-        {
-          "type": "TOD Project",
-          "desc": "Create your own Board Game.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Challenge",
-          "desc": "30 Days Happiness Challenge.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Music Task",
-          "desc": "My Playlist: Create a 10 songs playlist.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Multimedia Awareness Campaign", "desc": "Research the global and local threats facing Earth and present a persuasive campaign with interactive elements.", "url": "https://classroom.google.com/h" },
+        { "type": "KWL Chart & Research Log", "desc": "Track what you Know, Want to know and have Learned, and record the sources you used and why they are reliable.", "url": "https://classroom.google.com/h" },
+        { "type": "Peer Feedback", "desc": "Complete feedback forms for the other campaigns, focusing on strengths and areas for improvement.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Encourage autonomous learning and decision making through project-based tasks.",
-      "competencies": "Competència Específica 5 and Personal/Social.",
-      "methodology": "Project-based learning (Board Games), self-reflection.",
-      "assessment": "Creativity, collaboration in pairs, grammatical accuracy in instructions."
+      "repte": "Students analyse global and local environmental problems, evaluate the reliability of their sources, and develop a creative environmental campaign proposal cooperatively.",
+      "competencies": "Llengua Estrangera 1, 4 and 9; Ciutadana CC3; Emprenedora CE1; CPSAA 4; Digital CD2.",
+      "methodology": "Project-Based Learning, mind-mapping and KWL charts, source-reliability work, cooperative campaign design, digital poster and video tools.",
+      "assessment": "Reliability and variety of sources, persuasive use of modals and the first conditional, ability to separate main from secondary ideas."
     }
   },
   {
     "id": 4,
-    "title": "Communication & Technology",
-    "shortTitle": "Communication",
+    "title": "A holiday on the Moon",
+    "shortTitle": "Moon Holiday",
     "theme": "blue",
     "gradient": "from-blue-400 to-indigo-500",
-    "icon": "smartphone",
-    "grammar": "Modal Verbs",
+    "icon": "rocket",
+    "grammar": "Future forms, comparatives and superlatives, and the second conditional",
     "vocab": [
-      {
-        "term": "communication",
-        "def": "comunicació",
-        "example": "Communication is key in a relationship."
-      },
-      {
-        "term": "technology",
-        "def": "tecnologia",
-        "example": "Technology changes very fast."
-      },
-      {
-        "term": "trailer",
-        "def": "tràiler",
-        "example": "I saw the movie trailer online."
-      },
-      {
-        "term": "translation",
-        "def": "traducció",
-        "example": "This translation is incorrect."
-      },
-      {
-        "term": "device",
-        "def": "dispositiu",
-        "example": "Please turn off your device."
-      }
+      { "term": "destination", "def": "destinació", "example": "The Moon is an unusual holiday destination." },
+      { "term": "accommodation", "def": "allotjament", "example": "The accommodation includes a low-gravity room." },
+      { "term": "launch", "def": "llançament", "example": "The launch is scheduled for next spring." },
+      { "term": "orbit", "def": "òrbita", "example": "The hotel is in orbit around the Moon." },
+      { "term": "spacesuit", "def": "vestit espacial", "example": "You need a spacesuit to walk outside." },
+      { "term": "budget", "def": "pressupost", "example": "Design your trip with an unlimited budget." }
     ],
     "student": {
-      "repte": "Explore how we communicate in the modern world and learn to give advice using modals.",
+      "repte": "Imagine you were given the opportunity to design your future holiday in outer space with an unlimited budget. Have you got what it takes to design a travel brochure, website page or promotional video for a Moon holiday package and present it to the class?",
       "products": [
-        {
-          "type": "Listening Task",
-          "desc": "Movie Trailers: Listen and fill in the gaps.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Reading Task",
-          "desc": "Lost in translation! Read and answer.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "TOD",
-          "desc": "Modal verbs review exercises.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Travel Brochure or Video Advert", "desc": "In teams, plan a Moon holiday — travel logistics, accommodation, activities and challenges — and produce a brochure, web page or promotional video.", "url": "https://classroom.google.com/h" },
+        { "type": "Email to a Host Family", "desc": "Write an email to a host family, applying the register and structure practised in class.", "url": "https://classroom.google.com/h" },
+        { "type": "Presentation & Q&A", "desc": "Deliver the advertisement to the class, including the interactive elements, and field questions afterwards.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Enhance digital literacy and the ability to express obligation, permission, and advice.",
-      "competencies": "Competència Digital and Llengua Estrangera 1.",
-      "methodology": "Authentic materials listening, grammar in context.",
-      "assessment": "Listening comprehension, accurate use of modal verbs."
+      "repte": "Halfway through the year, students take a look at the future. Combining future thinking with holidays, they reflect on how leisure might change, weigh the ethical, social and environmental impacts of space tourism, and learn to appreciate the world as it is now.",
+      "competencies": "Llengua Estrangera 2, 5 and 10; Ciutadana CC1; Emprenedora CE3; CPSAA 2; Digital CD5.",
+      "methodology": "Project-Based Learning, shared Padlet for vocabulary, KWL charts, source evaluation, differentiated output (brochure, website or video).",
+      "assessment": "Persuasive use of comparatives, superlatives and the second conditional, coherence of the travel plan, quality of the multimedia product."
     }
   },
   {
     "id": 5,
-    "title": "Crime & Biographies",
-    "shortTitle": "Crime & Bio",
+    "title": "School days",
+    "shortTitle": "School Days",
     "theme": "purple",
     "gradient": "from-purple-400 to-violet-500",
-    "icon": "search",
-    "grammar": "Relative Pronouns & Modal Verbs",
+    "icon": "school",
+    "grammar": "Modals of obligation and prohibition, the passive voice and the second conditional",
     "vocab": [
-      {
-        "term": "crime",
-        "def": "crim",
-        "example": "The detective solved the crime."
-      },
-      {
-        "term": "biography",
-        "def": "biografia",
-        "example": "I read a biography of a famous writer."
-      },
-      {
-        "term": "author",
-        "def": "autor",
-        "example": "Who is the author of this book?"
-      },
-      {
-        "term": "justice",
-        "def": "justícia",
-        "example": "They demanded justice."
-      },
-      {
-        "term": "clue",
-        "def": "pista",
-        "example": "He found a clue at the scene."
-      }
+      { "term": "timetable", "def": "horari", "example": "Our timetable changes every term." },
+      { "term": "facilities", "def": "instal·lacions", "example": "The school has excellent sports facilities." },
+      { "term": "uniform", "def": "uniforme", "example": "Students there have to wear a uniform." },
+      { "term": "school rules", "def": "normes escolars", "example": "School rules are not the same in every country." },
+      { "term": "responsibilities", "def": "responsabilitats", "example": "Students should have responsibilities too." }
     ],
     "student": {
-      "repte": "Investigate crimes and learn about famous British and American writers.",
+      "repte": "If you could design your ideal school, what would it look like? What rules would you implement? Uniform or free expression? What would the students' responsibilities be — if any?",
       "products": [
-        {
-          "type": "Project",
-          "desc": "British and American writers - Biographical project.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Reading Task",
-          "desc": "A second chance: Read and complete the form.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Writing Task",
-          "desc": "Crime writing photocopy.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Ideal School Brochure", "desc": "A collaborative digital leaflet advertising the school your class designs, with its special features, its rules and the students' responsibilities.", "url": "https://classroom.google.com/h" },
+        { "type": "For and Against Essay", "desc": "Write a for-and-against essay about rules at school, following the structure of the model provided.", "url": "https://classroom.google.com/h" },
+        { "type": "Anecdote Role-Play", "desc": "Act out a conversation about a personal anecdote at school, paying particular attention to pronunciation and accent.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Integrate literature and culture with language learning through biographical research.",
-      "competencies": "Competència Específica 6 (Plurilingual/Intercultural).",
-      "methodology": "Research project, extensive reading, guided writing.",
-      "assessment": "Research skills, synthesis of information, correct use of relative clauses."
+      "repte": "The academic world opens the last term. Students learn about the difficult journeys some children make to reach school, give their opinion on the controversial topic of school uniforms, and consider the purpose of school rules and collective decision-making.",
+      "competencies": "Llengua Estrangera 3, 5 and 7; Ciutadana CC1; Emprenedora CE3; CPSAA 4; Digital CD1.",
+      "methodology": "Project-Based Learning, group decision-making through presenting, suggesting, evaluating and voting, comparative study of education systems.",
+      "assessment": "Accuracy of modals of obligation and the second conditional, balance and structure of the for-and-against essay, participation in collective decisions."
     }
   },
   {
     "id": 6,
-    "title": "Final Challenges & Music",
-    "shortTitle": "Finals",
+    "title": "Thinking outside the box",
+    "shortTitle": "Inventions",
     "theme": "slate",
     "gradient": "from-slate-700 to-slate-900",
-    "icon": "music",
-    "grammar": "Comprehensive Review",
+    "icon": "lightbulb",
+    "grammar": "The passive voice for describing inventions and the second conditional for hypotheses",
     "vocab": [
-      {
-        "term": "festival",
-        "def": "festival",
-        "example": "We went to a music festival."
-      },
-      {
-        "term": "billboard",
-        "def": "cartellera",
-        "example": "Look at the billboard for the concert."
-      },
-      {
-        "term": "review",
-        "def": "repàs",
-        "example": "Let's do a quick grammar review."
-      },
-      {
-        "term": "comprehension",
-        "def": "comprensió",
-        "example": "Reading comprehension is very important."
-      }
+      { "term": "invention", "def": "invent", "example": "The printing press was a life-changing invention." },
+      { "term": "inventor", "def": "inventor/a", "example": "The inventor never gave up on her idea." },
+      { "term": "resilience", "def": "resiliència", "example": "Resilience matters when your first design fails." },
+      { "term": "innovative", "def": "innovador/a", "example": "They came up with an innovative solution." },
+      { "term": "problem-solving", "def": "resolució de problemes", "example": "Problem-solving is the heart of this project." }
     ],
     "student": {
-      "repte": "Show off your skills! Design a music festival and ace your final exams.",
+      "repte": "If you had all the necessary resources, what contribution would you make to human evolution? Will you be innovative enough to create something that makes our life easier or better?",
       "products": [
-        {
-          "type": "Creative Task",
-          "desc": "The Music Festival of your Dreams: Design a billboard.",
-          "url": "https://classroom.google.com/h"
-        },
-        {
-          "type": "Exams",
-          "desc": "Proves Finals: Reading and Listening Comprehension.",
-          "url": "https://classroom.google.com/h"
-        }
+        { "type": "Invention Pitch", "desc": "In groups, choose a real problem — at school, in town or global — brainstorm solutions, then design an invention and present its design, materials and how it works.", "url": "https://classroom.google.com/h" },
+        { "type": "Negotiation & Task Log", "desc": "Record how your group took turns, expressed agreement and disagreement, and assigned tasks to reach a joint decision.", "url": "https://classroom.google.com/h" }
       ]
     },
     "teacher": {
-      "repte": "Consolidate learning and assess overall competency levels at the end of the year.",
-      "competencies": "All Competències Específiques.",
-      "methodology": "Summative assessment, creative wrap-up activities.",
-      "assessment": "Final mastery of 3rd ESO objectives."
+      "repte": "The last stop of the year. Students learn about life-changing inventions and the inventors whose creativity, persistence and resilience produced them, then experience the satisfaction of contributing to society with their own creativity.",
+      "competencies": "Llengua Estrangera 2, 3 and 4; Ciutadana CC1; Emprenedora CE3; CPSAA 4; Digital CD1.",
+      "methodology": "Collaborative project work, brainstorming and negotiation, conversational strategies for turn-taking and agreement, digital tools for shaping ideas.",
+      "assessment": "Fluency and self-confidence while speaking, comprehension of written texts about the origins of an invention, quality of group negotiation."
     }
   }
 ]
