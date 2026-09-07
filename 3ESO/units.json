@@ -8,25 +8,82 @@
     "icon": "sparkles",
     "grammar": "Past simple and present perfect for telling life stories, plus gerunds and infinitives",
     "grammarPoints": [
-      { "id": "PRES_PERF_B1_01", "label": "Present Perfect vs Past Simple" },
-      { "id": "PAST_SIMP_A2_02", "label": "Past Simple: irregular verbs" },
-      { "id": "GERINF_A2_01", "label": "Gerund vs infinitive" }
+      {
+        "id": "PRES_PERF_B1_01",
+        "label": "Present Perfect vs Past Simple"
+      },
+      {
+        "id": "PAST_SIMP_A2_02",
+        "label": "Past Simple: irregular verbs"
+      },
+      {
+        "id": "GERINF_A2_01",
+        "label": "Gerund vs infinitive"
+      }
     ],
     "vocab": [
-      { "term": "inspiring", "def": "inspirador", "example": "She is an inspiring young activist." },
-      { "term": "entrepreneur", "def": "emprenedor/a", "example": "The teenage entrepreneur started her own company." },
-      { "term": "achievement", "def": "assoliment", "example": "Winning the prize was a huge achievement." },
-      { "term": "role model", "def": "referent", "example": "Athletes can be role models for young people." },
-      { "term": "solidarity", "def": "solidaritat", "example": "Together, we are stronger — that is solidarity." },
-      { "term": "impact", "def": "impacte", "example": "Her project had a real impact on the community." },
-      { "term": "to overcome", "def": "superar", "example": "He overcame a lot of difficulties before succeeding." },
-      { "term": "determination", "def": "determinació", "example": "Her determination is what makes the story worth telling." }
+      {
+        "term": "inspiring",
+        "def": "inspirador",
+        "example": "She is an inspiring young activist.",
+        "example2": "She has become one of the most inspiring voices of her generation."
+      },
+      {
+        "term": "entrepreneur",
+        "def": "emprenedor/a",
+        "example": "The teenage entrepreneur started her own company.",
+        "example2": "He has already launched two companies, and he is only nineteen."
+      },
+      {
+        "term": "achievement",
+        "def": "assoliment",
+        "example": "Winning the prize was a huge achievement.",
+        "example2": "Her greatest achievement was starting the project on her own."
+      },
+      {
+        "term": "role model",
+        "def": "referent",
+        "example": "Athletes can be role models for young people.",
+        "example2": "He has been a role model for his younger brother since 2019."
+      },
+      {
+        "term": "solidarity",
+        "def": "solidaritat",
+        "example": "Together, we are stronger — that is solidarity.",
+        "example2": "The town showed real solidarity after the floods."
+      },
+      {
+        "term": "impact",
+        "def": "impacte",
+        "example": "Her project had a real impact on the community.",
+        "example2": "Have you ever had an impact on someone else's life?"
+      },
+      {
+        "term": "to overcome",
+        "def": "superar",
+        "example": "He overcame a lot of difficulties before succeeding.",
+        "example2": "She has overcome far more obstacles than most people realise."
+      },
+      {
+        "term": "determination",
+        "def": "determinació",
+        "example": "Her determination is what makes the story worth telling.",
+        "example2": "It was determination, not luck, that got her there."
+      }
     ],
     "student": {
       "repte": "We often hear about inspiring teenage entrepreneurs and their successful stories but, who of you will be able to find the most amazing?",
       "products": [
-        { "type": "Multimodal Presentation", "desc": "In small groups, research an inspiring young person and share their story and impact as a video, podcast, digital poster or speech.", "url": "https://classroom.google.com/h" },
-        { "type": "Class Q&A Session", "desc": "Present to the class and take questions from your classmates about the person your group chose.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Multimodal Presentation",
+          "desc": "In small groups, research an inspiring young person and share their story and impact as a video, podcast, digital poster or speech.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Class Q&A Session",
+          "desc": "Present to the class and take questions from your classmates about the person your group chose.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -45,26 +102,87 @@
     "icon": "palette",
     "grammar": "Comparatives and superlatives for describing an artist's style and work",
     "grammarPoints": [
-      { "id": "COMP_A1_01", "label": "Comparatives: -er / more … than" },
-      { "id": "COMP_SUPER_A2_01", "label": "Superlatives: the -est / the most" },
-      { "id": "COMPARISON_B1_01", "label": "as…as / less / more (review)" }
+      {
+        "id": "COMP_A1_01",
+        "label": "Comparatives: -er / more … than"
+      },
+      {
+        "id": "COMP_SUPER_A2_01",
+        "label": "Superlatives: the -est / the most"
+      },
+      {
+        "id": "COMPARISON_B1_01",
+        "label": "as…as / less / more (review)"
+      }
     ],
     "vocab": [
-      { "term": "artwork", "def": "obra d'art", "example": "Her artwork is displayed in a small gallery." },
-      { "term": "style", "def": "estil", "example": "His later style is bolder than his early work." },
-      { "term": "sculptor", "def": "escultor/a", "example": "The sculptor works mainly in bronze." },
-      { "term": "creativity", "def": "creativitat", "example": "Creativity is at the heart of this project." },
-      { "term": "exhibition", "def": "exposició", "example": "The exhibition opens next week." },
-      { "term": "persistence", "def": "persistència", "example": "Persistence helped her become a professional artist." },
-      { "term": "brushstroke", "def": "pinzellada", "example": "The brushstrokes are looser than in the earlier painting." },
-      { "term": "portrait", "def": "retrat", "example": "This portrait is the most striking piece in the room." }
+      {
+        "term": "artwork",
+        "def": "obra d'art",
+        "example": "Her artwork is displayed in a small gallery.",
+        "example2": "This artwork is far more colourful than the one beside it."
+      },
+      {
+        "term": "style",
+        "def": "estil",
+        "example": "His later style is bolder than his early work.",
+        "example2": "Her early style was simpler than the work she makes today."
+      },
+      {
+        "term": "sculptor",
+        "def": "escultor/a",
+        "example": "The sculptor works mainly in bronze.",
+        "example2": "He is the most original sculptor in the exhibition."
+      },
+      {
+        "term": "creativity",
+        "def": "creativitat",
+        "example": "Creativity is at the heart of this project.",
+        "example2": "Her creativity is greater than her technical skill, and that is the point."
+      },
+      {
+        "term": "exhibition",
+        "def": "exposició",
+        "example": "The exhibition opens next week.",
+        "example2": "This exhibition is smaller but much better organised than last year's."
+      },
+      {
+        "term": "persistence",
+        "def": "persistència",
+        "example": "Persistence helped her become a professional artist.",
+        "example2": "Persistence matters more than talent in the long run."
+      },
+      {
+        "term": "brushstroke",
+        "def": "pinzellada",
+        "example": "The brushstrokes are looser than in the earlier painting.",
+        "example2": "You can see the brushstrokes far more clearly in the original."
+      },
+      {
+        "term": "portrait",
+        "def": "retrat",
+        "example": "This portrait is the most striking piece in the room.",
+        "example2": "It is the most famous portrait she ever painted."
+      }
     ],
     "student": {
       "repte": "Art is not just old paintings in a museum. Find an artist who deserves to be better known — research their life and their work, and present them to the class as a team.",
       "products": [
-        { "type": "Compare Two Works", "desc": "Choose two comparable pieces and write ten comparative sentences describing the differences between them.", "url": "https://classroom.google.com/h" },
-        { "type": "Artist Presentation (pairs or threes)", "desc": "Present an unknown professional artist — sculptor, painter or photographer — covering their style and specific works. Use comparatives throughout. Slides carry keywords only, never full text.", "url": "https://classroom.google.com/h" },
-        { "type": "Listicle", "desc": "A written listicle covering several aspects of the artist, following the structure of the model provided.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Compare Two Works",
+          "desc": "Choose two comparable pieces and write ten comparative sentences describing the differences between them.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Artist Presentation (pairs or threes)",
+          "desc": "Present an unknown professional artist — sculptor, painter or photographer — covering their style and specific works. Use comparatives throughout. Slides carry keywords only, never full text.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Listicle",
+          "desc": "A written listicle covering several aspects of the artist, following the structure of the model provided.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -83,27 +201,91 @@
     "icon": "leaf",
     "grammar": "Present continuous for current trends, zero and first conditionals, and connectors",
     "grammarPoints": [
-      { "id": "PRES_CONT_A1_01", "label": "Present Continuous: happening now" },
-      { "id": "COND0_B1_01", "label": "Zero conditional" },
-      { "id": "COND1_B1_01", "label": "First conditional" },
-      { "id": "LINK_B1_01", "label": "Linkers: contrast, reason, result" }
+      {
+        "id": "PRES_CONT_A1_01",
+        "label": "Present Continuous: happening now"
+      },
+      {
+        "id": "COND0_B1_01",
+        "label": "Zero conditional"
+      },
+      {
+        "id": "COND1_B1_01",
+        "label": "First conditional"
+      },
+      {
+        "id": "LINK_B1_01",
+        "label": "Linkers: contrast, reason, result"
+      }
     ],
     "vocab": [
-      { "term": "pollution", "def": "contaminació", "example": "Air pollution is a serious problem in big cities." },
-      { "term": "climate change", "def": "canvi climàtic", "example": "Climate change affects the whole planet." },
-      { "term": "waste", "def": "residus", "example": "We produce too much plastic waste." },
-      { "term": "recycling", "def": "reciclatge", "example": "Recycling helps reduce landfill." },
-      { "term": "sustainability", "def": "sostenibilitat", "example": "Sustainability means thinking about the future." },
-      { "term": "greenhouse gases", "def": "gasos amb efecte d'hivernacle", "example": "Greenhouse gases trap heat in the atmosphere." },
-      { "term": "campaign", "def": "campanya", "example": "Our school is organising a green campaign." },
-      { "term": "to raise awareness", "def": "conscienciar", "example": "The poster raises awareness about single-use plastic." }
+      {
+        "term": "pollution",
+        "def": "contaminació",
+        "example": "Air pollution is a serious problem in big cities.",
+        "example2": "Pollution is getting worse in the city centre, although the council denies it."
+      },
+      {
+        "term": "climate change",
+        "def": "canvi climàtic",
+        "example": "Climate change affects the whole planet.",
+        "example2": "If we ignore climate change, the problem will only grow."
+      },
+      {
+        "term": "waste",
+        "def": "residus",
+        "example": "We produce too much plastic waste.",
+        "example2": "We are producing more waste than ever before."
+      },
+      {
+        "term": "recycling",
+        "def": "reciclatge",
+        "example": "Recycling helps reduce landfill.",
+        "example2": "If you recycle glass, it can be reused almost indefinitely."
+      },
+      {
+        "term": "sustainability",
+        "def": "sostenibilitat",
+        "example": "Sustainability means thinking about the future.",
+        "example2": "The school is taking sustainability seriously this year."
+      },
+      {
+        "term": "greenhouse gases",
+        "def": "gasos amb efecte d'hivernacle",
+        "example": "Greenhouse gases trap heat in the atmosphere.",
+        "example2": "If greenhouse gases increase, temperatures rise."
+      },
+      {
+        "term": "campaign",
+        "def": "campanya",
+        "example": "Our school is organising a green campaign.",
+        "example2": "We are launching the campaign next Monday, so we need the posters now."
+      },
+      {
+        "term": "to raise awareness",
+        "def": "conscienciar",
+        "example": "The poster raises awareness about single-use plastic.",
+        "example2": "If we raise awareness at school, families will hear about it too."
+      }
     ],
     "student": {
       "repte": "What are the biggest threats facing our planet? Research them, then design a campaign that persuades your classmates to actually do something about it.",
       "products": [
-        { "type": "Multimedia Awareness Campaign", "desc": "Research the global and local threats facing Earth and present a persuasive campaign with interactive elements.", "url": "https://classroom.google.com/h" },
-        { "type": "KWL Chart & Research Log", "desc": "Track what you Know, Want to know and have Learned, and record the sources you used and why they are reliable.", "url": "https://classroom.google.com/h" },
-        { "type": "Read-Aloud Practice", "desc": "Practise reading the campaign text aloud — clear pronunciation, pausing at the punctuation, looking up any word you cannot say.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Multimedia Awareness Campaign",
+          "desc": "Research the global and local threats facing Earth and present a persuasive campaign with interactive elements.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "KWL Chart & Research Log",
+          "desc": "Track what you Know, Want to know and have Learned, and record the sources you used and why they are reliable.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Read-Aloud Practice",
+          "desc": "Practise reading the campaign text aloud — clear pronunciation, pausing at the punctuation, looking up any word you cannot say.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -122,26 +304,87 @@
     "icon": "rocket",
     "grammar": "Future forms and the second conditional, plus the register of a polite client email",
     "grammarPoints": [
-      { "id": "FUTURE_REVIEW_B1_01", "label": "Future forms (review & choice)" },
-      { "id": "COND2_B1_01", "label": "Second conditional" },
-      { "id": "QUEST_INDIRECT_A2_01", "label": "Indirect questions (polite)" }
+      {
+        "id": "FUTURE_REVIEW_B1_01",
+        "label": "Future forms (review & choice)"
+      },
+      {
+        "id": "COND2_B1_01",
+        "label": "Second conditional"
+      },
+      {
+        "id": "QUEST_INDIRECT_A2_01",
+        "label": "Indirect questions (polite)"
+      }
     ],
     "vocab": [
-      { "term": "destination", "def": "destinació", "example": "The Moon is an unusual holiday destination." },
-      { "term": "accommodation", "def": "allotjament", "example": "The accommodation includes a low-gravity room." },
-      { "term": "launch", "def": "llançament", "example": "The launch is scheduled for next spring." },
-      { "term": "orbit", "def": "òrbita", "example": "The hotel is in orbit around the Moon." },
-      { "term": "spacesuit", "def": "vestit espacial", "example": "You need a spacesuit to walk outside." },
-      { "term": "budget", "def": "pressupost", "example": "Design your trip with an unlimited budget." },
-      { "term": "itinerary", "def": "itinerari", "example": "Day three of the itinerary is a crater walk." },
-      { "term": "enquiry", "def": "consulta", "example": "We received an enquiry from a client about the price." }
+      {
+        "term": "destination",
+        "def": "destinació",
+        "example": "The Moon is an unusual holiday destination.",
+        "example2": "By 2100, this destination will be fully booked."
+      },
+      {
+        "term": "accommodation",
+        "def": "allotjament",
+        "example": "The accommodation includes a low-gravity room.",
+        "example2": "If I could choose, I would book the accommodation with the Earth view."
+      },
+      {
+        "term": "launch",
+        "def": "llançament",
+        "example": "The launch is scheduled for next spring.",
+        "example2": "The launch is going to take place at dawn."
+      },
+      {
+        "term": "orbit",
+        "def": "òrbita",
+        "example": "The hotel is in orbit around the Moon.",
+        "example2": "We will be travelling in orbit for two days before we land."
+      },
+      {
+        "term": "spacesuit",
+        "def": "vestit espacial",
+        "example": "You need a spacesuit to walk outside.",
+        "example2": "If you forgot your spacesuit, you would not last a minute outside."
+      },
+      {
+        "term": "budget",
+        "def": "pressupost",
+        "example": "Design your trip with an unlimited budget.",
+        "example2": "If I had an unlimited budget, I would add a zero-gravity pool."
+      },
+      {
+        "term": "itinerary",
+        "def": "itinerari",
+        "example": "Day three of the itinerary is a crater walk.",
+        "example2": "I am attaching the full itinerary for your consideration."
+      },
+      {
+        "term": "enquiry",
+        "def": "consulta",
+        "example": "We received an enquiry from a client about the price.",
+        "example2": "Could you tell me whether your enquiry concerns the March departure?"
+      }
     ],
     "student": {
       "repte": "You have an unlimited budget and the whole solar system to work with. Can you design a high-tech trip nobody could refuse — and answer your clients convincingly when they write to you?",
       "products": [
-        { "type": "Brochure or Video Advert", "desc": "In teams, plan the trip — travel logistics, accommodation, activities and challenges — and produce a brochure, web page or promotional video.", "url": "https://classroom.google.com/h" },
-        { "type": "Client Emails", "desc": "Answer real enquiries from your 'clients' in a polite, correctly structured email. Practised first in the TOD translation and email workshops.", "url": "https://classroom.google.com/h" },
-        { "type": "Presentation & Q&A", "desc": "Deliver the advertisement to the class, including the interactive elements, and field questions afterwards.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Brochure or Video Advert",
+          "desc": "In teams, plan the trip — travel logistics, accommodation, activities and challenges — and produce a brochure, web page or promotional video.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Client Emails",
+          "desc": "Answer real enquiries from your 'clients' in a polite, correctly structured email. Practised first in the TOD translation and email workshops.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Presentation & Q&A",
+          "desc": "Deliver the advertisement to the class, including the interactive elements, and field questions afterwards.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -160,28 +403,95 @@
     "icon": "school",
     "grammar": "Modals of obligation and prohibition, for-and-against connectors, and the second conditional",
     "grammarPoints": [
-      { "id": "MOD_MUST_A2_01", "label": "Must / mustn't (rules)" },
-      { "id": "MOD_HAVE_TO_A2_01", "label": "Have to / don't have to" },
-      { "id": "MOD_SHOULD_A2_01", "label": "Should (advice)" },
-      { "id": "CLAUSE_CONC_B1_01", "label": "Although / despite / in spite of" },
-      { "id": "COND2_B1_01", "label": "Second conditional" }
+      {
+        "id": "MOD_MUST_A2_01",
+        "label": "Must / mustn't (rules)"
+      },
+      {
+        "id": "MOD_HAVE_TO_A2_01",
+        "label": "Have to / don't have to"
+      },
+      {
+        "id": "MOD_SHOULD_A2_01",
+        "label": "Should (advice)"
+      },
+      {
+        "id": "CLAUSE_CONC_B1_01",
+        "label": "Although / despite / in spite of"
+      },
+      {
+        "id": "COND2_B1_01",
+        "label": "Second conditional"
+      }
     ],
     "vocab": [
-      { "term": "timetable", "def": "horari", "example": "Our timetable changes every term." },
-      { "term": "facilities", "def": "instal·lacions", "example": "The school has excellent sports facilities." },
-      { "term": "uniform", "def": "uniforme", "example": "Students there have to wear a uniform." },
-      { "term": "school rules", "def": "normes escolars", "example": "School rules are not the same in every country." },
-      { "term": "responsibilities", "def": "responsabilitats", "example": "Students should have responsibilities too." },
-      { "term": "break", "def": "esbarjo", "example": "We get a twenty-minute break in the morning." },
-      { "term": "to be allowed to", "def": "tenir permís per", "example": "They aren't allowed to use phones in class." },
-      { "term": "detention", "def": "càstig", "example": "In some schools you get detention for being late." }
+      {
+        "term": "timetable",
+        "def": "horari",
+        "example": "Our timetable changes every term.",
+        "example2": "Students must follow the timetable, although there is some flexibility."
+      },
+      {
+        "term": "facilities",
+        "def": "instal·lacions",
+        "example": "The school has excellent sports facilities.",
+        "example2": "If we designed the school, the facilities would be open at weekends."
+      },
+      {
+        "term": "uniform",
+        "def": "uniforme",
+        "example": "Students there have to wear a uniform.",
+        "example2": "You don't have to wear a uniform here, however many schools require one."
+      },
+      {
+        "term": "school rules",
+        "def": "normes escolars",
+        "example": "School rules are not the same in every country.",
+        "example2": "School rules should be decided with the students, not just for them."
+      },
+      {
+        "term": "responsibilities",
+        "def": "responsabilitats",
+        "example": "Students should have responsibilities too.",
+        "example2": "Older students have to take on more responsibilities."
+      },
+      {
+        "term": "break",
+        "def": "esbarjo",
+        "example": "We get a twenty-minute break in the morning.",
+        "example2": "You mustn't leave the building during the break."
+      },
+      {
+        "term": "to be allowed to",
+        "def": "tenir permís per",
+        "example": "They aren't allowed to use phones in class.",
+        "example2": "In my ideal school, students would be allowed to choose two subjects."
+      },
+      {
+        "term": "detention",
+        "def": "càstig",
+        "example": "In some schools you get detention for being late.",
+        "example2": "You shouldn't get detention for forgetting a pencil."
+      }
     ],
     "student": {
       "repte": "If you could design your ideal school, what would it look like? What rules would you implement? Uniform or free expression? What would the students' responsibilities be — if any?",
       "products": [
-        { "type": "Ideal School Brochure (groups of 2-3)", "desc": "A visual presentation or digital brochure advertising your school. No text allowed except the title — use images. You may not read from a script or the screen: you must speak naturally. Use must, have to and should, plus the for-and-against connectors from your essay.", "url": "https://classroom.google.com/h" },
-        { "type": "For and Against Essay", "desc": "Write a for-and-against essay about rules at school, following the structure of the model provided.", "url": "https://classroom.google.com/h" },
-        { "type": "Anecdote Role-Play", "desc": "Act out a conversation about a personal anecdote at school, paying particular attention to pronunciation and accent.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Ideal School Brochure (groups of 2-3)",
+          "desc": "A visual presentation or digital brochure advertising your school. No text allowed except the title — use images. You may not read from a script or the screen: you must speak naturally. Use must, have to and should, plus the for-and-against connectors from your essay.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "For and Against Essay",
+          "desc": "Write a for-and-against essay about rules at school, following the structure of the model provided.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Anecdote Role-Play",
+          "desc": "Act out a conversation about a personal anecdote at school, paying particular attention to pronunciation and accent.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -200,24 +510,78 @@
     "icon": "lightbulb",
     "grammar": "The passive voice for describing inventions and the second conditional for hypotheses",
     "grammarPoints": [
-      { "id": "PASSIVE_B1_01", "label": "Passive voice (present & past)" },
-      { "id": "COND2_B1_01", "label": "Second conditional" }
+      {
+        "id": "PASSIVE_B1_01",
+        "label": "Passive voice (present & past)"
+      },
+      {
+        "id": "COND2_B1_01",
+        "label": "Second conditional"
+      }
     ],
     "vocab": [
-      { "term": "invention", "def": "invent", "example": "The printing press was a life-changing invention." },
-      { "term": "inventor", "def": "inventor/a", "example": "The inventor never gave up on her idea." },
-      { "term": "resilience", "def": "resiliència", "example": "Resilience matters when your first design fails." },
-      { "term": "innovative", "def": "innovador/a", "example": "They came up with an innovative solution." },
-      { "term": "problem-solving", "def": "resolució de problemes", "example": "Problem-solving is the heart of this project." },
-      { "term": "prototype", "def": "prototip", "example": "We built a cardboard prototype first." },
-      { "term": "materials", "def": "materials", "example": "Explain which materials your invention is made of." },
-      { "term": "to come up with", "def": "acudir-se, idear", "example": "They came up with the idea in five minutes." }
+      {
+        "term": "invention",
+        "def": "invent",
+        "example": "The printing press was a life-changing invention.",
+        "example2": "The telephone was invented long before anyone imagined the internet."
+      },
+      {
+        "term": "inventor",
+        "def": "inventor/a",
+        "example": "The inventor never gave up on her idea.",
+        "example2": "The inventor was never paid for her design."
+      },
+      {
+        "term": "resilience",
+        "def": "resiliència",
+        "example": "Resilience matters when your first design fails.",
+        "example2": "If you had more resilience, you would keep trying after a failure."
+      },
+      {
+        "term": "innovative",
+        "def": "innovador/a",
+        "example": "They came up with an innovative solution.",
+        "example2": "The most innovative ideas are often rejected at first."
+      },
+      {
+        "term": "problem-solving",
+        "def": "resolució de problemes",
+        "example": "Problem-solving is the heart of this project.",
+        "example2": "Problem-solving is taught through projects rather than exercises."
+      },
+      {
+        "term": "prototype",
+        "def": "prototip",
+        "example": "We built a cardboard prototype first.",
+        "example2": "The prototype was built from recycled parts."
+      },
+      {
+        "term": "materials",
+        "def": "materials",
+        "example": "Explain which materials your invention is made of.",
+        "example2": "If the materials were cheaper, we would produce it at scale."
+      },
+      {
+        "term": "to come up with",
+        "def": "acudir-se, idear",
+        "example": "They came up with the idea in five minutes.",
+        "example2": "If you came up with a better design, we would build it."
+      }
     ],
     "student": {
       "repte": "If you had all the necessary resources, what contribution would you make to human evolution? Will you be innovative enough to create something that makes our life easier or better?",
       "products": [
-        { "type": "Invention Pitch", "desc": "In groups, choose a real problem — at school, in town or global — brainstorm solutions, then design an invention and present its design, materials and how it works.", "url": "https://classroom.google.com/h" },
-        { "type": "Negotiation & Task Log", "desc": "Record how your group took turns, expressed agreement and disagreement, and assigned tasks to reach a joint decision.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Invention Pitch",
+          "desc": "In groups, choose a real problem — at school, in town or global — brainstorm solutions, then design an invention and present its design, materials and how it works.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Negotiation & Task Log",
+          "desc": "Record how your group took turns, expressed agreement and disagreement, and assigned tasks to reach a joint decision.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {

@@ -154,11 +154,12 @@ function hubRowButton(action, icon, title) {
 }
 
 function hubVocabRow(entry) {
-    const v = entry || { term: '', def: '', example: '' };
+    const v = entry || { term: '', def: '', example: '', example2: '' };
     return '<div data-row="vocab" class="flex gap-2 items-start">'
         + '<input type="text" data-field="term" value="' + hubEsc(v.term) + '" placeholder="term" class="' + HUB_INPUT_CLASS + ' flex-1">'
         + '<input type="text" data-field="def" value="' + hubEsc(v.def) + '" placeholder="definició" class="' + HUB_INPUT_CLASS + ' flex-1">'
         + '<input type="text" data-field="example" value="' + hubEsc(v.example) + '" placeholder="example sentence" class="' + HUB_INPUT_CLASS + ' flex-[2]">'
+        + '<input type="text" data-field="example2" value="' + hubEsc(v.example2) + '" placeholder="second example (optional)" class="' + HUB_INPUT_CLASS + ' flex-[2]">'
         + hubRowButton('remove-row', 'trash-2', 'Remove this word')
         + '</div>';
 }
@@ -340,7 +341,7 @@ function hubReadForm(root, original) {
     updated.shortTitle = value('shortTitle');
     updated.grammar = value('grammar');
     updated.icon = value('icon');
-    updated.vocab = hubReadRows(root, 'vocab', ['term', 'def', 'example']);
+    updated.vocab = hubReadRows(root, 'vocab', ['term', 'def', 'example', 'example2']);
     updated.grammarPoints = hubReadRows(root, 'grammarPoints', ['id', 'label']);
 
     updated.student = Object.assign({}, original.student, {

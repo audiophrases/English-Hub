@@ -8,28 +8,97 @@
     "icon": "briefcase",
     "grammar": "Will, going to, future continuous and future perfect",
     "grammarPoints": [
-      { "id": "FUTURE_REVIEW_B1_01", "label": "Future forms (review & choice)" },
-      { "id": "FUT_WILL_A2_01", "label": "Will: predictions, offers, decisions" },
-      { "id": "FUT_CONT_B2_01", "label": "Future Continuous" },
-      { "id": "FUT_PERF_B2_01", "label": "Future Perfect" }
+      {
+        "id": "FUTURE_REVIEW_B1_01",
+        "label": "Future forms (review & choice)"
+      },
+      {
+        "id": "FUT_WILL_A2_01",
+        "label": "Will: predictions, offers, decisions"
+      },
+      {
+        "id": "FUT_CONT_B2_01",
+        "label": "Future Continuous"
+      },
+      {
+        "id": "FUT_PERF_B2_01",
+        "label": "Future Perfect"
+      }
     ],
     "vocab": [
-      { "term": "degree", "def": "grau", "example": "I want to get a university degree." },
-      { "term": "internship", "def": "pràctiques", "example": "She is doing a summer internship." },
-      { "term": "scholarship", "def": "beca", "example": "He won a scholarship to study abroad." },
-      { "term": "job application", "def": "sol·licitud de feina", "example": "I sent my job application yesterday." },
-      { "term": "career path", "def": "trajectòria professional", "example": "She chose a career path in science." },
-      { "term": "skills", "def": "habilitats", "example": "Communication is an important skill." },
-      { "term": "qualifications", "def": "titulacions", "example": "Do you have the right qualifications?" },
-      { "term": "long-term goal", "def": "objectiu a llarg termini", "example": "My long-term goal is to become a doctor." },
-      { "term": "vocational training", "def": "formació professional", "example": "Vocational training is a serious option after ESO." }
+      {
+        "term": "degree",
+        "def": "grau",
+        "example": "I want to get a university degree.",
+        "example2": "By this time next year, I will have finished my degree."
+      },
+      {
+        "term": "internship",
+        "def": "pràctiques",
+        "example": "She is doing a summer internship.",
+        "example2": "She is going to apply for an internship in Berlin."
+      },
+      {
+        "term": "scholarship",
+        "def": "beca",
+        "example": "He won a scholarship to study abroad.",
+        "example2": "If the scholarship comes through, I will study abroad."
+      },
+      {
+        "term": "job application",
+        "def": "sol·licitud de feina",
+        "example": "I sent my job application yesterday.",
+        "example2": "I will be sending my job application before Friday."
+      },
+      {
+        "term": "career path",
+        "def": "trajectòria professional",
+        "example": "She chose a career path in science.",
+        "example2": "In ten years, he will have changed career path twice."
+      },
+      {
+        "term": "skills",
+        "def": "habilitats",
+        "example": "Communication is an important skill.",
+        "example2": "These are the skills employers are going to look for."
+      },
+      {
+        "term": "qualifications",
+        "def": "titulacions",
+        "example": "Do you have the right qualifications?",
+        "example2": "By June, we will all have the same qualifications."
+      },
+      {
+        "term": "long-term goal",
+        "def": "objectiu a llarg termini",
+        "example": "My long-term goal is to become a doctor.",
+        "example2": "My long-term goal is going to take years of study."
+      },
+      {
+        "term": "vocational training",
+        "def": "formació professional",
+        "example": "Vocational training is a serious option after ESO.",
+        "example2": "She will be starting vocational training in September."
+      }
     ],
     "student": {
       "repte": "Plan your future! Think about what you want to study and what career you want to pursue.",
       "products": [
-        { "type": "Written Task", "desc": "A 150-word text outlining your future study or career plans, using future tenses correctly. You choose the text type: formal email, short essay, job application or informal email.", "url": "https://classroom.google.com/h" },
-        { "type": "Oral Presentation", "desc": "A 2-3 minute individual presentation on a profession you find interesting: what the job involves, the skills it needs, and how you would get there.", "url": "https://classroom.google.com/h" },
-        { "type": "Vocabulary Practice with AI", "desc": "Use a chatbot to drill the vocabulary of your own chosen field, then bring the terms you learned back to class.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Written Task",
+          "desc": "A 150-word text outlining your future study or career plans, using future tenses correctly. You choose the text type: formal email, short essay, job application or informal email.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Oral Presentation",
+          "desc": "A 2-3 minute individual presentation on a profession you find interesting: what the job involves, the skills it needs, and how you would get there.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Vocabulary Practice with AI",
+          "desc": "Use a chatbot to drill the vocabulary of your own chosen field, then bring the terms you learned back to class.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -48,29 +117,101 @@
     "icon": "globe",
     "grammar": "Zero, first, second, third and mixed conditionals",
     "grammarPoints": [
-      { "id": "COND0_B1_01", "label": "Zero conditional" },
-      { "id": "COND1_B1_01", "label": "First conditional" },
-      { "id": "COND2_B1_01", "label": "Second conditional" },
-      { "id": "COND3_B2_01", "label": "Third conditional" },
-      { "id": "COND_MIX_B2_01", "label": "Mixed conditionals" }
+      {
+        "id": "COND0_B1_01",
+        "label": "Zero conditional"
+      },
+      {
+        "id": "COND1_B1_01",
+        "label": "First conditional"
+      },
+      {
+        "id": "COND2_B1_01",
+        "label": "Second conditional"
+      },
+      {
+        "id": "COND3_B2_01",
+        "label": "Third conditional"
+      },
+      {
+        "id": "COND_MIX_B2_01",
+        "label": "Mixed conditionals"
+      }
     ],
     "vocab": [
-      { "term": "migration challenges", "def": "reptes de la migració", "example": "Language is one of the main migration challenges." },
-      { "term": "misconceptions", "def": "idees errònies", "example": "There are many misconceptions about immigrants." },
-      { "term": "racism", "def": "racisme", "example": "We must fight against racism." },
-      { "term": "classism", "def": "classisme", "example": "Classism creates social divides." },
-      { "term": "cultural clashes", "def": "xocs culturals", "example": "Cultural clashes can happen when adjusting to a new country." },
-      { "term": "reasons", "def": "motius", "example": "People migrate for many different reasons." },
-      { "term": "emotions of leaving", "def": "emocions de marxar", "example": "The emotions of leaving home are complex." },
-      { "term": "asylum", "def": "asil", "example": "They applied for asylum when they arrived." },
-      { "term": "to settle in", "def": "establir-se", "example": "It took them two years to settle in." }
+      {
+        "term": "migration challenges",
+        "def": "reptes de la migració",
+        "example": "Language is one of the main migration challenges.",
+        "example2": "If governments understood the migration challenges better, policies would change."
+      },
+      {
+        "term": "misconceptions",
+        "def": "idees errònies",
+        "example": "There are many misconceptions about immigrants.",
+        "example2": "If people met more migrants, they would drop these misconceptions."
+      },
+      {
+        "term": "racism",
+        "def": "racisme",
+        "example": "We must fight against racism.",
+        "example2": "If we had spoken up, the racism would not have gone unchallenged."
+      },
+      {
+        "term": "classism",
+        "def": "classisme",
+        "example": "Classism creates social divides.",
+        "example2": "Classism persists even where racism is condemned."
+      },
+      {
+        "term": "cultural clashes",
+        "def": "xocs culturals",
+        "example": "Cultural clashes can happen when adjusting to a new country.",
+        "example2": "If you learn the language, cultural clashes become easier to manage."
+      },
+      {
+        "term": "reasons",
+        "def": "motius",
+        "example": "People migrate for many different reasons.",
+        "example2": "If you had asked her reasons, you would understand her decision now."
+      },
+      {
+        "term": "emotions of leaving",
+        "def": "emocions de marxar",
+        "example": "The emotions of leaving home are complex.",
+        "example2": "If I had to leave tomorrow, the emotions of leaving would overwhelm me."
+      },
+      {
+        "term": "asylum",
+        "def": "asil",
+        "example": "They applied for asylum when they arrived.",
+        "example2": "If their claim is accepted, they will be granted asylum."
+      },
+      {
+        "term": "to settle in",
+        "def": "establir-se",
+        "example": "It took them two years to settle in.",
+        "example2": "If they had arrived earlier, they would have settled in more easily."
+      }
     ],
     "student": {
       "repte": "Step into someone else's shoes. Understand the journey, challenges, and emotions of migration.",
       "products": [
-        { "type": "Skit (Groups of 3-4)", "desc": "A three-scene script and performance: 'Before Leaving', 'Once in the New Country' and 'Resolution'. Assign characters, feature all conditional types, and end with a moral and a debate.", "url": "https://classroom.google.com/h" },
-        { "type": "Migration News Story", "desc": "Find a real news story about immigration, simplify it to roughly two paragraphs, list the difficult words, and write one comprehension question and one opinion question using a conditional.", "url": "https://classroom.google.com/h" },
-        { "type": "Reflective Debate", "desc": "Post-performance class discussion on the moral and hidden social messages of the skits.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Skit (Groups of 3-4)",
+          "desc": "A three-scene script and performance: 'Before Leaving', 'Once in the New Country' and 'Resolution'. Assign characters, feature all conditional types, and end with a moral and a debate.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Migration News Story",
+          "desc": "Find a real news story about immigration, simplify it to roughly two paragraphs, list the difficult words, and write one comprehension question and one opinion question using a conditional.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Reflective Debate",
+          "desc": "Post-performance class discussion on the moral and hidden social messages of the skits.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -89,27 +230,91 @@
     "icon": "heart-pulse",
     "grammar": "Modals for giving advice and expressing necessity and possibility",
     "grammarPoints": [
-      { "id": "MOD_SHOULD_A2_01", "label": "Should (advice)" },
-      { "id": "MOD_MUST_A2_01", "label": "Must / mustn't (rules)" },
-      { "id": "MOD_HAVE_TO_A2_01", "label": "Have to / don't have to" },
-      { "id": "MOD_MAY_MIGHT_B1_01", "label": "May / might (possibility)" }
+      {
+        "id": "MOD_SHOULD_A2_01",
+        "label": "Should (advice)"
+      },
+      {
+        "id": "MOD_MUST_A2_01",
+        "label": "Must / mustn't (rules)"
+      },
+      {
+        "id": "MOD_HAVE_TO_A2_01",
+        "label": "Have to / don't have to"
+      },
+      {
+        "id": "MOD_MAY_MIGHT_B1_01",
+        "label": "May / might (possibility)"
+      }
     ],
     "vocab": [
-      { "term": "nutrition", "def": "nutrició", "example": "Good nutrition is essential for growth." },
-      { "term": "lifestyle habits", "def": "hàbits de vida", "example": "Sleeping 8 hours is a good lifestyle habit." },
-      { "term": "mental health", "def": "salut mental", "example": "Take care of your mental health as well as your body." },
-      { "term": "exercise", "def": "exercici", "example": "Regular exercise makes you stronger." },
-      { "term": "digital detox", "def": "desintoxicació digital", "example": "A digital detox might improve your sleep." },
-      { "term": "reliable source", "def": "font fiable", "example": "Always check that a health claim comes from a reliable source." },
-      { "term": "misinformation", "def": "desinformació", "example": "Health misinformation spreads quickly online." },
-      { "term": "balanced diet", "def": "dieta equilibrada", "example": "A balanced diet is not the same as eating less." }
+      {
+        "term": "nutrition",
+        "def": "nutrició",
+        "example": "Good nutrition is essential for growth.",
+        "example2": "You should read about nutrition before changing your diet."
+      },
+      {
+        "term": "lifestyle habits",
+        "def": "hàbits de vida",
+        "example": "Sleeping 8 hours is a good lifestyle habit.",
+        "example2": "Small lifestyle habits can make a bigger difference than one big change."
+      },
+      {
+        "term": "mental health",
+        "def": "salut mental",
+        "example": "Take care of your mental health as well as your body.",
+        "example2": "You must not treat mental health as less important than physical health."
+      },
+      {
+        "term": "exercise",
+        "def": "exercici",
+        "example": "Regular exercise makes you stronger.",
+        "example2": "You don't have to join a gym; you might just walk more."
+      },
+      {
+        "term": "digital detox",
+        "def": "desintoxicació digital",
+        "example": "A digital detox might improve your sleep.",
+        "example2": "A digital detox might help, but it may not solve everything."
+      },
+      {
+        "term": "reliable source",
+        "def": "font fiable",
+        "example": "Always check that a health claim comes from a reliable source.",
+        "example2": "You must check that it comes from a reliable source before you publish it."
+      },
+      {
+        "term": "misinformation",
+        "def": "desinformació",
+        "example": "Health misinformation spreads quickly online.",
+        "example2": "Health misinformation can be dangerous, so we should always cite our sources."
+      },
+      {
+        "term": "balanced diet",
+        "def": "dieta equilibrada",
+        "example": "A balanced diet is not the same as eating less.",
+        "example2": "You should aim for a balanced diet rather than a strict one."
+      }
     ],
     "student": {
       "repte": "Become a wellness expert! Build a guide people actually want to read — and make sure every word of it is true.",
       "products": [
-        { "type": "Health & Well-being Guide", "desc": "Narrow 'health' down to a specific niche (teen mental health, the science of sleep, digital detox...). Structure it with Question Titles the reader needs answered — 'Why am I always tired in the morning?' — never headers like 'Introduction' or 'Tips'. Use modal verbs inside every section to give advice.", "url": "https://classroom.google.com/h" },
-        { "type": "The Truth Test", "desc": "Before including any fact, prove the source is credible: a medical institution, a government health site or a peer-reviewed paper. Health is sensitive — you must not spread misinformation.", "url": "https://classroom.google.com/h" },
-        { "type": "Role-Play Recording", "desc": "A doctor-patient or coach-athlete spoken diagnostic scenario recorded for peer feedback.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Health & Well-being Guide",
+          "desc": "Narrow 'health' down to a specific niche (teen mental health, the science of sleep, digital detox...). Structure it with Question Titles the reader needs answered — 'Why am I always tired in the morning?' — never headers like 'Introduction' or 'Tips'. Use modal verbs inside every section to give advice.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "The Truth Test",
+          "desc": "Before including any fact, prove the source is credible: a medical institution, a government health site or a peer-reviewed paper. Health is sensitive — you must not spread misinformation.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Role-Play Recording",
+          "desc": "A doctor-patient or coach-athlete spoken diagnostic scenario recorded for peer feedback.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -128,27 +333,91 @@
     "icon": "milestone",
     "grammar": "Reported speech, tense backshifting and reporting verbs",
     "grammarPoints": [
-      { "id": "REPORTED_B1_01", "label": "Reported speech: statements" },
-      { "id": "REPORTED_B1_02", "label": "Reported speech: questions" },
-      { "id": "REPORTED_ADV_B2_01", "label": "Reporting verbs" },
-      { "id": "REPORTED_PERF_B2_01", "label": "Backshift exceptions & time words" }
+      {
+        "id": "REPORTED_B1_01",
+        "label": "Reported speech: statements"
+      },
+      {
+        "id": "REPORTED_B1_02",
+        "label": "Reported speech: questions"
+      },
+      {
+        "id": "REPORTED_ADV_B2_01",
+        "label": "Reporting verbs"
+      },
+      {
+        "id": "REPORTED_PERF_B2_01",
+        "label": "Backshift exceptions & time words"
+      }
     ],
     "vocab": [
-      { "term": "life path", "def": "camí de la vida", "example": "Everyone has a different life path." },
-      { "term": "personal challenges", "def": "reptes personals", "example": "Overcoming personal challenges makes you resilient." },
-      { "term": "achievements", "def": "assoliments", "example": "Graduating was one of her greatest achievements." },
-      { "term": "turning point", "def": "punt d'inflexió", "example": "Moving abroad was the turning point in his career." },
-      { "term": "to claim", "def": "afirmar", "example": "She claimed that the job had changed her completely." },
-      { "term": "to admit", "def": "admetre", "example": "He admitted he had been wrong." },
-      { "term": "to deny", "def": "negar", "example": "They denied knowing anything about it." },
-      { "term": "headline", "def": "titular", "example": "Write a headline for your sixty-second news pitch." }
+      {
+        "term": "life path",
+        "def": "camí de la vida",
+        "example": "Everyone has a different life path.",
+        "example2": "She said that her life path had changed completely that year."
+      },
+      {
+        "term": "personal challenges",
+        "def": "reptes personals",
+        "example": "Overcoming personal challenges makes you resilient.",
+        "example2": "He admitted that his personal challenges had made him stronger."
+      },
+      {
+        "term": "achievements",
+        "def": "assoliments",
+        "example": "Graduating was one of her greatest achievements.",
+        "example2": "She told us her achievements had come at a cost."
+      },
+      {
+        "term": "turning point",
+        "def": "punt d'inflexió",
+        "example": "Moving abroad was the turning point in his career.",
+        "example2": "He explained that the turning point had happened the previous summer."
+      },
+      {
+        "term": "to claim",
+        "def": "afirmar",
+        "example": "She claimed that the job had changed her completely.",
+        "example2": "She claimed she had never wanted to be famous."
+      },
+      {
+        "term": "to admit",
+        "def": "admetre",
+        "example": "He admitted he had been wrong.",
+        "example2": "He admitted that he had made a mistake the day before."
+      },
+      {
+        "term": "to deny",
+        "def": "negar",
+        "example": "They denied knowing anything about it.",
+        "example2": "They denied that they had been told about the decision."
+      },
+      {
+        "term": "headline",
+        "def": "titular",
+        "example": "Write a headline for your sixty-second news pitch.",
+        "example2": "The reporter asked what the headline was going to be."
+      }
     ],
     "student": {
       "repte": "Discover inspiring stories around you. Interview someone whose life path inspires you and report their story back to the class.",
       "products": [
-        { "type": "Visual-Only Oral Profile", "desc": "A short presentation supported exclusively by images. Tell the interviewee's story and reflect on how it inspires you — no text on the slides.", "url": "https://classroom.google.com/h" },
-        { "type": "Interview + Reported Speech Appendix", "desc": "Choose someone accessible, write your questions first in direct speech, convert them into reported speech, then conduct the interview. Submit both columns side by side.", "url": "https://classroom.google.com/h" },
-        { "type": "The 60-Second News Pitch", "desc": "Turn one story from your interview into a sixty-second spoken news item, reporting what was said rather than quoting it.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Visual-Only Oral Profile",
+          "desc": "A short presentation supported exclusively by images. Tell the interviewee's story and reflect on how it inspires you — no text on the slides.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Interview + Reported Speech Appendix",
+          "desc": "Choose someone accessible, write your questions first in direct speech, convert them into reported speech, then conduct the interview. Submit both columns side by side.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "The 60-Second News Pitch",
+          "desc": "Turn one story from your interview into a sixty-second spoken news item, reporting what was said rather than quoting it.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -167,26 +436,87 @@
     "icon": "user-check",
     "grammar": "Question formation, indirect polite questions and professional register",
     "grammarPoints": [
-      { "id": "QUEST_INDIRECT_B1_01", "label": "Indirect questions (core)" },
-      { "id": "WHQ_A1_01", "label": "WH- questions" },
-      { "id": "TAGQ_B1_01", "label": "Question tags" }
+      {
+        "id": "QUEST_INDIRECT_B1_01",
+        "label": "Indirect questions (core)"
+      },
+      {
+        "id": "WHQ_A1_01",
+        "label": "WH- questions"
+      },
+      {
+        "id": "TAGQ_B1_01",
+        "label": "Question tags"
+      }
     ],
     "vocab": [
-      { "term": "job advertisement", "def": "oferta de feina", "example": "I saw several job advertisements online." },
-      { "term": "cover letter", "def": "carta de presentació", "example": "A good cover letter is essential." },
-      { "term": "CV", "def": "currículum", "example": "Follow standard CV conventions." },
-      { "term": "action verbs", "def": "verbs d'acció", "example": "Use action verbs like 'managed' or 'created' in your CV." },
-      { "term": "duties", "def": "tasques, funcions", "example": "The advert lists the main duties of the post." },
-      { "term": "compensation", "def": "remuneració", "example": "The compensation includes a bonus structure." },
-      { "term": "candidate", "def": "candidat/a", "example": "We interviewed six candidates." },
-      { "term": "to hire", "def": "contractar", "example": "They decided to hire her after the second interview." }
+      {
+        "term": "job advertisement",
+        "def": "oferta de feina",
+        "example": "I saw several job advertisements online.",
+        "example2": "Could you tell me where you saw the job advertisement?"
+      },
+      {
+        "term": "cover letter",
+        "def": "carta de presentació",
+        "example": "A good cover letter is essential.",
+        "example2": "Do you know how long a cover letter should be?"
+      },
+      {
+        "term": "CV",
+        "def": "currículum",
+        "example": "Follow standard CV conventions.",
+        "example2": "May I ask when you last updated your CV?"
+      },
+      {
+        "term": "action verbs",
+        "def": "verbs d'acció",
+        "example": "Use action verbs like 'managed' or 'created' in your CV.",
+        "example2": "You used strong action verbs in your CV, didn't you?"
+      },
+      {
+        "term": "duties",
+        "def": "tasques, funcions",
+        "example": "The advert lists the main duties of the post.",
+        "example2": "Could you explain what the main duties of the post are?"
+      },
+      {
+        "term": "compensation",
+        "def": "remuneració",
+        "example": "The compensation includes a bonus structure.",
+        "example2": "I was wondering whether the compensation includes travel."
+      },
+      {
+        "term": "candidate",
+        "def": "candidat/a",
+        "example": "We interviewed six candidates.",
+        "example2": "Which candidate impressed you most, if you don't mind me asking?"
+      },
+      {
+        "term": "to hire",
+        "def": "contractar",
+        "example": "They decided to hire her after the second interview.",
+        "example2": "Do you know when they are planning to hire someone?"
+      }
     ],
     "student": {
       "repte": "Get ready for the real world! Build the job market first, then apply to it and survive the interview.",
       "products": [
-        { "type": "Project 1/2 — Job Offer", "desc": "Publish a job offer as a PDF. Include the company description; the job title, department, duties and reporting manager; base salary or hourly rate, pay frequency and any bonus; and the start logistics.", "url": "https://classroom.google.com/h" },
-        { "type": "Project 2/2 — CV and Cover Letter", "desc": "Choose two of your classmates' job offers and apply: one modern CV plus a cover letter tailored to each post.", "url": "https://classroom.google.com/h" },
-        { "type": "Recorded Mock Interview", "desc": "Recruiters interview the candidates and record it. Rehearse pronunciation and intonation first — polite indirect questions throughout.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Project 1/2 — Job Offer",
+          "desc": "Publish a job offer as a PDF. Include the company description; the job title, department, duties and reporting manager; base salary or hourly rate, pay frequency and any bonus; and the start logistics.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Project 2/2 — CV and Cover Letter",
+          "desc": "Choose two of your classmates' job offers and apply: one modern CV plus a cover letter tailored to each post.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Recorded Mock Interview",
+          "desc": "Recruiters interview the candidates and record it. Rehearse pronunciation and intonation first — polite indirect questions throughout.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {
@@ -205,27 +535,91 @@
     "icon": "search-code",
     "grammar": "Defining and non-defining relative clauses",
     "grammarPoints": [
-      { "id": "REL_DEF_A2_01", "label": "Defining relative clauses" },
-      { "id": "REL_NONDEF_B1_01", "label": "Non-defining relative clauses" },
-      { "id": "REL_ADV_B1_01", "label": "whose / where / when" },
-      { "id": "REL_REDUCED_B2_01", "label": "Reduced relatives" }
+      {
+        "id": "REL_DEF_A2_01",
+        "label": "Defining relative clauses"
+      },
+      {
+        "id": "REL_NONDEF_B1_01",
+        "label": "Non-defining relative clauses"
+      },
+      {
+        "id": "REL_ADV_B1_01",
+        "label": "whose / where / when"
+      },
+      {
+        "id": "REL_REDUCED_B2_01",
+        "label": "Reduced relatives"
+      }
     ],
     "vocab": [
-      { "term": "deductive reasoning", "def": "raonament deductiu", "example": "Detectives use deductive reasoning to solve cases." },
-      { "term": "crime scene", "def": "escena del crim", "example": "The area was secured with crime scene tape." },
-      { "term": "clues", "def": "pistes", "example": "They found several clues in the room." },
-      { "term": "evidence", "def": "proves", "example": "The fingerprints are crucial evidence." },
-      { "term": "suspect profile", "def": "perfil del sospitós", "example": "They created suspect profiles based on the testimonies." },
-      { "term": "alibi", "def": "coartada", "example": "The suspect whose alibi failed became the prime suspect." },
-      { "term": "witness", "def": "testimoni", "example": "The witness who saw the car came forward." },
-      { "term": "motive", "def": "mòbil", "example": "Nobody could establish a motive." }
+      {
+        "term": "deductive reasoning",
+        "def": "raonament deductiu",
+        "example": "Detectives use deductive reasoning to solve cases.",
+        "example2": "The detective, whose deductive reasoning never failed, solved it in an hour."
+      },
+      {
+        "term": "crime scene",
+        "def": "escena del crim",
+        "example": "The area was secured with crime scene tape.",
+        "example2": "The crime scene, which had been sealed overnight, was untouched."
+      },
+      {
+        "term": "clues",
+        "def": "pistes",
+        "example": "They found several clues in the room.",
+        "example2": "The clues that mattered most were the ones nobody photographed."
+      },
+      {
+        "term": "evidence",
+        "def": "proves",
+        "example": "The fingerprints are crucial evidence.",
+        "example2": "The evidence which convicted him was found under the stairs."
+      },
+      {
+        "term": "suspect profile",
+        "def": "perfil del sospitós",
+        "example": "They created suspect profiles based on the testimonies.",
+        "example2": "The suspect profile that the team built turned out to be wrong."
+      },
+      {
+        "term": "alibi",
+        "def": "coartada",
+        "example": "The suspect whose alibi failed became the prime suspect.",
+        "example2": "The man whose alibi collapsed was arrested that evening."
+      },
+      {
+        "term": "witness",
+        "def": "testimoni",
+        "example": "The witness who saw the car came forward.",
+        "example2": "The witness who came forward had been standing across the street."
+      },
+      {
+        "term": "motive",
+        "def": "mòbil",
+        "example": "Nobody could establish a motive.",
+        "example2": "The motive, which nobody had considered, was money after all."
+      }
     ],
     "student": {
       "repte": "Become a detective! Invent a crime mystery and challenge your classmates to solve it using clues.",
       "products": [
-        { "type": "Digital Clue Board", "desc": "A single presentation slide displaying twelve picture-only clues with absolutely no text.", "url": "https://classroom.google.com/h" },
-        { "type": "Confidential Written Solution", "desc": "A short narrative connecting all clues using accurate relative clauses and identifying the culprit.", "url": "https://classroom.google.com/h" },
-        { "type": "CSI Live Presentation", "desc": "An interactive classroom round where the team projects their clue board and fields classmates' questions.", "url": "https://classroom.google.com/h" }
+        {
+          "type": "Digital Clue Board",
+          "desc": "A single presentation slide displaying twelve picture-only clues with absolutely no text.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "Confidential Written Solution",
+          "desc": "A short narrative connecting all clues using accurate relative clauses and identifying the culprit.",
+          "url": "https://classroom.google.com/h"
+        },
+        {
+          "type": "CSI Live Presentation",
+          "desc": "An interactive classroom round where the team projects their clue board and fields classmates' questions.",
+          "url": "https://classroom.google.com/h"
+        }
       ]
     },
     "teacher": {

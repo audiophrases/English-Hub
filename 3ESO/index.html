@@ -732,6 +732,12 @@
                                                 <div class="mt-0.5 text-blue-500"><i data-lucide="quote" class="w-4 h-4"></i></div>
                                                 <p class="text-slate-600 dark:text-slate-300 italic">"${v.example}"</p>
                                             </div>
+                                            ${v.example2 ? `
+                                                <div class="flex items-start gap-2 mt-2">
+                                                    <div class="mt-0.5 text-blue-500/60"><i data-lucide="quote" class="w-4 h-4"></i></div>
+                                                    <p class="text-slate-600 dark:text-slate-300 italic">"${v.example2}"</p>
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     </div>
                                 `).join('')}
