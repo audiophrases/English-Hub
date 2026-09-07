@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../auth.js"></script>
+    <script src="../editor.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -72,186 +73,7 @@
 
     <script>
         // Data Store
-        const units = [
-            {
-                id: 1,
-                title: "Happiness & Feelings",
-                shortTitle: "Happiness",
-                theme: "amber",
-                gradient: "from-amber-400 to-orange-500",
-                icon: "smile",
-                grammar: "Past Simple vs Past Continuous",
-                vocab: [
-                    { term: "happiness", def: "felicitat", example: "Happiness is important for your health." },
-                    { term: "behaviour", def: "comportament", example: "His behaviour was excellent." },
-                    { term: "feeling", def: "sentiment", example: "She had a strong feeling of joy." },
-                    { term: "helping", def: "ajudar", example: "Helping others makes you feel good." },
-                    { term: "spooky", def: "esgarrifós", example: "That was a very spooky story!" }
-                ],
-                student: {
-                    repte: "Explore what happiness means to you, talk about past experiences, and invent a spooky tale.",
-                    products: [
-                        { type: "Written Task", desc: "Spooky Tales: Invent a horror story.", url: "https://classroom.google.com/h" },
-                        { type: "Speaking Task", desc: "Speaking about the past: share experiences.", url: "https://classroom.google.com/h" },
-                        { type: "TOD", desc: "Find Someone Who: Play the game speaking only in English.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Establish initial routines and assess narrative tenses through engaging topics like happiness and Halloween.",
-                    competencies: "Competència Específica 1 and 5.",
-                    methodology: "Gamification, creative writing, peer interaction.",
-                    assessment: "Accuracy of past tenses, fluency in spoken games."
-                }
-            },
-            {
-                id: 2,
-                title: "Stories, Books & Films",
-                shortTitle: "Stories & Films",
-                theme: "rose",
-                gradient: "from-rose-400 to-pink-500",
-                icon: "film",
-                grammar: "Present Perfect",
-                vocab: [
-                    { term: "opinion", def: "opinió", example: "What is your opinion on this book?" },
-                    { term: "archetype", def: "arquetip", example: "The hero is a common archetype." },
-                    { term: "plot", def: "argument", example: "The plot of the movie was very interesting." },
-                    { term: "comic strip", def: "tira còmica", example: "I love reading this comic strip." },
-                    { term: "character", def: "personatge", example: "Who is your favourite character?" }
-                ],
-                student: {
-                    repte: "Dive into the world of stories! Review your favourite films and create your own comic strip.",
-                    products: [
-                        { type: "Speaking Task", desc: "My Favourite Film Presentation.", url: "https://classroom.google.com/h" },
-                        { type: "Creative Task", desc: "Comic strip creation.", url: "https://classroom.google.com/h" },
-                        { type: "Listening Task", desc: "Fantastic Beasts trailer listening.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Develop students' ability to narrate life experiences and express opinions on media.",
-                    competencies: "Competència Específica 3 and 4.",
-                    methodology: "Oral presentations, multimodal creation (comics), active listening.",
-                    assessment: "Oral fluency, proper usage of Present Perfect."
-                }
-            },
-            {
-                id: 3,
-                title: "Choices, Money & Adventure",
-                shortTitle: "Choices",
-                theme: "emerald",
-                gradient: "from-emerald-400 to-teal-500",
-                icon: "compass",
-                grammar: "Review of Present and Past Tenses",
-                vocab: [
-                    { term: "choice", def: "elecció", example: "You have to make a choice." },
-                    { term: "money", def: "diners", example: "How much money do you need?" },
-                    { term: "shopping", def: "compres", example: "Let's go shopping!" },
-                    { term: "adventure", def: "aventura", example: "It was a great adventure." },
-                    { term: "bargain", def: "ganga", example: "This jacket was a real bargain." }
-                ],
-                student: {
-                    repte: "Make choices, manage money, and embark on adventures while preparing for the holidays.",
-                    products: [
-                        { type: "TOD Project", desc: "Create your own Board Game.", url: "https://classroom.google.com/h" },
-                        { type: "Challenge", desc: "30 Days Happiness Challenge.", url: "https://classroom.google.com/h" },
-                        { type: "Music Task", desc: "My Playlist: Create a 10 songs playlist.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Encourage autonomous learning and decision making through project-based tasks.",
-                    competencies: "Competència Específica 5 and Personal/Social.",
-                    methodology: "Project-based learning (Board Games), self-reflection.",
-                    assessment: "Creativity, collaboration in pairs, grammatical accuracy in instructions."
-                }
-            },
-            {
-                id: 4,
-                title: "Communication & Technology",
-                shortTitle: "Communication",
-                theme: "blue",
-                gradient: "from-blue-400 to-indigo-500",
-                icon: "smartphone",
-                grammar: "Modal Verbs",
-                vocab: [
-                    { term: "communication", def: "comunicació", example: "Communication is key in a relationship." },
-                    { term: "technology", def: "tecnologia", example: "Technology changes very fast." },
-                    { term: "trailer", def: "tràiler", example: "I saw the movie trailer online." },
-                    { term: "translation", def: "traducció", example: "This translation is incorrect." },
-                    { term: "device", def: "dispositiu", example: "Please turn off your device." }
-                ],
-                student: {
-                    repte: "Explore how we communicate in the modern world and learn to give advice using modals.",
-                    products: [
-                        { type: "Listening Task", desc: "Movie Trailers: Listen and fill in the gaps.", url: "https://classroom.google.com/h" },
-                        { type: "Reading Task", desc: "Lost in translation! Read and answer.", url: "https://classroom.google.com/h" },
-                        { type: "TOD", desc: "Modal verbs review exercises.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Enhance digital literacy and the ability to express obligation, permission, and advice.",
-                    competencies: "Competència Digital and Llengua Estrangera 1.",
-                    methodology: "Authentic materials listening, grammar in context.",
-                    assessment: "Listening comprehension, accurate use of modal verbs."
-                }
-            },
-            {
-                id: 5,
-                title: "Crime & Biographies",
-                shortTitle: "Crime & Bio",
-                theme: "purple",
-                gradient: "from-purple-400 to-violet-500",
-                icon: "search",
-                grammar: "Relative Pronouns & Modal Verbs",
-                vocab: [
-                    { term: "crime", def: "crim", example: "The detective solved the crime." },
-                    { term: "biography", def: "biografia", example: "I read a biography of a famous writer." },
-                    { term: "author", def: "autor", example: "Who is the author of this book?" },
-                    { term: "justice", def: "justícia", example: "They demanded justice." },
-                    { term: "clue", def: "pista", example: "He found a clue at the scene." }
-                ],
-                student: {
-                    repte: "Investigate crimes and learn about famous British and American writers.",
-                    products: [
-                        { type: "Project", desc: "British and American writers - Biographical project.", url: "https://classroom.google.com/h" },
-                        { type: "Reading Task", desc: "A second chance: Read and complete the form.", url: "https://classroom.google.com/h" },
-                        { type: "Writing Task", desc: "Crime writing photocopy.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Integrate literature and culture with language learning through biographical research.",
-                    competencies: "Competència Específica 6 (Plurilingual/Intercultural).",
-                    methodology: "Research project, extensive reading, guided writing.",
-                    assessment: "Research skills, synthesis of information, correct use of relative clauses."
-                }
-            },
-            {
-                id: 6,
-                title: "Final Challenges & Music",
-                shortTitle: "Finals",
-                theme: "slate",
-                gradient: "from-slate-700 to-slate-900",
-                icon: "music",
-                grammar: "Comprehensive Review",
-                vocab: [
-                    { term: "festival", def: "festival", example: "We went to a music festival." },
-                    { term: "billboard", def: "cartellera", example: "Look at the billboard for the concert." },
-                    { term: "review", def: "repàs", example: "Let's do a quick grammar review." },
-                    { term: "comprehension", def: "comprensió", example: "Reading comprehension is very important." }
-                ],
-                student: {
-                    repte: "Show off your skills! Design a music festival and ace your final exams.",
-                    products: [
-                        { type: "Creative Task", desc: "The Music Festival of your Dreams: Design a billboard.", url: "https://classroom.google.com/h" },
-                        { type: "Exams", desc: "Proves Finals: Reading and Listening Comprehension.", url: "https://classroom.google.com/h" }
-                    ]
-                },
-                teacher: {
-                    repte: "Consolidate learning and assess overall competency levels at the end of the year.",
-                    competencies: "All Competències Específiques.",
-                    methodology: "Summative assessment, creative wrap-up activities.",
-                    assessment: "Final mastery of 3rd ESO objectives."
-                }
-            }
-        ];
+        let units = [];
 
         const themeClasses = {
             amber: { bg: 'bg-amber-100 dark:bg-amber-900/40', text: 'text-amber-700 dark:text-amber-400' },
@@ -698,6 +520,10 @@
                         <h2 class="text-2xl font-bold text-slate-900 dark:text-white leading-tight pr-4">${u.title}</h2>
                     </div>
                 </div>
+                ${currentView === 'teacher' ? `
+                <button onclick="hubEditUnit(${u.id})" title="Edit this unit" class="absolute top-6 right-16 p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <i data-lucide="pencil"></i>
+                </button>` : ''}
                 <button onclick="closeDrawer()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
                     <i data-lucide="x"></i>
                 </button>
@@ -861,7 +687,40 @@
         }
 
         // Boot
-        window.addEventListener('DOMContentLoaded', initApp);
+        // units.json loads before the first render, so Teacher Mode edits and
+        // what the page shows are always the same array.
+        window.addEventListener('DOMContentLoaded', function () {
+            hubLoadUnits('units.json').then(function (loaded) {
+                units = loaded;
+
+                hubEditorInit({
+                    path: '3ESO/units.json',
+                    getUnits: function () { return units; },
+                    setUnits: function (next) { units = next; },
+                    onChange: function () {
+                        renderRoadmap();
+                        renderGrid();
+                        renderResourceCorner();
+                        if (selectedUnit) {
+                            selectedUnit = units.find(function (u) { return u.id === selectedUnit.id; }) || null;
+                            if (selectedUnit) renderDrawerContent();
+                            else closeDrawer();
+                        }
+                        lucide.createIcons();
+                    }
+                });
+
+                initApp();
+            }).catch(function (err) {
+                document.getElementById('app').innerHTML =
+                    '<div class="max-w-lg mx-auto mt-24 p-8 text-center">'
+                    + '<h1 class="text-xl font-bold text-slate-900 dark:text-white mb-2">This dashboard could not load</h1>'
+                    + '<p class="text-slate-600 dark:text-slate-400">' + err.message + '</p>'
+                    + '<p class="text-sm text-slate-400 mt-4">Opening index.html straight from disk will do this too '
+                    + '— units.json needs to be served over http, so use a local server or the live site.</p>'
+                    + '</div>';
+            });
+        });
     </script>
 </body>
 </html>
