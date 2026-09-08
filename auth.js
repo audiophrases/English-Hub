@@ -28,8 +28,11 @@
 
 const HUB_CLIENT_ID = '673678320233-8aacskg99idu0uqnbr181id33gf8fet4.apps.googleusercontent.com';
 
+// Lowercase only - the address from Google is lowercased before it is compared.
 const HUB_ALLOWED_EMAILS = [
-    'eugenimonfort@iecomaruga.cat'
+    'eugenimonfort@iecomaruga.cat',
+    'eugenime@gmail.com',
+    'emonfor3@xtec.cat'
 ];
 
 const HUB_AUTH_KEY = 'hubTeacherEmail';
