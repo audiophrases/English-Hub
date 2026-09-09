@@ -79,6 +79,78 @@
         "def": "formació professional",
         "example": "Vocational training is a serious option after ESO.",
         "example2": "She will be starting vocational training in September."
+      },
+      {
+        "term": "apprenticeship",
+        "def": "contracte de formació, aprenentatge",
+        "example": "She chose an apprenticeship instead of university.",
+        "example2": "The apprenticeship lasts two years and is paid."
+      },
+      {
+        "term": "gap year",
+        "def": "any sabàtic",
+        "example": "He is taking a gap year to travel.",
+        "example2": "A gap year is not a wasted year."
+      },
+      {
+        "term": "to apply for",
+        "def": "sol·licitar",
+        "example": "I applied for three courses.",
+        "example2": "She has applied for a scholarship abroad."
+      },
+      {
+        "term": "entry requirements",
+        "def": "requisits d'accés",
+        "example": "Check the entry requirements first.",
+        "example2": "The entry requirements changed this year."
+      },
+      {
+        "term": "work experience",
+        "def": "experiència laboral",
+        "example": "Work experience counts as much as grades.",
+        "example2": "He got work experience in a local clinic."
+      },
+      {
+        "term": "to earn a living",
+        "def": "guanyar-se la vida",
+        "example": "She earns a living as a translator.",
+        "example2": "You can earn a living doing what you love."
+      },
+      {
+        "term": "shortlist",
+        "def": "llista de finalistes",
+        "example": "She made the shortlist.",
+        "example2": "Only six names were on the shortlist."
+      },
+      {
+        "term": "deadline",
+        "def": "data límit",
+        "example": "The deadline is in March.",
+        "example2": "He missed the deadline by one day."
+      },
+      {
+        "term": "self-employed",
+        "def": "autònom",
+        "example": "My cousin is self-employed.",
+        "example2": "Being self-employed means no fixed salary."
+      },
+      {
+        "term": "to specialise in",
+        "def": "especialitzar-se en",
+        "example": "I want to specialise in robotics.",
+        "example2": "She has specialised in marine biology."
+      },
+      {
+        "term": "prospects",
+        "def": "perspectives (de futur)",
+        "example": "The job prospects are good.",
+        "example2": "That degree has excellent prospects."
+      },
+      {
+        "term": "to take a course",
+        "def": "fer un curs",
+        "example": "He is taking a course in coding.",
+        "example2": "I have taken two online courses this year."
       }
     ],
     "student": {
@@ -192,6 +264,78 @@
         "def": "establir-se",
         "example": "It took them two years to settle in.",
         "example2": "If they had arrived earlier, they would have settled in more easily."
+      },
+      {
+        "term": "refugee",
+        "def": "refugiat/da",
+        "example": "The family arrived as refugees.",
+        "example2": "Refugees are not the same as economic migrants."
+      },
+      {
+        "term": "border",
+        "def": "frontera",
+        "example": "They crossed the border at night.",
+        "example2": "The border had been closed for weeks."
+      },
+      {
+        "term": "homesick",
+        "def": "enyorat de casa",
+        "example": "She felt homesick for months.",
+        "example2": "He gets homesick every winter."
+      },
+      {
+        "term": "to fit in",
+        "def": "encaixar, integrar-se",
+        "example": "It takes time to fit in.",
+        "example2": "He struggled to fit in at his new school."
+      },
+      {
+        "term": "mother tongue",
+        "def": "llengua materna",
+        "example": "Her mother tongue is Wolof.",
+        "example2": "They speak their mother tongue at home."
+      },
+      {
+        "term": "prejudice",
+        "def": "prejudici",
+        "example": "Prejudice is learned, not born.",
+        "example2": "She faced prejudice on her first day."
+      },
+      {
+        "term": "to flee",
+        "def": "fugir",
+        "example": "They fled the war.",
+        "example2": "Thousands have fled the region."
+      },
+      {
+        "term": "belonging",
+        "def": "sentiment de pertinença",
+        "example": "Everyone needs a sense of belonging.",
+        "example2": "Belonging is not the same as fitting in."
+      },
+      {
+        "term": "welcoming",
+        "def": "acollidor",
+        "example": "The neighbours were very welcoming.",
+        "example2": "A welcoming school changes everything."
+      },
+      {
+        "term": "stereotype",
+        "def": "estereotip",
+        "example": "That is a common stereotype.",
+        "example2": "Stereotypes disappear when you meet people."
+      },
+      {
+        "term": "to seek a better life",
+        "def": "buscar una vida millor",
+        "example": "They left to seek a better life.",
+        "example2": "Most people migrate to seek a better life."
+      },
+      {
+        "term": "diversity",
+        "def": "diversitat",
+        "example": "Diversity makes the class richer.",
+        "example2": "The city is proud of its diversity."
       }
     ],
     "student": {
@@ -295,6 +439,78 @@
         "def": "dieta equilibrada",
         "example": "A balanced diet is not the same as eating less.",
         "example2": "You should aim for a balanced diet rather than a strict one."
+      },
+      {
+        "term": "sedentary",
+        "def": "sedentari",
+        "example": "A sedentary lifestyle is risky.",
+        "example2": "Their jobs are increasingly sedentary."
+      },
+      {
+        "term": "to work out",
+        "def": "entrenar, fer exercici",
+        "example": "She works out three times a week.",
+        "example2": "He has worked out every morning since January."
+      },
+      {
+        "term": "sleep pattern",
+        "def": "patró de son",
+        "example": "Screens damage your sleep pattern.",
+        "example2": "His sleep pattern changed completely."
+      },
+      {
+        "term": "processed food",
+        "def": "aliment processat",
+        "example": "Processed food is high in salt.",
+        "example2": "They cut out processed food entirely."
+      },
+      {
+        "term": "burnout",
+        "def": "esgotament",
+        "example": "Burnout is common among students.",
+        "example2": "She recognised the signs of burnout early."
+      },
+      {
+        "term": "peer-reviewed",
+        "def": "revisat per experts",
+        "example": "Use peer-reviewed studies.",
+        "example2": "The claim is not peer-reviewed."
+      },
+      {
+        "term": "to fact-check",
+        "def": "verificar la informació",
+        "example": "Always fact-check health advice.",
+        "example2": "We fact-checked every statistic in the guide."
+      },
+      {
+        "term": "clickbait",
+        "def": "esquer per fer clic",
+        "example": "That headline is pure clickbait.",
+        "example2": "Clickbait spreads faster than facts."
+      },
+      {
+        "term": "hydration",
+        "def": "hidratació",
+        "example": "Hydration affects concentration.",
+        "example2": "Proper hydration matters more than people think."
+      },
+      {
+        "term": "to cope with",
+        "def": "fer front a",
+        "example": "Sport helps me cope with stress.",
+        "example2": "She has learned to cope with exam pressure."
+      },
+      {
+        "term": "well-being",
+        "def": "benestar",
+        "example": "The school runs a well-being week.",
+        "example2": "Well-being is more than not being ill."
+      },
+      {
+        "term": "screen time",
+        "def": "temps de pantalla",
+        "example": "Limit your screen time at night.",
+        "example2": "Her screen time dropped by half."
       }
     ],
     "student": {
@@ -398,6 +614,78 @@
         "def": "titular",
         "example": "Write a headline for your sixty-second news pitch.",
         "example2": "The reporter asked what the headline was going to be."
+      },
+      {
+        "term": "to look back on",
+        "def": "recordar, mirar enrere",
+        "example": "She looks back on that year fondly.",
+        "example2": "He looked back on his childhood without regret."
+      },
+      {
+        "term": "role model",
+        "def": "model a seguir",
+        "example": "My grandfather was my role model.",
+        "example2": "She became a role model without trying."
+      },
+      {
+        "term": "to point out",
+        "def": "assenyalar, remarcar",
+        "example": "He pointed out that she was wrong.",
+        "example2": "She pointed out the risk immediately."
+      },
+      {
+        "term": "to insist",
+        "def": "insistir",
+        "example": "He insisted he had never been there.",
+        "example2": "She insisted on paying."
+      },
+      {
+        "term": "to suggest",
+        "def": "suggerir",
+        "example": "She suggested waiting a week.",
+        "example2": "He suggested that we ask the teacher."
+      },
+      {
+        "term": "upbringing",
+        "def": "educació rebuda a casa",
+        "example": "Her upbringing shaped her values.",
+        "example2": "They had a very strict upbringing."
+      },
+      {
+        "term": "to regret",
+        "def": "penedir-se",
+        "example": "He regrets leaving school early.",
+        "example2": "She has never regretted the decision."
+      },
+      {
+        "term": "milestone",
+        "def": "fita",
+        "example": "That was a milestone in her life.",
+        "example2": "The first concert was a real milestone."
+      },
+      {
+        "term": "to give advice",
+        "def": "donar consells",
+        "example": "He gave me good advice.",
+        "example2": "She gives advice without judging."
+      },
+      {
+        "term": "quote",
+        "def": "cita textual",
+        "example": "I used a direct quote in the report.",
+        "example2": "The quote was taken out of context."
+      },
+      {
+        "term": "to interview",
+        "def": "entrevistar",
+        "example": "We interviewed a local nurse.",
+        "example2": "She has interviewed twelve people."
+      },
+      {
+        "term": "to reveal",
+        "def": "revelar",
+        "example": "He revealed the reason years later.",
+        "example2": "She revealed that she had almost quit."
       }
     ],
     "student": {
@@ -497,6 +785,78 @@
         "def": "contractar",
         "example": "They decided to hire her after the second interview.",
         "example2": "Do you know when they are planning to hire someone?"
+      },
+      {
+        "term": "vacancy",
+        "def": "vacant",
+        "example": "There is a vacancy in the kitchen.",
+        "example2": "The vacancy was filled in two days."
+      },
+      {
+        "term": "to be in charge of",
+        "def": "estar a càrrec de",
+        "example": "She is in charge of the till.",
+        "example2": "He was in charge of a team of six."
+      },
+      {
+        "term": "shift",
+        "def": "torn",
+        "example": "I work the morning shift.",
+        "example2": "The night shift pays better."
+      },
+      {
+        "term": "reference",
+        "def": "referència, recomanació",
+        "example": "Her old boss wrote a reference.",
+        "example2": "They asked for two references."
+      },
+      {
+        "term": "strengths and weaknesses",
+        "def": "punts forts i febles",
+        "example": "Talk about your strengths and weaknesses.",
+        "example2": "Naming your weaknesses honestly helps."
+      },
+      {
+        "term": "teamwork",
+        "def": "treball en equip",
+        "example": "The job requires teamwork.",
+        "example2": "Teamwork matters more than speed here."
+      },
+      {
+        "term": "to be responsible for",
+        "def": "ser responsable de",
+        "example": "You would be responsible for the stock.",
+        "example2": "She was responsible for training new staff."
+      },
+      {
+        "term": "salary",
+        "def": "sou",
+        "example": "The salary is negotiable.",
+        "example2": "They did not mention the salary."
+      },
+      {
+        "term": "full-time / part-time",
+        "def": "jornada completa / mitja jornada",
+        "example": "Is it full-time or part-time?",
+        "example2": "He works part-time while studying."
+      },
+      {
+        "term": "to turn down",
+        "def": "rebutjar (una oferta)",
+        "example": "She turned down the offer.",
+        "example2": "He turned down two jobs last month."
+      },
+      {
+        "term": "notice period",
+        "def": "període de preavís",
+        "example": "The notice period is one month.",
+        "example2": "She left after her notice period."
+      },
+      {
+        "term": "to come across as",
+        "def": "donar la impressió de ser",
+        "example": "Try not to come across as arrogant.",
+        "example2": "He came across as calm and prepared."
       }
     ],
     "student": {
@@ -600,6 +960,78 @@
         "def": "mòbil",
         "example": "Nobody could establish a motive.",
         "example2": "The motive, which nobody had considered, was money after all."
+      },
+      {
+        "term": "to investigate",
+        "def": "investigar",
+        "example": "The police investigated the case.",
+        "example2": "They have investigated every lead."
+      },
+      {
+        "term": "fingerprints",
+        "def": "empremtes dactilars",
+        "example": "The fingerprints were on the glass.",
+        "example2": "No fingerprints were found on the door."
+      },
+      {
+        "term": "to question",
+        "def": "interrogar",
+        "example": "They questioned three people.",
+        "example2": "The witness was questioned twice."
+      },
+      {
+        "term": "footprint",
+        "def": "petjada",
+        "example": "There was a footprint in the mud.",
+        "example2": "The footprints led to the garden."
+      },
+      {
+        "term": "to break in",
+        "def": "entrar per la força",
+        "example": "Somebody broke in through the window.",
+        "example2": "They had broken in before midnight."
+      },
+      {
+        "term": "guilty",
+        "def": "culpable",
+        "example": "The jury found him guilty.",
+        "example2": "She looked guilty, but she was not."
+      },
+      {
+        "term": "innocent",
+        "def": "innocent",
+        "example": "He was innocent all along.",
+        "example2": "The evidence proved she was innocent."
+      },
+      {
+        "term": "to solve a case",
+        "def": "resoldre un cas",
+        "example": "They solved the case in a week.",
+        "example2": "The case was solved by a single clue."
+      },
+      {
+        "term": "eyewitness",
+        "def": "testimoni presencial",
+        "example": "An eyewitness saw the car.",
+        "example2": "The eyewitness changed her story."
+      },
+      {
+        "term": "to accuse",
+        "def": "acusar",
+        "example": "She accused him of lying.",
+        "example2": "He was accused of stealing the keys."
+      },
+      {
+        "term": "red herring",
+        "def": "pista falsa",
+        "example": "The letter was a red herring.",
+        "example2": "Good mysteries need a red herring."
+      },
+      {
+        "term": "to confess",
+        "def": "confessar",
+        "example": "He confessed the next morning.",
+        "example2": "She has confessed to everything."
       }
     ],
     "student": {

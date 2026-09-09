@@ -69,6 +69,78 @@
         "def": "determinació",
         "example": "Her determination is what makes the story worth telling.",
         "example2": "It was determination, not luck, that got her there."
+      },
+      {
+        "term": "to start up",
+        "def": "posar en marxa (un negoci)",
+        "example": "They started up the business in a garage.",
+        "example2": "She started up her own label before she finished school."
+      },
+      {
+        "term": "fundraising",
+        "def": "recaptació de fons",
+        "example": "The fundraising event paid for the new library.",
+        "example2": "Their fundraising campaign reached its target in a week."
+      },
+      {
+        "term": "to volunteer",
+        "def": "fer voluntariat",
+        "example": "He volunteers at the animal shelter every Saturday.",
+        "example2": "Hundreds of teenagers have volunteered for the clean-up."
+      },
+      {
+        "term": "mentor",
+        "def": "mentor/a",
+        "example": "Her mentor helped her prepare the presentation.",
+        "example2": "A good mentor asks questions instead of giving answers."
+      },
+      {
+        "term": "to give up",
+        "def": "rendir-se",
+        "example": "Don't give up after the first failure.",
+        "example2": "He had every reason to give up, but he kept going."
+      },
+      {
+        "term": "self-taught",
+        "def": "autodidacta",
+        "example": "She is a self-taught programmer.",
+        "example2": "Most of what he knows is self-taught."
+      },
+      {
+        "term": "breakthrough",
+        "def": "avenç decisiu",
+        "example": "The breakthrough came after months of work.",
+        "example2": "That interview was the breakthrough her career needed."
+      },
+      {
+        "term": "to raise funds",
+        "def": "recaptar diners",
+        "example": "They raised funds to build a school.",
+        "example2": "The team has raised funds for three different charities."
+      },
+      {
+        "term": "confidence",
+        "def": "confiança en un mateix",
+        "example": "Speaking in public built her confidence.",
+        "example2": "He lost his confidence after the first bad grade."
+      },
+      {
+        "term": "commitment",
+        "def": "compromís",
+        "example": "Her commitment to the cause impressed everyone.",
+        "example2": "Real change needs commitment, not good intentions."
+      },
+      {
+        "term": "to look up to",
+        "def": "admirar",
+        "example": "Younger students look up to her.",
+        "example2": "I have always looked up to my grandmother."
+      },
+      {
+        "term": "setback",
+        "def": "contratemps",
+        "example": "Every setback taught him something.",
+        "example2": "The project survived several serious setbacks."
       }
     ],
     "student": {
@@ -163,6 +235,78 @@
         "def": "retrat",
         "example": "This portrait is the most striking piece in the room.",
         "example2": "It is the most famous portrait she ever painted."
+      },
+      {
+        "term": "canvas",
+        "def": "llenç",
+        "example": "He painted the scene on a large canvas.",
+        "example2": "The canvas was almost two metres wide."
+      },
+      {
+        "term": "masterpiece",
+        "def": "obra mestra",
+        "example": "This painting is considered her masterpiece.",
+        "example2": "Every masterpiece was once an unfinished sketch."
+      },
+      {
+        "term": "to sketch",
+        "def": "esbossar",
+        "example": "She sketched the building in her notebook.",
+        "example2": "He had sketched the idea long before he painted it."
+      },
+      {
+        "term": "gallery",
+        "def": "galeria d'art",
+        "example": "The gallery opens at ten.",
+        "example2": "Their work hangs in a small gallery downtown."
+      },
+      {
+        "term": "landscape",
+        "def": "paisatge",
+        "example": "He is famous for his winter landscapes.",
+        "example2": "The landscape in the background is completely invented."
+      },
+      {
+        "term": "shade",
+        "def": "tonalitat",
+        "example": "She used three shades of blue.",
+        "example2": "The shades get darker towards the corner."
+      },
+      {
+        "term": "texture",
+        "def": "textura",
+        "example": "The texture of the paint is rough.",
+        "example2": "You can feel the texture from a metre away."
+      },
+      {
+        "term": "to stand out",
+        "def": "destacar",
+        "example": "Her use of colour makes the work stand out.",
+        "example2": "That sculpture stands out from everything else in the room."
+      },
+      {
+        "term": "influence",
+        "def": "influència",
+        "example": "You can see the influence of street art.",
+        "example2": "His influence on younger painters was enormous."
+      },
+      {
+        "term": "self-portrait",
+        "def": "autoretrat",
+        "example": "She painted a self-portrait every year.",
+        "example2": "The self-portrait shows him at nineteen."
+      },
+      {
+        "term": "to be inspired by",
+        "def": "inspirar-se en",
+        "example": "He was inspired by the sea.",
+        "example2": "She has been inspired by her city since childhood."
+      },
+      {
+        "term": "underrated",
+        "def": "infravalorat",
+        "example": "This artist is completely underrated.",
+        "example2": "Her later work is the most underrated of all."
       }
     ],
     "student": {
@@ -266,6 +410,78 @@
         "def": "conscienciar",
         "example": "The poster raises awareness about single-use plastic.",
         "example2": "If we raise awareness at school, families will hear about it too."
+      },
+      {
+        "term": "carbon footprint",
+        "def": "petjada de carboni",
+        "example": "Flying increases your carbon footprint.",
+        "example2": "We measured the carbon footprint of the whole school."
+      },
+      {
+        "term": "renewable energy",
+        "def": "energia renovable",
+        "example": "Renewable energy is getting cheaper.",
+        "example2": "The town runs almost entirely on renewable energy."
+      },
+      {
+        "term": "single-use plastic",
+        "def": "plàstic d'un sol ús",
+        "example": "The shop has banned single-use plastic.",
+        "example2": "Single-use plastic ends up in the sea."
+      },
+      {
+        "term": "landfill",
+        "def": "abocador",
+        "example": "Most of that waste goes to landfill.",
+        "example2": "The landfill outside the town is nearly full."
+      },
+      {
+        "term": "deforestation",
+        "def": "desforestació",
+        "example": "Deforestation destroys habitats.",
+        "example2": "Deforestation has doubled in the last decade."
+      },
+      {
+        "term": "endangered species",
+        "def": "espècie en perill d'extinció",
+        "example": "The turtle is an endangered species.",
+        "example2": "Three endangered species live in this valley."
+      },
+      {
+        "term": "to cut down on",
+        "def": "reduir el consum de",
+        "example": "We should cut down on meat.",
+        "example2": "They have cut down on plastic packaging."
+      },
+      {
+        "term": "eco-friendly",
+        "def": "respectuós amb el medi ambient",
+        "example": "This is an eco-friendly product.",
+        "example2": "Eco-friendly does not always mean expensive."
+      },
+      {
+        "term": "to litter",
+        "def": "llençar brossa a terra",
+        "example": "Please don't litter in the park.",
+        "example2": "Somebody had littered the whole beach."
+      },
+      {
+        "term": "drought",
+        "def": "sequera",
+        "example": "The drought lasted all summer.",
+        "example2": "Droughts are becoming longer and more frequent."
+      },
+      {
+        "term": "second-hand",
+        "def": "de segona mà",
+        "example": "She buys second-hand clothes.",
+        "example2": "Second-hand is cheaper and greener."
+      },
+      {
+        "term": "to make a difference",
+        "def": "marcar la diferència",
+        "example": "Small habits make a difference.",
+        "example2": "One class can make a difference in a whole school."
       }
     ],
     "student": {
@@ -365,6 +581,78 @@
         "def": "consulta",
         "example": "We received an enquiry from a client about the price.",
         "example2": "Could you tell me whether your enquiry concerns the March departure?"
+      },
+      {
+        "term": "spacecraft",
+        "def": "nau espacial",
+        "example": "The spacecraft left orbit at dawn.",
+        "example2": "Their spacecraft carries only six passengers."
+      },
+      {
+        "term": "zero gravity",
+        "def": "gravetat zero",
+        "example": "Meals are difficult in zero gravity.",
+        "example2": "You will spend two days in zero gravity."
+      },
+      {
+        "term": "crew",
+        "def": "tripulació",
+        "example": "The crew speaks four languages.",
+        "example2": "Our crew has flown this route twelve times."
+      },
+      {
+        "term": "to book",
+        "def": "reservar",
+        "example": "You can book the trip online.",
+        "example2": "She has already booked two seats."
+      },
+      {
+        "term": "departure",
+        "def": "sortida",
+        "example": "Departure is at six in the morning.",
+        "example2": "The departure was delayed by a storm."
+      },
+      {
+        "term": "on board",
+        "def": "a bord",
+        "example": "Everything is included on board.",
+        "example2": "There is a doctor on board every flight."
+      },
+      {
+        "term": "refund",
+        "def": "reemborsament",
+        "example": "We offer a full refund.",
+        "example2": "He asked for a refund after the cancellation."
+      },
+      {
+        "term": "brochure",
+        "def": "fullet informatiu",
+        "example": "The brochure shows the whole route.",
+        "example2": "We have sent you a brochure by email."
+      },
+      {
+        "term": "to look forward to",
+        "def": "esperar amb ganes",
+        "example": "We look forward to hearing from you.",
+        "example2": "I am looking forward to the launch."
+      },
+      {
+        "term": "sightseeing",
+        "def": "turisme, visita turística",
+        "example": "There is sightseeing on the third day.",
+        "example2": "The sightseeing includes the crater."
+      },
+      {
+        "term": "insurance",
+        "def": "assegurança",
+        "example": "Travel insurance is compulsory.",
+        "example2": "The price does not include insurance."
+      },
+      {
+        "term": "state-of-the-art",
+        "def": "d'última generació",
+        "example": "The cabins are state-of-the-art.",
+        "example2": "They use state-of-the-art navigation systems."
       }
     ],
     "student": {
@@ -472,6 +760,78 @@
         "def": "càstig",
         "example": "In some schools you get detention for being late.",
         "example2": "You shouldn't get detention for forgetting a pencil."
+      },
+      {
+        "term": "compulsory",
+        "def": "obligatori",
+        "example": "Attendance is compulsory.",
+        "example2": "Music should not be compulsory after fourteen."
+      },
+      {
+        "term": "to be supposed to",
+        "def": "haver de (segons la norma)",
+        "example": "We are supposed to arrive at eight.",
+        "example2": "You were supposed to hand it in yesterday."
+      },
+      {
+        "term": "punishment",
+        "def": "càstig",
+        "example": "The punishment seemed unfair.",
+        "example2": "Punishment rarely changes behaviour."
+      },
+      {
+        "term": "canteen",
+        "def": "menjador escolar",
+        "example": "The canteen serves lunch at two.",
+        "example2": "Our canteen has no vegetarian option."
+      },
+      {
+        "term": "playground",
+        "def": "pati",
+        "example": "We meet in the playground at break.",
+        "example2": "The playground is too small for everyone."
+      },
+      {
+        "term": "homework load",
+        "def": "càrrega de deures",
+        "example": "The homework load is too heavy.",
+        "example2": "They have reduced the homework load this year."
+      },
+      {
+        "term": "to skip class",
+        "def": "fer campana",
+        "example": "Nobody should skip class.",
+        "example2": "He skipped class twice last month."
+      },
+      {
+        "term": "peer pressure",
+        "def": "pressió del grup",
+        "example": "Peer pressure is hard to resist.",
+        "example2": "Peer pressure affects what students wear."
+      },
+      {
+        "term": "extracurricular",
+        "def": "extraescolar",
+        "example": "Extracurricular activities start at five.",
+        "example2": "Her extracurricular schedule is full."
+      },
+      {
+        "term": "to get away with",
+        "def": "sortir-se'n sense conseqüències",
+        "example": "They got away with it.",
+        "example2": "You cannot get away with copying homework."
+      },
+      {
+        "term": "dress code",
+        "def": "codi de vestimenta",
+        "example": "The dress code is quite strict.",
+        "example2": "Students voted to change the dress code."
+      },
+      {
+        "term": "to look after",
+        "def": "tenir cura de",
+        "example": "We look after the school garden.",
+        "example2": "Older students look after the younger ones."
       }
     ],
     "student": {
@@ -567,6 +927,78 @@
         "def": "acudir-se, idear",
         "example": "They came up with the idea in five minutes.",
         "example2": "If you came up with a better design, we would build it."
+      },
+      {
+        "term": "patent",
+        "def": "patent",
+        "example": "She filed a patent for the design.",
+        "example2": "The patent expired after twenty years."
+      },
+      {
+        "term": "to test",
+        "def": "provar",
+        "example": "They tested the device for months.",
+        "example2": "The prototype has been tested in three countries."
+      },
+      {
+        "term": "device",
+        "def": "aparell, dispositiu",
+        "example": "The device fits in your pocket.",
+        "example2": "This device was invented by a student."
+      },
+      {
+        "term": "trial and error",
+        "def": "prova i error",
+        "example": "It was pure trial and error.",
+        "example2": "Most inventions come from trial and error."
+      },
+      {
+        "term": "breakthrough",
+        "def": "avenç decisiu",
+        "example": "The breakthrough came by accident.",
+        "example2": "That was the breakthrough the team needed."
+      },
+      {
+        "term": "to improve",
+        "def": "millorar",
+        "example": "They improved the first model.",
+        "example2": "The design has been improved twice."
+      },
+      {
+        "term": "waterproof",
+        "def": "impermeable",
+        "example": "The case is completely waterproof.",
+        "example2": "They made it waterproof after the first test."
+      },
+      {
+        "term": "affordable",
+        "def": "assequible",
+        "example": "The aim is an affordable version.",
+        "example2": "It must be affordable or nobody will buy it."
+      },
+      {
+        "term": "to figure out",
+        "def": "esbrinar, resoldre",
+        "example": "We figured out the problem together.",
+        "example2": "She figured out how to make it lighter."
+      },
+      {
+        "term": "recycled materials",
+        "def": "materials reciclats",
+        "example": "It is built from recycled materials.",
+        "example2": "Recycled materials cut the cost in half."
+      },
+      {
+        "term": "user-friendly",
+        "def": "fàcil d'utilitzar",
+        "example": "The design is very user-friendly.",
+        "example2": "It has to be user-friendly for older people."
+      },
+      {
+        "term": "to launch",
+        "def": "llançar (al mercat)",
+        "example": "They launched the product in May.",
+        "example2": "The invention was launched at a science fair."
       }
     ],
     "student": {
